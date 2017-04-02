@@ -240,6 +240,49 @@ section.success {
 #portfolio * {
   z-index: 2;
 }
+#art .art-item {
+  margin: 0 0 15px;
+  right: 0;
+}
+#art .art-item .art-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#art .art-item .art-link .caption {
+  background: rgba(186, 85, 211, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+}
+#art .art-item .art-link .caption:hover {
+  opacity: 1;
+}
+#art .art-item .art-link .caption .caption-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+}
+#art .art-item .art-link .caption .caption-content i {
+  margin-top: -12px;
+}
+#art .art-item .art-link .caption .caption-content h3,
+#art .art-item .art-link .caption .caption-content h4 {
+  margin: 0;
+}
+#art * {
+  z-index: 2;
+}
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
