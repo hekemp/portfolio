@@ -161,7 +161,9 @@ header.masthead {
   background: #BA55D3; }
   header.masthead img {
     display: block;
-    margin: 0 auto 20px; }
+    margin: 0 auto 20px;
+    width: 20%;
+    height: auto; }
   header.masthead .intro-text .name {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2em;
@@ -181,16 +183,16 @@ header.masthead {
     header.masthead .intro-text .skills {
       font-size: 1.75em; } }
 
-#portfolio .portfolio-item {
+#games .portfolio-item {
   right: 0;
   margin: 0 0 15px; }
-  #portfolio .portfolio-item .portfolio-link {
+  #games .portfolio-item .portfolio-link {
     position: relative;
     display: block;
     max-width: 400px;
     margin: 0 auto;
     cursor: pointer; }
-    #portfolio .portfolio-item .portfolio-link .caption {
+    #games .portfolio-item .portfolio-link .caption {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -199,9 +201,9 @@ header.masthead {
       transition: all ease 0.5s;
       opacity: 0;
       background: rgba(186, 85, 211, 0.9); }
-      #portfolio .portfolio-item .portfolio-link .caption:hover {
+      #games .portfolio-item .portfolio-link .caption:hover {
         opacity: 1; }
-      #portfolio .portfolio-item .portfolio-link .caption .caption-content {
+      #games .portfolio-item .portfolio-link .caption .caption-content {
         font-size: 20px;
         position: absolute;
         top: 50%;
@@ -210,13 +212,13 @@ header.masthead {
         margin-top: -12px;
         text-align: center;
         color: white; }
-        #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+        #games .portfolio-item .portfolio-link .caption .caption-content i {
           margin-top: -12px; }
-        #portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-        #portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+        #games .portfolio-item .portfolio-link .caption .caption-content h3,
+        #games .portfolio-item .portfolio-link .caption .caption-content h4 {
           margin: 0; }
 
-#portfolio * {
+#games * {
   z-index: 2; }
 
 @media (min-width: 767px) {
