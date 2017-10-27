@@ -11,6 +11,15 @@ portfolioDetails = ->
       link: 'tonybirb/'
     }
     {
+      title: 'Internet of Followers'
+      description: '<p><emph>Internet of Followers</emph> allows users to have an innovative VR experience which allows them to delve through the wide-reaching space of Twitter networks. Users are able to walk firsthand through their network of Twitter followers and watch clusters form from different communities of users all following each other.</p>
+                    <p>It was created for the <a href="http://bigdata.uiowa.edu/" target="_blank" rel="noopener noreferrer">Midwestern Big Data Hackathon</a> and took first place.'
+      thumbnail_img: 'icon_iof.jpg'
+      img: 'iof.jpg'
+      date: 'September 2017'
+      link: 'https://devpost.com/software/internet-of-followers-iof'
+    }
+    {
       title: 'Bee Dodger'
       description: '<p><emph>Bee Dodger</emph> is a dodge-em-up inspired by a GIF of Oprah releasing bees onto an unsuspecting crowd. It was written entirely in JavaScript, and can be played <a href="beedodger/" target="_blank" rel="noopener noreferrer">here</a>.</p>
                     <p>Source code is available at my <a href="https://github.com/aszecsei/game-jan17" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>'
