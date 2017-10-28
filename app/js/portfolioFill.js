@@ -1,7 +1,7 @@
 var modalHtmlForGame, thumbnailHtmlForGame;
 
 thumbnailHtmlForGame = function(game, index) {
-  return "<div class=\"col-sm-4 portfolio-item\">'\n  <a href=\"#\" class=\"portfolio-link\" data-toggle=\"modal\" data-target=\"#modal" + index + "\">\n    <div class=\"caption\">\n      <div class=\"caption-content\">\n        <i class=\"fa fa-search-plus fa-3x\"></i>\n      </div>\n    </div>\n    <img src=\"img/portfolio/" + game.thumbnail_img + "\" class=\"img-fluid\" alt=\"\">\n  </a>\n</div>";
+  return "<div class=\"col-sm-4 portfolio-item\">\n  <a href=\"#\" class=\"portfolio-link\" data-toggle=\"modal\" data-target=\"#modal" + index + "\">\n    <div class=\"caption\">\n      <div class=\"caption-content\">\n        <i class=\"fa fa-search-plus fa-3x\"></i>\n      </div>\n    </div>\n    <img src=\"img/portfolio/" + game.thumbnail_img + "\" class=\"img-fluid\" alt=\"\">\n  </a>\n</div>";
 };
 
 modalHtmlForGame = function(game, index) {

@@ -1,6 +1,6 @@
 thumbnailHtmlForGame = (game, index) ->
   """
-  <div class="col-sm-4 portfolio-item">'
+  <div class="col-sm-4 portfolio-item">
     <a href="#" class="portfolio-link" data-toggle="modal" data-target="#modal#{index}">
       <div class="caption">
         <div class="caption-content">
