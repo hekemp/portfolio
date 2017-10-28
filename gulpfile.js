@@ -83,7 +83,8 @@ gulp.task('coffee', function() {
 
 gulp.task('build', function(callback) {
   runSequence('clean:dist',
-    ['sass', 'coffee', 'useref', 'images', 'fonts', 'favicon'],
+    ['sass', 'coffee'],
+    ['useref', 'images', 'fonts', 'favicon'],
     callback
   );
 });
