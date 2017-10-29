@@ -5,7 +5,7 @@ portfolioDetails = function() {
     games: [
       {
         title: 'Tony Birb: Pro Sk8er 2003',
-        description: '<p><em>Tony Birb: Pro Skater 2003</em> is an infinite runner in which you play as the legendary Tony Birb, sliding down twigs.</p> <p>Inspired by a GIF of a bird sliding down a rail, this game was created with <a href="http://hekemp.github.io/app" target="_blank" rel="noopener noreferrer">Heather Kemp</a> for the Fall EPX Jam at the University of Iowa.</p>',
+        description: '<p><em>Tony Birb: Pro Skater 2003</em> is an infinite runner in which you play as the legendary Tony Birb, sliding down twigs.</p> <p>Inspired by a GIF of a bird sliding down a rail, this game was created with <a href="http://hekemp.github.io/" target="_blank" rel="noopener noreferrer">Heather Kemp</a> for the Fall EPX Jam at the University of Iowa.</p>',
         thumbnail_img: 'icon_tonybirb.png',
         img: 'tonybirb.jpg',
         gif: 'birb.gif',
