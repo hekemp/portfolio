@@ -4,7 +4,7 @@ thumbnailHtmlForGame = (game, index) ->
     <a href="#" class="portfolio-link" data-toggle="modal" data-target="#modal#{index}">
       <div class="caption">
         <div class="caption-content">
-          <i class="fa fa-search-plus fa-3x"></i>
+          <span>#{game.title}</span>
         </div>
       </div>
       <img src="img/portfolio/#{game.thumbnail_img}" class="img-fluid" alt="">
@@ -18,14 +18,16 @@ modalHtmlForGame = (game, index) ->
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">#{game.title}</h5>
+          <h5 class="modal-title"><a href="#{game.link}" target="_blank" rel="noopener noreferrer">#{game.title}</a></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <center>
-            <img src="img/portfolio/#{game.img}" class="img-fluid img-centered img-portfolio rounded" alt="An image of #{game.title}">
+            <a href="#{game.link}" target="_blank" rel="noopener noreferrer">
+              <img src="img/portfolio/#{game.img}" class="img-fluid img-centered img-portfolio rounded" alt="An image of #{game.title}">
+            </a>
           </center>
           #{game.description}
           #{if game.itch then '<p><center><iframe frameborder="0" src="' + game.itch + '" width="80%" height="auto"></iframe></center></p>' else ''}
@@ -38,7 +40,7 @@ modalHtmlForGame = (game, index) ->
           <center>
             <ul class="list-inline item-details">
               <li>Date:
-                <strong><a href="#{game.link}" target="_blank" rel="noopener noreferrer">#{game.date}</a></strong>
+                <strong>#{game.date}</strong>
               </li>
             </ul>
           </center>

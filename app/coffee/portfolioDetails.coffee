@@ -13,7 +13,7 @@ portfolioDetails = ->
       }
       {
         title: 'Internet of Followers'
-        description: '<p><em>Internet of Followers</em> allows users to have an innovative VR experience which allows them to delve through the wide-reaching space of Twitter networks. Users are able to walk firsthand through their network of Twitter followers and watch clusters form from different communities of users all following each other.</p>
+        description: '<p><em>Internet of Followers</em> allows users to have an innovative VR experience which enables them to delve through the wide-reaching space of Twitter networks. Users are able to walk firsthand through their network of Twitter followers and watch clusters form from different communities of users all following each other.</p>
                       <p>It was created for the <a href="http://bigdata.uiowa.edu/" target="_blank" rel="noopener noreferrer">Midwest Big Data Hackathon</a> and took first place.'
         thumbnail_img: 'icon_iof.jpg'
         img: 'iof.jpg'
@@ -123,7 +123,7 @@ portfolioDetails = ->
       {
         title: 'dexterity.io'
         description: '<p><em>dexterity.io</em> is an agile management tool created in a software engineering course. It\'s designed to combine several aspects of project management, including issue tracking and scrum meeting tools.</p>
-                      <p>I worked on a team of 5 students to create this site, focusing on unit testing and front-end development.</p>'
+                      <p>I worked on a team of 5 students to create this site; my focus was on unit testing and front-end development.</p>'
         thumbnail_img: 'icon_dexterity.png'
         img: 'dexterity.png'
         date: 'October 2017'
