@@ -16,8 +16,15 @@ a.active,
 a:active,
 a:focus,
 a:hover {
-  color: $theme-success;
+  color: inherit;
   outline: none;
+  transition: color 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+a:hover {
+  color: $theme-success;
+  text-decoration: underline;
 }
 
 h1,
@@ -73,6 +80,7 @@ hr.star-primary:after {
 
 section {
   padding: 100px 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) inset;
   h2 {
     font-size: 3em;
     margin: 0;
@@ -110,4 +118,9 @@ section.success {
       outline: none;
     }
   }
+}
+
+.progress-label {
+  margin-bottom: 0;
+  margin-top: 1rem;
 }

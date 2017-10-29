@@ -1,5 +1,5 @@
 // Styling for the portfolio section
-#games {
+#games, #otherprojects {
   .portfolio-item {
     right: 0;
     margin: 0 0 15px;
@@ -17,7 +17,7 @@
         -moz-transition: all ease 0.5s;
         transition: all ease 0.5s;
         opacity: 0;
-        background: fade-out($theme-success, .1);
+        background: fade-out($theme-secondary, .3);
         &:hover {
           opacity: 1;
         }
@@ -51,6 +51,10 @@
       margin: 0 0 30px;
     }
   }
+}
+
+.img-portfolio {
+  margin-bottom: 1em;
 }
 
 .portfolio-modal {
@@ -120,4 +124,33 @@
     display: none;
     opacity: 0;
   }
+}
+
+.github-widget {
+  h3 {
+    font-size: 20px;
+    text-transform: none;
+  }
+  p {
+    font-size: 14px;
+  }
+  margin: auto;
+  margin-bottom: 1em;
+  width: 75%;
+}
+
+.youtube-wrapper {
+  position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  margin-bottom: 1em;
+}
+
+iframe.youtube-widget {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

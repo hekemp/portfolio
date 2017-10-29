@@ -1,6 +1,6 @@
 thumbnailHtmlForGame = (game, index) ->
   """
-  <div class="col-sm-4 portfolio-item">
+  <div class="col-md-4 portfolio-item">
     <a href="#" class="portfolio-link" data-toggle="modal" data-target="#modal#{index}">
       <div class="caption">
         <div class="caption-content">
@@ -25,11 +25,16 @@ modalHtmlForGame = (game, index) ->
         </div>
         <div class="modal-body">
           <center>
-            <img src="img/portfolio/#{game.img}" class="img-fluid img-centered" alt="">
+            <img src="img/portfolio/#{game.img}" class="img-fluid img-centered img-portfolio rounded" alt="An image of #{game.title}">
           </center>
           #{game.description}
-          #{if game.itch then '<p><center><iframe frameborder="0" src="' + game.itch + '" width="552" height="167"></iframe></center></p>' else ''}
-          #{if game.gif then '<center><img src="img/portfolio/' + game.gif + '" class="img-fluid" alt=""></center>' else ''}
+          #{if game.itch then '<p><center><iframe frameborder="0" src="' + game.itch + '" width="80%" height="auto"></iframe></center></p>' else ''}
+          #{if game.gif then '<center><img src="img/portfolio/' + game.gif + '" class="img-fluid img-portfolio" alt=""></center>' else ''}
+          #{if game.github then '<div class="github-widget" data-repo="' + game.github + '"></div>' else ''}
+          #{if game.youtube then '<center><div class="youtube-wrapper"><iframe class="youtube-widget" width="560" height="315" src="https://www.youtube.com/embed/' + game.youtube + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div></center>' else ''}
+          #{if game.youtube then '<script>$("#modal' + index + '").on(\'hidden.bs.modal\', function (e) {
+            $("#modal' + index + ' iframe").attr("src", $("#modal' + index + ' iframe").attr("src"));
+            });</script>' else ''}
           <center>
             <ul class="list-inline item-details">
               <li>Date:
@@ -47,13 +52,19 @@ modalHtmlForGame = (game, index) ->
   """
 
 $ ->
-  games = portfolioDetails()
+  projects = portfolioDetails()
   thumbHtml = ''
+  otherHtml = ''
   modalHtml = ''
-  for game, index in games
+  for game, index in projects.games
     do (game, index) ->
-      thumbHtml += thumbnailHtmlForGame(game, index)
-      modalHtml += modalHtmlForGame(game, index)
+      thumbHtml += thumbnailHtmlForGame(game, "game#{index}")
+      modalHtml += modalHtmlForGame(game, "game#{index}")
+  for proj, index in projects.other
+    do(proj, index) ->
+      otherHtml += thumbnailHtmlForGame(proj, "other#{index}")
+      modalHtml += modalHtmlForGame(proj, "other#{index}")
   $('#portfolioRow').html(thumbHtml)
+  $('#otherPortfolioRow').html(otherHtml)
   $('#modals').html(modalHtml)
   return
