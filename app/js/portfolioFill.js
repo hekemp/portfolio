@@ -1,15 +1,15 @@
 var modalHtmlForGame, thumbnailHtmlForGame;
 
 thumbnailHtmlForGame = function(game, index) {
-  return "<div class=\"col-md-4 portfolio-item\">\n  <a href=\"#\" class=\"portfolio-link\" data-toggle=\"modal\" data-target=\"#modal" + index + "\">\n    <div class=\"caption\">\n      <div class=\"caption-content\">\n        <span>" + game.title + "</span>\n      </div>\n    </div>\n    <img src=\"img/portfolio/" + game.thumbnail_img + "\" class=\"img-fluid\" alt=\"\">\n  </a>\n</div>";
+  return "<div class=\"col-md-4 portfolio-item\">\n  <a href=\"#\" class=\"portfolio-link\" data-toggle=\"modal\" data-target=\"#modal" + index + "\">\n    <div class=\"caption\">\n      <div class=\"caption-content\">\n        <span>" + game.title + "</span>\n      </div>\n    </div>\n    <img data-src=\"img/portfolio/" + game.thumbnail_img + "\" class=\"img-fluid\" alt=\"\">\n  </a>\n</div>";
 };
 
 modalHtmlForGame = function(game, index) {
-  return "<div class=\"modal fade\" id=\"modal" + index + "\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\"><a href=\"" + game.link + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + game.title + "</a></h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <center>\n          <a href=\"" + game.link + "\" target=\"_blank\" rel=\"noopener noreferrer\">\n            <img src=\"img/portfolio/" + game.img + "\" class=\"img-fluid img-centered img-portfolio rounded\" alt=\"An image of " + game.title + "\">\n          </a>\n        </center>\n        " + game.description + "\n        " + (game.itch ? '<p><center><iframe frameborder="0" src="' + game.itch + '" width="80%" height="auto"></iframe></center></p>' : '') + "\n        " + (game.gif ? '<center><img src="img/portfolio/' + game.gif + '" class="img-fluid img-portfolio" alt=""></center>' : '') + "\n        " + (game.github ? '<div class="github-widget" data-repo="' + game.github + '"></div>' : '') + "\n        " + (game.youtube ? '<center><div class="youtube-wrapper"><iframe class="youtube-widget" width="560" height="315" src="https://www.youtube.com/embed/' + game.youtube + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div></center>' : '') + "\n        " + (game.youtube ? '<script>$("#modal' + index + '").on(\'hidden.bs.modal\', function (e) { $("#modal' + index + ' iframe").attr("src", $("#modal' + index + ' iframe").attr("src")); });</script>' : '') + "\n        <center>\n          <ul class=\"list-inline item-details\">\n            <li>Date:\n              <strong>" + game.date + "</strong>\n            </li>\n          </ul>\n        </center>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n      </div>\n    </div>\n  </div>\n</div>";
+  return "<div class=\"modal fade\" id=\"modal" + index + "\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\"><a href=\"" + game.link + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + game.title + "</a></h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <center>\n          <a href=\"" + game.link + "\" target=\"_blank\" rel=\"noopener noreferrer\">\n            <img data-src=\"img/portfolio/" + game.img + "\" class=\"img-fluid img-centered img-portfolio rounded\" alt=\"An image of " + game.title + "\">\n          </a>\n        </center>\n        " + game.description + "\n        " + (game.itch ? '<p><center><iframe frameborder="0" data-src="' + game.itch + '" width="80%" height="auto"></iframe></center></p>' : '') + "\n        " + (game.gif ? '<center><img data-src="img/portfolio/' + game.gif + '" class="img-fluid img-portfolio" alt=""></center>' : '') + "\n        " + (game.github ? '<div class="github-widget" data-repo="' + game.github + '"></div>' : '') + "\n        " + (game.youtube ? '<center><div class="youtube-wrapper"><iframe class="youtube-widget" width="560" height="315" data-src="https://www.youtube.com/embed/' + game.youtube + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div></center>' : '') + "\n        " + (game.youtube ? '<script>$("#modal' + index + '").on(\'hidden.bs.modal\', function (e) { $("#modal' + index + ' iframe").attr("src", $("#modal' + index + ' iframe").attr("src")); });</script>' : '') + "\n        <center>\n          <ul class=\"list-inline item-details\">\n            <li>Date:\n              <strong>" + game.date + "</strong>\n            </li>\n          </ul>\n        </center>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n      </div>\n    </div>\n  </div>\n</div>";
 };
 
 $(function() {
-  var fn, fn1, game, i, index, j, len, len1, modalHtml, otherHtml, proj, projects, ref, ref1, thumbHtml;
+  var fn, fn1, game, globalLazyLoad, i, index, j, len, len1, modalHtml, modalLazyLoad, modalLazyLoadiFrame, otherHtml, proj, projects, ref, ref1, thumbHtml;
   projects = portfolioDetails();
   thumbHtml = '';
   otherHtml = '';
@@ -35,4 +35,18 @@ $(function() {
   $('#portfolioRow').html(thumbHtml);
   $('#otherPortfolioRow').html(otherHtml);
   $('#modals').html(modalHtml);
+  globalLazyLoad = new LazyLoad();
+  modalLazyLoad = void 0;
+  modalLazyLoadiFrame = void 0;
+  $('.modal').bind('shown.bs.modal', function() {
+    modalLazyLoad = new LazyLoad({
+      container: this
+    });
+    modalLazyLoadiFrame = new LazyLoad({
+      elements_selector: "iframe"
+    });
+  }).bind('hidden.bs.modal', function() {
+    modalLazyLoad.destroy();
+    modalLazyLoadiFrame.destroy();
+  });
 });

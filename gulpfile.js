@@ -1,15 +1,17 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
-var cssnano = require('gulp-cssnano');
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var del = require('del');
-var runSequence = require('run-sequence');
-var coffee = require('gulp-coffee');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync');
+const useref = require('gulp-useref');
+const uglify = require('gulp-uglify');
+const gulpIf = require('gulp-if');
+const cssnano = require('gulp-cssnano');
+const imagemin = require('gulp-imagemin');
+const cache = require('gulp-cache');
+const del = require('del');
+const runSequence = require('run-sequence');
+const coffee = require('gulp-coffee');
+// const modernizr = require('gulp-modernizr');
+const webp = require('gulp-webp');
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss')
@@ -46,12 +48,26 @@ gulp.task('useref', function() {
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('images', function() {
+gulp.task('images', function(callback) {
+  runSequence(['imagemin', 'imgwebp'],
+    callback
+  );
+});
+
+gulp.task('imagemin', function() {
   return gulp.src('app/img/**/*.+(png|jpg|gif|svg)')
     .pipe(imagemin({
-      interlaced: true
+      interlaced: true,
+      pngquant: true,
+      progressive: true
     }))
     .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task('imgwebp', function() {
+  gulp.src('app/img/**/*.+(png|jpg|gif)')
+		.pipe(webp())
+		.pipe(gulp.dest('dist/img'))
 });
 
 gulp.task('fonts', function() {
