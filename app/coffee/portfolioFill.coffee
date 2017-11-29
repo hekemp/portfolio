@@ -1,3 +1,8 @@
+getWebpName = (filename) ->
+  x = filename.split('.')
+  x[-1..] = ['webp']
+  return x.join('.')
+
 thumbnailHtmlForGame = (game, index) ->
   """
   <div class="col-md-4 portfolio-item">
@@ -7,7 +12,10 @@ thumbnailHtmlForGame = (game, index) ->
           <span>#{game.title}</span>
         </div>
       </div>
-      <img data-src="img/portfolio/#{game.thumbnail_img}" class="img-fluid" alt="">
+      <picture>
+        <source srcset="img/portfolio/#{getWebpName(game.thumbnail_img)}" type="image/webp">
+        <img srcset="img/portfolio/#{game.thumbnail_img}" alt="…" class="img-fluid">
+      </picture>
     </a>
   </div>
   """
@@ -26,7 +34,10 @@ modalHtmlForGame = (game, index) ->
         <div class="modal-body">
           <center>
             <a href="#{game.link}" target="_blank" rel="noopener noreferrer">
-              <img data-src="img/portfolio/#{game.img}" class="img-fluid img-centered img-portfolio rounded" alt="An image of #{game.title}">
+              <picture>
+                <source data-srcset="img/portfolio/#{getWebpName(game.img)}" type="image/webp">
+                <img data-srcset="img/portfolio/#{game.img}" alt="An image of #{game.title}" class="img-fluid img-centered img-portfolio rounded">
+              </picture>
             </a>
           </center>
           #{game.description}

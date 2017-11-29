@@ -63,7 +63,10 @@
   <!-- Header -->
   <header class="masthead">
     <div class="container">
-      <img class="" src="img/profile2.png" alt="">
+      <picture>
+        <source srcset="img/profile2.webp" type="image/webp">
+        <img srcset="img/profile2.png" alt="…">
+      </picture>
       <div class="intro-text">
         <span class="name">Alic Szecsei</span>
         <hr class="star-light">
@@ -190,5 +193,6 @@
   <script src="js/freelancer.js"></script>
   <script src="js/analytics.js"></script>
   <script src="js/lib/jquery.githubRepoWidget.js"></script>
+  <script src="js/lib/picturefill.js"></script>
   <!-- endbuild -->
 </body>

@@ -10,7 +10,6 @@ const cache = require('gulp-cache');
 const del = require('del');
 const runSequence = require('run-sequence');
 const coffee = require('gulp-coffee');
-// const modernizr = require('gulp-modernizr');
 const webp = require('gulp-webp');
 
 gulp.task('sass', function() {
@@ -64,6 +63,12 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('dist/img'))
 });
 
+gulp.task('buildwebp', function() {
+  gulp.src('app/img/**/*.+(png|jpg|gif)')
+		.pipe(webp())
+		.pipe(gulp.dest('app/img'))
+});
+
 gulp.task('imgwebp', function() {
   gulp.src('app/img/**/*.+(png|jpg|gif)')
 		.pipe(webp())
@@ -106,7 +111,7 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'coffee', 'browserSync', 'watch'],
+  runSequence(['sass', 'coffee', 'buildwebp', 'browserSync', 'watch'],
     callback
   );
 });
