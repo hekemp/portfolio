@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio",
+  "main": "index.js",
+  "repository": "git@github.com:aszecsei/portfolio.git",
+  "author": "Alic Szecsei <aszecsei@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
