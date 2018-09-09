@@ -6,5 +6,22 @@
   "repository": "git@github.com:aszecsei/portfolio.git",
   "author": "Alic Szecsei <aszecsei@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-typescript": "^1.1.0",
+    "next": "^6.1.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-ga": "^2.5.3"
+  },
+  "devDependencies": {
+    "@types/next": "^6.1.4",
+    "@types/react": "^16.4.13",
+    "@types/react-dom": "^16.0.7"
+  }
 }
