@@ -12,10 +12,13 @@ const bigSizes = sizes.map((_, index) => Math.pow(bigScale, index));
 
 const TextBase = css`
   text-rendering: optimizeLegibility;
+  box-sizing: content-box;
 `;
 
 export const Text = styled.p`
   ${TextBase};
+  margin-top: 0em;
+  margin-bottom: 2em;
 
   font-family: 'Open Sans', sans-serif;
   font-size: ${smallSizes[0]}em;
@@ -31,17 +34,25 @@ export const Text = styled.p`
 
 export const BaseHeader = css`
   ${TextBase};
-  color: #ffffff;
   font-family: 'Raleway', sans-serif;
 `;
+
+
+interface ITextProps {
+  color?: 'white' | 'black'
+}
+
 
 const generateHeader = <K extends keyof JSX.IntrinsicElements>(
   size: number,
   component: K,
-) => styled(component)`
+) => styled<ITextProps, K>(component)`
   ${BaseHeader};
+  color: ${(props: ITextProps) => props.color ? props.color : 'white'};
 
-  margin: 0;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
 
   ${generateHeaderSize(size)};
   font-weight: ${size > 4 ? 800 : 400};

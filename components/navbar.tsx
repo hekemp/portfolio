@@ -36,6 +36,7 @@ const NavbarBrand = styled.a`
   white-space: nowrap;
   outline: none;
   text-decoration: none;
+  padding-left: 0.5em;
 `;
 
 const NavbarCollapse = styled.div`
@@ -58,6 +59,7 @@ const NavbarNav = styled.ul`
   margin-bottom: 0;
   list-style: none;
   margin-top: 0;
+  padding-right: 1em;
 `;
 
 const NavItem = styled.li`
@@ -69,7 +71,7 @@ const NavLink = styled.a`
   ${generateHeaderSize(1)};
   color: ${colors.white};
   display: block;
-  padding-left: 1.4em;
+  padding-left: 1em;
   outline: none;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
