@@ -67,9 +67,9 @@ const NavLink = styled.a`
   ${generateHeaderSize(1)};
   color: ${colors.white};
   display: block;
-  padding: 0.5em 1em;
+  padding: 0.5em 0.5em;
   outline: none;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
 
   &:hover {
@@ -100,7 +100,7 @@ const Nav = () => (
           </NavItem>
           <NavItem>
             <NavLink
-              href="https://blog.alic-szecsei.com"
+              href="http://blog.alic-szecsei.com"
               target="_blank"
               rel="noopener noreferrer"
             >

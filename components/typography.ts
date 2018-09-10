@@ -44,6 +44,7 @@ const generateHeader = <K extends keyof JSX.IntrinsicElements>(
   margin: 0;
 
   ${generateHeaderSize(size)};
+  font-weight: ${size > 4 ? 800 : 400};
 `;
 
 export const generateHeaderSize = (val: number) => css`
