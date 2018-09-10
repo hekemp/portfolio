@@ -14,9 +14,12 @@ const Navbar = styled.nav`
   left: 0;
   z-index: 1030;
 
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   ${media.desktop`
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     transition: padding-top .3s, padding-bottom .3s;
   `};
 `;
@@ -33,11 +36,6 @@ const NavbarBrand = styled.a`
   white-space: nowrap;
   outline: none;
   text-decoration: none;
-
-  ${media.desktop`
-    font-size: 2em;
-    transition: all .3s;
-  `};
 `;
 
 const NavbarCollapse = styled.div`
@@ -45,6 +43,10 @@ const NavbarCollapse = styled.div`
   flex-basis: auto;
   flex-grow: 1;
   align-items: center;
+
+  ${media.until('desktop')`
+    display: none;
+  `}
 `;
 
 const NavbarNav = styled.ul`
@@ -67,7 +69,7 @@ const NavLink = styled.a`
   ${generateHeaderSize(1)};
   color: ${colors.white};
   display: block;
-  padding: 0.5em 0.5em;
+  padding-left: 1.4em;
   outline: none;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
