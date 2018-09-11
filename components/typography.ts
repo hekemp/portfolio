@@ -13,6 +13,13 @@ const bigSizes = sizes.map((_, index) => Math.pow(bigScale, index));
 const TextBase = css`
   text-rendering: optimizeLegibility;
   box-sizing: content-box;
+  line-height: ${smallScale};
+  ${media.tablet`
+    line-height: ${medScale};
+  `};
+  ${media.desktop`
+    line-height: ${bigScale};
+  `};
 `;
 
 export const Text = styled.p`
@@ -22,13 +29,10 @@ export const Text = styled.p`
 
   font-family: 'Open Sans', sans-serif;
   font-size: ${smallSizes[0]}em;
-  line-height: ${smallScale};
   ${media.tablet`
     font-size: ${medSizes[0]}em;
-    line-height: ${medScale};
   `} ${media.desktop`
     font-size: ${bigSizes[0]}em;
-    line-height: ${bigScale};
   `};
 `;
 
@@ -60,13 +64,10 @@ const generateHeader = <K extends keyof JSX.IntrinsicElements>(
 
 export const generateHeaderSize = (val: number) => css`
   font-size: ${smallSizes[val]}em;
-  line-height: ${smallScale};
   ${media.tablet`
     font-size: ${medSizes[val]}em;
-    line-height: ${medScale};
   `} ${media.desktop`
     font-size: ${bigSizes[val]}em;
-    line-height: ${bigScale};
   `};
 `;
 
