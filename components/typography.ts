@@ -12,7 +12,6 @@ const bigSizes = sizes.map((_, index) => Math.pow(bigScale, index));
 
 const TextBase = css`
   text-rendering: optimizeLegibility;
-  box-sizing: content-box;
   line-height: ${smallScale};
   ${media.tablet`
     line-height: ${medScale};

@@ -5,8 +5,6 @@ export const Container = styled.div`
   margin: 0 auto;
   position: relative;
   display: flex;
-  max-width: 95%;
-  width: 95%;
   ${media.tablet`
     max-width: ${sizes.tablet - 2 * gap}px;
     width: ${sizes.desktop - 2 * gap}px;

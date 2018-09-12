@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { Container } from './container';
 import { BaseHeader, generateHeaderSize } from './typography';
 import { colors, media } from './utils';
@@ -7,7 +7,7 @@ import { colors, media } from './utils';
 const Navbar = styled.nav`
   text-transform: uppercase;
   border: none;
-  background: rgba(0, 0, 0, 0.7);
+  
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 
   position: fixed;
@@ -15,29 +15,33 @@ const Navbar = styled.nav`
   left: 0;
   z-index: 1030;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+  display: block;
 
   ${media.desktop`
     padding-top: 15px;
     padding-bottom: 15px;
     transition: padding-top .3s, padding-bottom .3s;
+    background: rgba(0, 0, 0, 0.7);
   `};
 `;
 
-const NavbarBrand = styled.a`
+const NavbarBrand = styled.div`
   ${BaseHeader};
   ${generateHeaderSize(2)};
   color: ${colors.white};
 
-  display: inline-block;
-  padding-top: 0.3125em;
-  padding-bottom: 0.3125em;
-  margin-right: 1em;
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  padding: 0.3125em;
+  padding-left: 1em;
   white-space: nowrap;
   outline: none;
   text-decoration: none;
-  padding-left: 0.5em;
+
+  ${media.until('desktop')`
+    background: rgba(0, 0, 0, 0.7);
+  `}
 `;
 
 interface INavbarCollapseProps {
@@ -51,7 +55,26 @@ const NavbarCollapse = styled<INavbarCollapseProps, 'div'>('div')`
   align-items: center;
 
   ${media.until('desktop')`
-    ${(props: INavbarCollapseProps) => props.isActive ? false : css`display: none;`};
+    display: block;
+    ${(props: INavbarCollapseProps) => props.isActive
+      ? css`
+        transform: translateY(0);
+        z-index: 1;
+        opacity: 1;
+        flex: 1;
+        visibility: visible;
+      `
+      : css`
+        transform: translateY(-2em);
+        z-index: -1;
+        opacity: 0;
+        flex: 0;
+        visibility: hidden;
+      `};
+    clear: both;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    transition: all 86ms ease-in-out;
   `}
 `;
 
@@ -65,10 +88,14 @@ const NavbarNav = styled.ul`
   list-style: none;
   margin-top: 0;
   padding-right: 1em;
+  ${media.until('desktop')`
+    flex-direction: column;
+  `}
 `;
 
 const NavItem = styled.li`
   display: list-item;
+  user-select: none;
 `;
 
 const NavLink = styled.a`
@@ -84,7 +111,20 @@ const NavLink = styled.a`
   &:hover {
     color: ${colors.purple};
   }
+
+  ${media.until('desktop')`
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 2em;
+  `}
 `;
+
+const NavbarContainer = styled(Container)`
+  ${media.until('desktop')`
+    display: block;
+    align-items: stretch;
+  `}
+`
 
 interface IHamburgerDivProps {
   dimensions: number
@@ -93,11 +133,11 @@ interface IHamburgerDivProps {
 const HamburgerDiv = styled<IHamburgerDivProps, 'div'>('div')`
   margin-left: auto;
   cursor: pointer;
-  display: block;
   color: white;
   height: ${(props: IHamburgerDivProps) => props.dimensions}px;
   position: relative;
   width: ${(props: IHamburgerDivProps) => props.dimensions}px;
+  display: block;
   &:hover {
     background-color: rgba(black, 0.05);
   }
@@ -170,9 +210,11 @@ class Nav extends React.Component<{}, INavState> {
   public render() {
     return (
       <Navbar>
-        <Container>
-          <NavbarBrand>Alic Szecsei</NavbarBrand>
-          <Hamburger dimensions={44} isActive={this.state.isActive} onClick={this.onClickHamburger} />
+        <NavbarContainer>
+          <NavbarBrand>
+            Alic Szecsei
+            <Hamburger dimensions={44} isActive={this.state.isActive} onClick={this.onClickHamburger} />
+          </NavbarBrand>
           <NavbarCollapse isActive={this.state.isActive}>
             <NavbarNav>
               <NavItem>
@@ -201,7 +243,7 @@ class Nav extends React.Component<{}, INavState> {
               </NavItem>
             </NavbarNav>
           </NavbarCollapse>
-        </Container>
+        </NavbarContainer>
       </Navbar>
     )
   }
