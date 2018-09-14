@@ -141,3 +141,9 @@ export const unselectable = css`
   -webkit-touch-callout: none;
   user-select: none;
 `;
+
+export const block = css`
+  &:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+`

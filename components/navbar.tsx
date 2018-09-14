@@ -1,5 +1,6 @@
 import * as React from 'react';
-import styled, { css, keyframes } from 'styled-components';
+import { scroller } from 'react-scroll'
+import styled, { css } from 'styled-components';
 import { Container } from './container';
 import { BaseHeader, generateHeaderSize } from './typography';
 import { colors, media } from './utils';
@@ -7,8 +8,8 @@ import { colors, media } from './utils';
 const Navbar = styled.nav`
   text-transform: uppercase;
   border: none;
-  
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  background: rgba(0, 0, 0, 0.8);
 
   position: fixed;
   right: 0;
@@ -27,7 +28,7 @@ const Navbar = styled.nav`
 
 const NavbarBrand = styled.div`
   ${BaseHeader};
-  ${generateHeaderSize(2)};
+  ${generateHeaderSize(4)};
   color: ${colors.white};
 
   align-items: center;
@@ -38,10 +39,6 @@ const NavbarBrand = styled.div`
   white-space: nowrap;
   outline: none;
   text-decoration: none;
-
-  ${media.until('desktop')`
-    background: rgba(0, 0, 0, 0.7);
-  `}
 `;
 
 interface INavbarCollapseProps {
@@ -58,23 +55,13 @@ const NavbarCollapse = styled<INavbarCollapseProps, 'div'>('div')`
     display: block;
     ${(props: INavbarCollapseProps) => props.isActive
       ? css`
-        transform: translateY(0);
-        z-index: 1;
-        opacity: 1;
-        flex: 1;
-        visibility: visible;
+        display: block;
       `
       : css`
-        transform: translateY(-2em);
-        z-index: -1;
-        opacity: 0;
-        flex: 0;
-        visibility: hidden;
+        display: none;
       `};
     clear: both;
-    background: rgba(0, 0, 0, 0.7);
     width: 100%;
-    transition: all 86ms ease-in-out;
   `}
 `;
 
@@ -100,7 +87,7 @@ const NavItem = styled.li`
 
 const NavLink = styled.a`
   ${BaseHeader};
-  ${generateHeaderSize(1)};
+  ${generateHeaderSize(5)};
   color: ${colors.white};
   display: block;
   padding-left: 1em;
@@ -124,6 +111,7 @@ const NavbarContainer = styled(Container)`
     display: block;
     align-items: stretch;
   `}
+  flex-direction: row;
 `
 
 interface IHamburgerDivProps {
@@ -215,22 +203,24 @@ class Nav extends React.Component<{}, INavState> {
             Alic Szecsei
             <Hamburger dimensions={44} isActive={this.state.isActive} onClick={this.onClickHamburger} />
           </NavbarBrand>
+        
           <NavbarCollapse isActive={this.state.isActive}>
             <NavbarNav>
               <NavItem>
-                <NavLink>Games</NavLink>
+                <NavLink href="#about" onClick={this.scrollToAbout}>About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Projects</NavLink>
+                <NavLink href="#games" onClick={this.scrollToGames}>Games</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>About</NavLink>
+                <NavLink href="#projects" onClick={this.scrollToProjects}>Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Skills</NavLink>
+                <NavLink href="#skills" onClick={this.scrollToSkills}>Skills</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Resume</NavLink>
+                <NavLink href="/static/Resume.pdf" target="_blank"
+                  rel="noopener noreferrer">Resume</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
@@ -253,6 +243,30 @@ class Nav extends React.Component<{}, INavState> {
       isActive: !this.state.isActive
     })
   };
+
+  private scrollToAbout = () => {
+    scroller.scrollTo('about', {
+      smooth: true
+    })
+  }
+
+  private scrollToGames = () => {
+    scroller.scrollTo('games', {
+      smooth: true
+    })
+  }
+
+  private scrollToProjects = () => {
+    scroller.scrollTo('projects', {
+      smooth: true
+    })
+  }
+
+  private scrollToSkills = () => {
+    scroller.scrollTo('skills', {
+      smooth: true
+    })
+  }
 }
 
 // const Nav = () => (

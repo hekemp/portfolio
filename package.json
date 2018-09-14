@@ -19,12 +19,14 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-ga": "^2.5.3",
+    "react-scroll": "^1.7.10",
     "styled-components": "^3.4.5"
   },
   "devDependencies": {
     "@types/next": "^6.1.4",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
+    "@types/react-scroll": "^1.5.4",
     "babel-plugin-styled-components": "^1.6.4",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended": "^2.1.0",

@@ -1,24 +1,9 @@
 import styled, { css } from 'styled-components';
-import { media } from './utils';
-
-const bigScale = 1.414; // Augmented 4th
-const medScale = 1.25; // Major 3rd
-const smallScale = 1.125; // Major 2nd
-
-const sizes = [1, 2, 3, 4, 5, 6, 7];
-const smallSizes = sizes.map((_, index) => Math.pow(smallScale, index));
-const medSizes = sizes.map((_, index) => Math.pow(medScale, index));
-const bigSizes = sizes.map((_, index) => Math.pow(bigScale, index));
+import { Colors, getFontSize, vars } from './style-variables'
 
 const TextBase = css`
-  text-rendering: optimizeLegibility;
-  line-height: ${smallScale};
-  ${media.tablet`
-    line-height: ${medScale};
-  `};
-  ${media.desktop`
-    line-height: ${bigScale};
-  `};
+  text-rendering: ${vars["render-mode"]};
+  ${getFontSize('normal')}
 `;
 
 export const Text = styled.p`
@@ -26,32 +11,26 @@ export const Text = styled.p`
   margin-top: 0em;
   margin-bottom: 2em;
 
-  font-family: 'Open Sans', sans-serif;
-  font-size: ${smallSizes[0]}em;
-  ${media.tablet`
-    font-size: ${medSizes[0]}em;
-  `} ${media.desktop`
-    font-size: ${bigSizes[0]}em;
-  `};
+  font-family: ${vars["family-body"]};
 `;
 
 export const BaseHeader = css`
   ${TextBase};
   font-family: 'Raleway', sans-serif;
+  ${getFontSize('large')}
 `;
 
 
 interface ITextProps {
-  color?: 'white' | 'black'
+  color?: Colors
 }
-
 
 const generateHeader = <K extends keyof JSX.IntrinsicElements>(
   size: number,
   component: K,
 ) => styled<ITextProps, K>(component)`
   ${BaseHeader};
-  color: ${(props: ITextProps) => props.color ? props.color : 'white'};
+  color: ${(props: ITextProps) => props.color ? vars[props.color] : 'black'};
 
   display: block;
   margin-top: 0;
@@ -62,17 +41,12 @@ const generateHeader = <K extends keyof JSX.IntrinsicElements>(
 `;
 
 export const generateHeaderSize = (val: number) => css`
-  font-size: ${smallSizes[val]}em;
-  ${media.tablet`
-    font-size: ${medSizes[val]}em;
-  `} ${media.desktop`
-    font-size: ${bigSizes[val]}em;
-  `};
+  ${getFontSize(val)}
 `;
 
-export const H1 = generateHeader(6, 'h1');
-export const H2 = generateHeader(5, 'h2');
-export const H3 = generateHeader(4, 'h3');
-export const H4 = generateHeader(3, 'h4');
-export const H5 = generateHeader(2, 'h5');
-export const H6 = generateHeader(1, 'h6');
+export const H1 = generateHeader(1, 'h1');
+export const H2 = generateHeader(2, 'h2');
+export const H3 = generateHeader(3, 'h3');
+export const H4 = generateHeader(4, 'h4');
+export const H5 = generateHeader(5, 'h5');
+export const H6 = generateHeader(6, 'h6');
