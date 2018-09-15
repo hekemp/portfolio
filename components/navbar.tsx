@@ -35,7 +35,6 @@ const NavbarBrand = styled.div`
   display: flex;
   flex-shrink: 0;
   padding: 0.3125em;
-  padding-left: 1em;
   white-space: nowrap;
   outline: none;
   text-decoration: none;
@@ -246,25 +245,29 @@ class Nav extends React.Component<{}, INavState> {
 
   private scrollToAbout = () => {
     scroller.scrollTo('about', {
-      smooth: true
+      smooth: true,
+      offset: -100,
     })
   }
 
   private scrollToGames = () => {
     scroller.scrollTo('games', {
-      smooth: true
+      smooth: true,
+      offset: -100,
     })
   }
 
   private scrollToProjects = () => {
     scroller.scrollTo('projects', {
-      smooth: true
+      smooth: true,
+      offset: -100,
     })
   }
 
   private scrollToSkills = () => {
     scroller.scrollTo('skills', {
-      smooth: true
+      smooth: true,
+      offset: -100,
     })
   }
 }

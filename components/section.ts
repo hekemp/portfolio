@@ -5,7 +5,7 @@ interface ISectionProps {
   size?: 'small' | 'medium' | 'large'
 }
 
-export const Section = styled<ISectionProps, 'div'>('div')`
+export const Section = styled<ISectionProps, 'section'>('section')`
   padding: 3em 1.5em;
   ${media.desktop`
     ${(props: ISectionProps) => props.size === 'medium' ? css`

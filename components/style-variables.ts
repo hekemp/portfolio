@@ -85,7 +85,7 @@ export const getInverse = (color: string) => {
 
 const bigScale = 1.414; // Augmented 4th
 const medScale = 1.25; // Major 3rd
-const smallScale = 1.125; // Major 2nd
+const smallScale = 1.25; // Major 2nd
 
 const sizes = [6, 5, 4, 3, 2, 1, 0, -1];
 const smallSizes = sizes.map((x) => Math.pow(smallScale, x));

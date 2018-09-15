@@ -6,12 +6,20 @@ const TextBase = css`
   ${getFontSize('normal')}
 `;
 
-export const Text = styled.p`
+interface ITextProps {
+  color?: Colors
+  alignment?: 'left' | 'center' | 'right' | 'justify'
+}
+
+export const Text = styled<ITextProps, 'p'>('p')`
   ${TextBase};
   margin-top: 0em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 
   font-family: ${vars["family-body"]};
+
+  color: ${(props: ITextProps) => props.color ? vars[props.color] : 'black'};
+  text-align: ${(props: ITextProps) => props.alignment ? props.alignment : 'left'};
 `;
 
 export const BaseHeader = css`
@@ -20,24 +28,20 @@ export const BaseHeader = css`
   ${getFontSize('large')}
 `;
 
-
-interface ITextProps {
-  color?: Colors
-}
-
 const generateHeader = <K extends keyof JSX.IntrinsicElements>(
   size: number,
   component: K,
 ) => styled<ITextProps, K>(component)`
   ${BaseHeader};
   color: ${(props: ITextProps) => props.color ? vars[props.color] : 'black'};
+  text-align: ${(props: ITextProps) => props.alignment ? props.alignment : 'left'};
 
   display: block;
   margin-top: 0;
   margin-bottom: 0;
 
   ${generateHeaderSize(size)};
-  font-weight: ${size > 4 ? 800 : 400};
+  font-weight: ${size < 4 ? vars["weight-bold"] : vars["weight-normal"]};
 `;
 
 export const generateHeaderSize = (val: number) => css`

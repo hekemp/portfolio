@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HeroImage = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('static/img/controller.jpg');
-  height: 100%;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
