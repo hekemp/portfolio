@@ -8,7 +8,7 @@ export interface IProject {
   thumbnail_img_path: string
   img_path: string
   gif_path?: string
-  
+
   link: string
   github?: string
   itch?: string

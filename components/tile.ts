@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components'
-import {media} from './utils'
+import styled, { css } from 'styled-components'
+import { media } from './utils'
 
 interface ITileProps {
   isVertical?: boolean
@@ -13,15 +13,19 @@ export const Tile = styled<ITileProps, 'div'>('div')`
   flex-grow: 1;
   flex-shrink: 1;
   min-height: min-content;
-  ${(props: ITileProps) => props.isVertical && css`
-    flex-direction: column;
-    & > ${/* sc-selector */ ChildTile}:not(:last-child) {
-      margin-bottom: 1.5em;
-    }
-  `}
-  ${(props: ITileProps) => props.size && media.tablet`
+  ${(props: ITileProps) =>
+    props.isVertical &&
+    css`
+      flex-direction: column;
+      & > ${/* sc-selector */ ChildTile}:not(:last-child) {
+        margin-bottom: 1.5em;
+      }
+    `}
+  ${(props: ITileProps) =>
+    props.size &&
+    media.tablet`
     flex: none;
-    width: ${props.size / 12 * 100}%;
+    width: ${(props.size / 12) * 100}%;
   `}
   ${media.tablet`
     display: flex;
@@ -44,7 +48,7 @@ export const ChildTile = styled(Tile)`
   margin: 0;
   ${media.tablet`
     display: block;
-  `}
+  `};
 `
 
 export const ParentTile = styled(Tile)`

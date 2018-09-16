@@ -15,16 +15,22 @@ export const Icon = styled<IIconProps, 'span'>('span')`
   justify-content: center;
   height: ${iconDimensions};
   width: ${iconDimensions};
-  ${(props: IIconProps) => props.size === 'small' && css`
-    height: ${iconDimensionsSmall};
-    width: ${iconDimensionsSmall};
-  `}
-  ${(props: IIconProps) => props.size === 'medium' && css`
-    height: ${iconDimensionsMedium};
-    width: ${iconDimensionsMedium};
-  `}
-  ${(props: IIconProps) => props.size === 'large' && css`
-    height: ${iconDimensionsLarge};
-    width: ${iconDimensionsLarge};
-  `}
+  ${(props: IIconProps) =>
+    props.size === 'small' &&
+    css`
+      height: ${iconDimensionsSmall};
+      width: ${iconDimensionsSmall};
+    `}
+  ${(props: IIconProps) =>
+    props.size === 'medium' &&
+    css`
+      height: ${iconDimensionsMedium};
+      width: ${iconDimensionsMedium};
+    `}
+  ${(props: IIconProps) =>
+    props.size === 'large' &&
+    css`
+      height: ${iconDimensionsLarge};
+      width: ${iconDimensionsLarge};
+    `}
 `

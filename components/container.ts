@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { gap, media, sizes } from './utils';
+import styled, { css } from 'styled-components'
+import { gap, media, sizes } from './utils'
 
 interface IContainerProps {
   isFluid?: boolean
@@ -13,12 +13,14 @@ export const Container = styled<IContainerProps, 'div'>('div')`
   ${media.desktop`
     max-width: ${sizes.desktop - 2 * gap}px;
     width: ${sizes.desktop - 2 * gap}px;
-    ${(props: IContainerProps) => props.isFluid && css`
-      margin-left: ${gap}px;
-      margin-right: ${gap}px;
-      max-width: none;
-      width: auto;
-    `}
+    ${(props: IContainerProps) =>
+      props.isFluid &&
+      css`
+        margin-left: ${gap}px;
+        margin-right: ${gap}px;
+        max-width: none;
+        width: auto;
+      `}
   `};
   ${media.widescreen`
     max-width: ${sizes.widescreen - 2 * gap}px;
@@ -28,4 +30,4 @@ export const Container = styled<IContainerProps, 'div'>('div')`
     max-width: ${sizes.fullhd - 2 * gap}px;
     width: ${sizes.fullhd - 2 * gap}px;
   `};
-`;
+`

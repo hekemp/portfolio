@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
 export const colors = {
   navy: '#001f3f',
@@ -18,7 +18,7 @@ export const colors = {
   gray: '#aaaaaa',
   silver: '#dddddd',
   white: '#ffffff',
-};
+}
 
 export const clearfix = css`
   &::after {
@@ -26,7 +26,7 @@ export const clearfix = css`
     content: ' ';
     display: table;
   }
-`;
+`
 
 export const center = (width: string, height: string = '0') => css`
   position: absolute;
@@ -39,20 +39,20 @@ export const center = (width: string, height: string = '0') => css`
         left: calc(50% - (${width} / 2));
         top: calc(50% - (${width} / 2));
       `};
-`;
+`
 
 export const overflowTouch = css`
   -webkit-overflow-scrolling: touch;
-`;
+`
 
-export const gap: number = 64;
+export const gap: number = 64
 
 export const sizes = {
   tablet: 769,
   desktop: 960 + 2 * gap,
   widescreen: 1152 + 2 * gap,
   fullhd: 1344 + 2 * gap,
-};
+}
 
 export const media = {
   from: (device: keyof typeof sizes) => (
@@ -135,12 +135,12 @@ export const media = {
       ${css(literals, ...placeholders)};
     }
   `,
-};
+}
 
 export const unselectable = css`
   -webkit-touch-callout: none;
   user-select: none;
-`;
+`
 
 export const block = css`
   &:not(:last-child) {

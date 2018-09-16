@@ -219,13 +219,11 @@ class Nav extends React.Component<{}, INavState> {
               </NavItem>
               <NavItem>
                 <NavLink href="/static/Resume.pdf" target="_blank"
-                  rel="noopener noreferrer">Resume</NavLink>
+                  rel="noopener noreferrer">Resume (PDF)</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="http://blog.alic-szecsei.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://blog.alic-szecsei.com"
                 >
                   Blog
                 </NavLink>

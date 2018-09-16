@@ -10,10 +10,12 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pretty": "prettier --write \"{components,models,pages}/**/*.{js,ts,md,json}\""
   },
   "dependencies": {
     "@zeit/next-typescript": "^1.1.0",
+    "animejs": "^2.2.0",
     "next": "^6.1.2",
     "polished": "^2.0.3",
     "react": "^16.5.0",
@@ -24,11 +26,13 @@
     "styled-components": "^3.4.5"
   },
   "devDependencies": {
+    "@types/animejs": "^2.0.0",
     "@types/next": "^6.1.4",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
     "@types/react-scroll": "^1.5.4",
     "babel-plugin-styled-components": "^1.6.4",
+    "prettier": "^1.14.2",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
