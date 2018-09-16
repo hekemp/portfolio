@@ -8,10 +8,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "pretty": "prettier --write \"{components,models,pages}/**/*.{js,ts,md,json}\""
+    "dev": "next app",
+    "build": "next build app",
+    "start": "next start app",
+    "pretty": "prettier --write \"{app,__{tests,mocks}__}/**/*.{js,ts,md,json}\""
   },
   "dependencies": {
     "@zeit/next-typescript": "^1.1.0",

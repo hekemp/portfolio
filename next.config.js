@@ -1,2 +1,7 @@
 const withTypescript = require("@zeit/next-typescript");
-module.exports = withTypescript();
+
+const myCustomization = {
+  distDir: '../.next'
+}
+
+module.exports = Object.assign({}, withTypescript(), myCustomization);
