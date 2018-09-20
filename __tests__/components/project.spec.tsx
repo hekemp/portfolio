@@ -1,4 +1,5 @@
-import { splitIntoChunks } from '@/pages/index'
+// tslint:disable-next-line:no-implicit-dependencies
+import { splitIntoChunks } from '@/components/project'
 
 describe('split into chunks', () => {
   test('it works with no elements', () => {

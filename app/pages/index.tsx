@@ -1,4 +1,3 @@
-import moment from 'moment'
 import React from 'react';
 import { FaDesktop, FaGamepad, FaReact, FaRobot } from 'react-icons/fa'
 
@@ -7,22 +6,12 @@ import { Container } from '../components/container';
 import { HeroImage, HeroText } from '../components/hero';
 import { Icon } from '../components/icon';
 import Nav from '../components/navbar';
-import { Project } from '../components/project'
+import { Projects } from '../components/project'
 import { Section } from '../components/section';
 import { SkillIcon } from '../components/skill-icon'
 import { vars } from '../components/style-variables'
 import { H1, H2, H4, Text } from '../components/typography';
-import { games, IProject, otherProjects } from '../models/project';
-
-const numProjectCols = 3
-export function splitIntoChunks<T>(arr: T[], chunkSize: number) {
-  // return [...Array(chunkSize)].map((_0, i) => arr.filter((_1, i2) => i2 % chunkSize === i))
-  return arr.map((_, i) => i % chunkSize === 0 ? arr.slice(i, i+chunkSize) : null).filter((e) => e)
-}
-
-function sortProjectsByDate(arr: IProject[]) {
-  return arr.sort((a, b) => (moment(b.date, "MMMM YYYY").valueOf() - moment(a.date, "MMMM YYYY").valueOf()))
-}
+import { games, otherProjects } from '../models/project';
 
 const IndexPage = () => (
   <div>
@@ -84,29 +73,13 @@ const IndexPage = () => (
     <Section id="games">
       <Container>
         <H2 alignment='center'>Games</H2>
-        {splitIntoChunks(sortProjectsByDate(games), numProjectCols).map((value, index) => (
-          <Columns key={index}>
-            {value.map((project, index2) => (
-              <Column key={index2} size={12/numProjectCols}>
-                <Project key={index2} projectDetails={project} />
-              </Column>
-            ))}
-          </Columns>
-        ))}
+        <Projects projects={games} />
       </Container>
     </Section>
     <Section id="projects">
       <Container>
         <H2 alignment='center'>Other Projects</H2>
-        {splitIntoChunks(sortProjectsByDate(otherProjects), numProjectCols).map((value, index) => (
-          <Columns key={index}>
-            {value.map((project, index2) => (
-              <Column key={index2} size={12/numProjectCols}>
-                <Project key={index2} projectDetails={project} />
-              </Column>
-            ))}
-          </Columns>
-        ))}
+        <Projects projects={otherProjects} />
       </Container>
     </Section>
   </div>

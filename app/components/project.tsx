@@ -1,9 +1,11 @@
+import moment from 'moment'
 import * as React from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import LazyLoad from 'react-lazyload'
 import styled from 'styled-components'
 
 import { Chip, Chips } from './chip'
+import { Column, Columns } from './column';
 import { Icon } from './icon'
 import { Image } from './image'
 import { H5, H6, Text } from './typography' 
@@ -130,5 +132,33 @@ export const Project = (props: IProjectProps) => (
         </Chips>
       </CardFooter>
     </Card>
+  </>
+)
+
+interface IProjectsProps {
+  projects: IProject[]
+}
+
+const numProjectCols = 3
+export function splitIntoChunks<T>(arr: T[], chunkSize: number) {
+  // return [...Array(chunkSize)].map((_0, i) => arr.filter((_1, i2) => i2 % chunkSize === i))
+  return arr.map((_, i) => i % chunkSize === 0 ? arr.slice(i, i+chunkSize) : null).filter((e) => e)
+}
+
+function sortProjectsByDate(arr: IProject[]) {
+  return arr.sort((a, b) => (moment(b.date, "MMMM YYYY").valueOf() - moment(a.date, "MMMM YYYY").valueOf()))
+}
+
+export const Projects = (props: IProjectsProps) => (
+  <>
+    {splitIntoChunks(sortProjectsByDate(props.projects), numProjectCols).map((value, index) => (
+      <Columns key={index}>
+        {value.map((project, index2) => (
+          <Column key={index2} size={12/numProjectCols}>
+            <Project key={index2} projectDetails={project} />
+          </Column>
+        ))}
+      </Columns>
+    ))}
   </>
 )
