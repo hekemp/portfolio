@@ -24,6 +24,7 @@ const initialVars = {
   turquoise: hsl(171, 1, 0.41),
   cyan: hsl(2014, 0.86, 0.53),
   blue: hsl(217, 0.71, 0.53),
+  'blue-light': hsl(217, 0.71, 0.96),
   purple: hsl(271, 1, 0.71),
   red: hsl(348, 1, 0.61),
   navy: '#001f3f',

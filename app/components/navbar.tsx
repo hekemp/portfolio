@@ -96,6 +96,7 @@ const NavLink = styled.a`
 
   &:hover {
     color: ${colors.purple};
+    cursor: pointer;
   }
 
   ${media.until('desktop')`

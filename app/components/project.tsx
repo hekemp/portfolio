@@ -93,8 +93,8 @@ const ProjectCheckHolder = styled.div`
   &:last-child {
     border-bottom: 1px solid ${vars.border()};
   }
-  &:hover {
-    background-color: ${vars["white-ter"]}
+  &:hover, &:active {
+    background-color: ${vars["blue-light"]};
   }
 `
 
