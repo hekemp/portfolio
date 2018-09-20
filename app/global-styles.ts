@@ -602,6 +602,7 @@ textarea,
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('/static/fontsraleway-v12-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Raleway'), local('Raleway-Regular'),
        url('/static/fonts/raleway-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -615,6 +616,7 @@ textarea,
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
+  font-display: swap;
   src: url('/static/fonts/raleway-v12-latin-800.eot'); /* IE9 Compat Modes */
   src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'),
        url('/static/fonts/raleway-v12-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -628,6 +630,7 @@ textarea,
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: url('/static/fonts/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Open Sans Regular'), local('OpenSans-Regular'),
        url('/static/fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -641,6 +644,7 @@ textarea,
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 400;
+  font-display: fallback;
   src: url('/static/fonts/open-sans-v15-latin-italic.eot'); /* IE9 Compat Modes */
   src: local('Open Sans Italic'), local('OpenSans-Italic'),
        url('/static/fonts/open-sans-v15-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */

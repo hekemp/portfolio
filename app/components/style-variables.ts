@@ -31,8 +31,8 @@ const initialVars = {
   maroon: '#85144b',
 
   // TYPOGRAPHY
-  'family-body': "'Open Sans', sans-serif",
-  'family-header': "'Raleway', sans-serif",
+  'family-body': "'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+  'family-header': "'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
   'family-monospace': 'monospace',
   'render-mode': 'optimizeLegibility',
 
