@@ -7,4 +7,6 @@ const myCustomization = {
   distDir: '../.next'
 }
 
-module.exports = withPlugins([withTypescript], myCustomization);
+module.exports = withPlugins([
+  [withTypescript]
+], myCustomization);

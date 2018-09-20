@@ -1,4 +1,4 @@
-import * as moment from 'moment'
+import moment from 'moment'
 import React from 'react';
 import { FaDesktop, FaGamepad, FaReact, FaRobot } from 'react-icons/fa'
 
@@ -10,14 +10,13 @@ import Nav from '../components/navbar';
 import { Project } from '../components/project'
 import { Section } from '../components/section';
 import { SkillIcon } from '../components/skill-icon'
-import { AncestorTile, ParentTile } from '../components/tile';
 import { H1, H2, H4, Text } from '../components/typography';
 import { games, IProject, otherProjects } from '../models/project';
 
 const numProjectCols = 3
-function splitIntoChunks<T>(arr: T[], chunkSize: number) {
-  const groups = arr.map((_, i) => i % chunkSize === 0 ? arr.slice(i, i+chunkSize) : null)
-  return groups.filter((e) => e)
+export function splitIntoChunks<T>(arr: T[], chunkSize: number) {
+  // return [...Array(chunkSize)].map((_0, i) => arr.filter((_1, i2) => i2 % chunkSize === i))
+  return arr.map((_, i) => i % chunkSize === 0 ? arr.slice(i, i+chunkSize) : null).filter((e) => e)
 }
 
 function sortProjectsByDate(arr: IProject[]) {
@@ -84,29 +83,29 @@ const IndexPage = () => (
     <Section id="games">
       <Container>
         <H2 alignment='center'>Games</H2>
-        <AncestorTile isVertical>
-          {splitIntoChunks(sortProjectsByDate(games), numProjectCols).map((value, index) => (
-            <ParentTile key={index} size={12}>
-              {value.map((project, index2) => (
+        {splitIntoChunks(sortProjectsByDate(games), numProjectCols).map((value, index) => (
+          <Columns key={index}>
+            {value.map((project, index2) => (
+              <Column key={index2} size={12/numProjectCols}>
                 <Project key={index2} projectDetails={project} />
-              ))}
-            </ParentTile>
-          ))}
-        </AncestorTile>
+              </Column>
+            ))}
+          </Columns>
+        ))}
       </Container>
     </Section>
     <Section id="projects">
       <Container>
         <H2 alignment='center'>Other Projects</H2>
-        <AncestorTile isVertical>
-          {splitIntoChunks(sortProjectsByDate(otherProjects), numProjectCols).map((value, index) => (
-            <ParentTile key={index}>
-              {value.map((project, index2) => (
+        {splitIntoChunks(sortProjectsByDate(otherProjects), numProjectCols).map((value, index) => (
+          <Columns key={index}>
+            {value.map((project, index2) => (
+              <Column key={index2} size={12/numProjectCols}>
                 <Project key={index2} projectDetails={project} />
-              ))}
-            </ParentTile>
-          ))}
-        </AncestorTile>
+              </Column>
+            ))}
+          </Columns>
+        ))}
       </Container>
     </Section>
   </div>
