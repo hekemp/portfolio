@@ -14,7 +14,7 @@ import { vars } from './style-variables';
 const Card = styled.div`
   padding: 2em;
   margin: 1em;
-  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.20);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.18);
   border: 1px solid ${vars.border()};
   border-radius: ${vars.radius};
   display: flex;
@@ -114,7 +114,7 @@ export const Project = (props: IProjectProps) => (
       <H5>{props.projectDetails.name}</H5>
       <H6>{props.projectDetails.date}</H6>
       <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={200} alt={`cover image for ${props.projectDetails.name}`} />
-      <Text><em>{props.projectDetails.summary}</em></Text>
+      <Text color={vars["grey-dark"]}><em>{props.projectDetails.summary}</em></Text>
       <ProjectChecks>
         {props.projectDetails.tasks && props.projectDetails.tasks.map((val, i) => (
           <ProjectCheckHolder key={i}>

@@ -134,6 +134,10 @@
       "link": "sector5/",
       "tags": [
         "JavaScript", "HTML5/Canvas"
+      ],
+      "tasks": [
+        "Programmed game, menus, & level editor which serializes to JSON",
+        "Designed 15 levels using level editor"
       ]
     },
     {
@@ -150,6 +154,10 @@
       "link": "https://aszecsei.itch.io/on-the-tracks",
       "tags": [
         "C#", "Unity", "Train Jam"
+      ],
+      "tasks": [
+        "Programmed game and menus",
+        "Implemented blood trail effect using particles"
       ]
     },
     {
@@ -164,11 +172,15 @@
       "link": "https://gamejolt.com/games/untitled/62765/",
       "tags": [
         "C++", "Unreal Engine 4"
+      ],
+      "tasks": [
+        "Programmed game and triggers for narrative presentation",
+        "Developed visual style using post-processing shaders"
       ]
     },
     {
       "name": "Rover",
-      "summary": "a driving game with visual effects",
+      "summary": "a driving game with CRT-style visual effects",
       "description": [
         "<em>Rover</em> is a game where the player remotely drives around an alien landscape, trying to collect 6 resources without overturning their vehicle.",
         "This game was developed for <a href='https://ludumdare.com/compo/2014/12/03/welcome-to-ludum-dare-31/' target='_blank' rel='noopener noreferrer'>Ludum Dare 31</a>, and can be downloaded <a href='https://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=15297' target='_blank' rel='noopener noreferrer'>here</a>."
@@ -179,6 +191,10 @@
       "link": "https://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=15297",
       "tags": [
         "C++", "Unreal Engine 4", "Ludum Dare"
+      ],
+      "tasks": [
+        "Implemented visual effects using post-processing shaders",
+        "Programmed UI for displaying distance to the closest pick-up"
       ]
     },
     {
@@ -195,6 +211,10 @@
       "link": "https://aszecsei.itch.io/chess-plus",
       "tags": [
         "C#", "Unity", "7DRL"
+      ],
+      "tasks": [
+        "Programmed chess movement, AI, and UI for displaying legal chess moves",
+        "Developed algorithm to procedurally generate more difficult levels by using chess scoring rules"
       ]
     }
   ],
@@ -212,6 +232,9 @@
       "link": "https://aszecsei.itch.io/confetti",
       "tags": [
         "JavaScript", "HTML5/Canvas", "Screensaver"
+      ],
+      "tasks": [
+        "Implemented particle system, including color, velocity, and size variation"
       ]
     },
     {
@@ -228,6 +251,11 @@
       "youtube": "n2CMJaNdBaI",
       "tags": [
         "Python", "NAO Robots"
+      ],
+      "tasks": [
+        "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+        "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+        "Assisted in the programming of other students' dance routines"
       ]
     },
     {
@@ -244,6 +272,11 @@
       "github": "aszecsei/dexterity.io",
       "tags": [
         "Ruby", "Web Dev", "Project Management"
+      ],
+      "tasks": [
+        "Led team of students using agile methodologies",
+        "Developed issue activity log, burndown charts, and issue creation UI",
+        "Customized resort gem to work with Ruby 5"
       ]
     },
     {
@@ -259,7 +292,11 @@
       "link": "https://www.usatoday.com/story/tech/2015/02/16/app-lets-hospital-see-accident-scenes-better-prepare/23505279/",
       "youtube": "O1WCoJdTQ8I",
       "tags": [
-        "Flutter", "Mobile Dev"
+        "Flutter", "Mobile Dev", "JavaScript", "Web Dev"
+      ],
+      "tasks": [
+        "Adapted existing iOS app to use Flutter, using Redux for state management",
+        "Developed secured API and web front-end for hospitals to use when viewing crash reports"
       ]
     }
   ]

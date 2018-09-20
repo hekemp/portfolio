@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Colors, getFontSize, vars } from './style-variables'
+import { getFontSize, vars } from './style-variables'
 
 const TextBase = css`
   text-rendering: ${vars['render-mode']};
@@ -7,7 +7,7 @@ const TextBase = css`
 `
 
 interface ITextProps {
-  color?: Colors
+  color?: string
   alignment?: 'left' | 'center' | 'right' | 'justify'
 }
 
@@ -18,7 +18,7 @@ export const Text = styled<ITextProps, 'p'>('p')`
 
   font-family: ${vars['family-body']};
 
-  color: ${(props: ITextProps) => (props.color ? vars[props.color] : 'black')};
+  color: ${(props: ITextProps) => (props.color ? props.color : vars["grey-darker"])};
   text-align: ${(props: ITextProps) =>
     props.alignment ? props.alignment : 'left'};
 `
@@ -34,7 +34,7 @@ const generateHeader = <K extends keyof JSX.IntrinsicElements>(
   component: K,
 ) => styled<ITextProps, K>(component)`
   ${BaseHeader};
-  color: ${(props: ITextProps) => (props.color ? vars[props.color] : 'black')};
+  color: ${(props: ITextProps) => (props.color ? props.color : vars.black)};
   text-align: ${(props: ITextProps) =>
     props.alignment ? props.alignment : 'left'};
 

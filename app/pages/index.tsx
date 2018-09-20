@@ -10,6 +10,7 @@ import Nav from '../components/navbar';
 import { Project } from '../components/project'
 import { Section } from '../components/section';
 import { SkillIcon } from '../components/skill-icon'
+import { vars } from '../components/style-variables'
 import { H1, H2, H4, Text } from '../components/typography';
 import { games, IProject, otherProjects } from '../models/project';
 
@@ -28,13 +29,13 @@ const IndexPage = () => (
     <Nav />
     <HeroImage>
       <HeroText>
-        <H1 color='white' alignment='center'>Alic Szecsei</H1>
-        <H4 color='white' alignment='center'>Game Developer & Software Engineer</H4>
+        <H1 color={vars.white} alignment='center'>Alic Szecsei</H1>
+        <H4 color={vars.white} alignment='center'>Game Developer & Software Engineer</H4>
       </HeroText>
     </HeroImage>
     <Section id="about">
       <Container>
-        <H2 alignment='center' color='black'>About Me</H2>
+        <H2 alignment='center' >About Me</H2>
         <Text>
           I'm Alic Szecsei, a software engineer and game developer. I'm currently a student at the
           University of Iowa, getting my Master's degree in computer science. I've been programming since

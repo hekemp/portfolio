@@ -73,25 +73,6 @@ const derivedVars = {
 
 export const vars = { ...initialVars, ...derivedVars }
 
-export type Colors =
-  | 'white'
-  | 'black'
-  | 'light'
-  | 'dark'
-  | 'primary'
-  | 'info'
-  | 'success'
-  | 'warning'
-  | 'danger'
-  | 'orange'
-  | 'yellow'
-  | 'green'
-  | 'turquoise'
-  | 'cyan'
-  | 'blue'
-  | 'purple'
-  | 'red'
-
 export const getInverse = (color: string) => {
   if (getLuminance(color) > 0.55) {
     return vars.dark()
