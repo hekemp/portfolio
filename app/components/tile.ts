@@ -15,7 +15,7 @@ export const Tile = styled<ITileProps, 'div'>('div')`
   min-height: min-content;
   ${(props: ITileProps) =>
     props.isVertical &&
-    css`
+    media.tablet`
       flex-direction: column;
       & > ${/* sc-selector */ ChildTile}:not(:last-child) {
         margin-bottom: 1.5em;

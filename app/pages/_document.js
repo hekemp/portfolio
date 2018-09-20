@@ -17,8 +17,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <meta charset="utf-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
           <title>Alic Szecsei</title>
           <meta
             name="viewport"

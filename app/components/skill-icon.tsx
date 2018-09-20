@@ -35,15 +35,11 @@ export class SkillIcon extends React.Component<ISkillIconProps, {}> {
   })
 
   private mouseEnter = () => {
-    // tslint:disable-next-line:no-console
-    console.log('Enter')
     anime.remove(this.divRef.current)
     anime(this.getAnimeProps(true))
   }
 
   private mouseLeave = () => {
-    // tslint:disable-next-line:no-console
-    console.log('Exit')
     anime.remove(this.divRef.current)
     anime(this.getAnimeProps(false))
   }

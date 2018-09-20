@@ -2,8 +2,10 @@ import projects from './projects.json'
 
 export interface IProject {
   name: string
-  description: string
+  description: string[]
   date: string
+  tags?: string[]
+  tasks?: string[]
 
   thumbnail_img_path: string
   img_path: string

@@ -1,4 +1,4 @@
-// import Link from 'next/link';
+import * as moment from 'moment'
 import React from 'react';
 import { FaDesktop, FaGamepad, FaReact, FaRobot } from 'react-icons/fa'
 
@@ -10,9 +10,19 @@ import Nav from '../components/navbar';
 import { Project } from '../components/project'
 import { Section } from '../components/section';
 import { SkillIcon } from '../components/skill-icon'
-import { AncestorTile } from '../components/tile';
-import { H1, H3, H4, Text } from '../components/typography';
-import { games, otherProjects } from '../models/project';
+import { AncestorTile, ParentTile } from '../components/tile';
+import { H1, H2, H4, Text } from '../components/typography';
+import { games, IProject, otherProjects } from '../models/project';
+
+const numProjectCols = 3
+function splitIntoChunks<T>(arr: T[], chunkSize: number) {
+  const groups = arr.map((_, i) => i % chunkSize === 0 ? arr.slice(i, i+chunkSize) : null)
+  return groups.filter((e) => e)
+}
+
+function sortProjectsByDate(arr: IProject[]) {
+  return arr.sort((a, b) => (moment(b.date, "MMMM YYYY").valueOf() - moment(a.date, "MMMM YYYY").valueOf()))
+}
 
 const IndexPage = () => (
   <div>
@@ -25,7 +35,7 @@ const IndexPage = () => (
     </HeroImage>
     <Section id="about">
       <Container>
-        <H3 alignment='center' color='black'>About Me</H3>
+        <H2 alignment='center' color='black'>About Me</H2>
         <Text>
           I'm Alic Szecsei, a software engineer and game developer. I'm currently a student at the
           University of Iowa, getting my Master's degree in computer science. I've been programming since
@@ -73,17 +83,29 @@ const IndexPage = () => (
     </Section>
     <Section id="games">
       <Container>
-        <H3 alignment='center'>Games</H3>
-        <AncestorTile>
-          {games.map((value, index) => <Project key={index} projectDetails={value} />)}
+        <H2 alignment='center'>Games</H2>
+        <AncestorTile isVertical>
+          {splitIntoChunks(sortProjectsByDate(games), numProjectCols).map((value, index) => (
+            <ParentTile key={index} size={12}>
+              {value.map((project, index2) => (
+                <Project key={index2} projectDetails={project} />
+              ))}
+            </ParentTile>
+          ))}
         </AncestorTile>
       </Container>
     </Section>
     <Section id="projects">
       <Container>
-        <H3 alignment='center'>Other Projects</H3>
-        <AncestorTile>
-          {otherProjects.map((value, index) => <Project key={index} projectDetails={value} />)}
+        <H2 alignment='center'>Other Projects</H2>
+        <AncestorTile isVertical>
+          {splitIntoChunks(sortProjectsByDate(otherProjects), numProjectCols).map((value, index) => (
+            <ParentTile key={index}>
+              {value.map((project, index2) => (
+                <Project key={index2} projectDetails={project} />
+              ))}
+            </ParentTile>
+          ))}
         </AncestorTile>
       </Container>
     </Section>

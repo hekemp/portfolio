@@ -26,6 +26,9 @@ const initialVars = {
   blue: hsl(217, 0.71, 0.53),
   purple: hsl(271, 1, 0.71),
   red: hsl(348, 1, 0.61),
+  navy: '#001f3f',
+  lime: '#01ff70',
+  maroon: '#85144b',
 
   // TYPOGRAPHY
   'family-body': "'Open Sans', sans-serif",

@@ -1,6 +1,6 @@
 import { darken } from 'polished'
 import styled, { css } from 'styled-components'
-import { Colors, getFontSize, getInverse, vars } from './style-variables'
+import { getFontSize, getInverse, vars } from './style-variables'
 import { unselectable } from './utils'
 
 const tagBackgroundColor = vars.background()
@@ -11,7 +11,7 @@ const tagDeleteMargin = '1px'
 interface IChipProps {
   size?: 'small' | 'medium' | 'large'
   isRounded?: boolean
-  color?: Colors
+  color?: string
 }
 
 export const Chip = styled<IChipProps, 'span'>('span')`
