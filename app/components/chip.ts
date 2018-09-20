@@ -6,7 +6,7 @@ import { unselectable } from './utils'
 const tagBackgroundColor = vars.background()
 const tagColor = vars.text()
 const tagRadius = vars.radius
-const tagDeleteMargin = '1px'
+// const tagDeleteMargin = '1px'
 
 interface IChipProps {
   size?: 'small' | 'medium' | 'large'
