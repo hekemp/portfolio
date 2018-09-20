@@ -108,8 +108,11 @@ const smallScale = 1.25 // Major 2nd
 
 const sizes = [6, 5, 4, 3, 2, 1, 0, -1]
 const smallSizes = sizes.map(x => Math.pow(smallScale, x))
+const smallLineHeight = sizes.map((_, i) => 1 + (smallScale / 12) * i)
 const medSizes = sizes.map(x => Math.pow(medScale, x))
+const medLineHeight = sizes.map((_, i) => 1 + (medScale / 12) * i)
 const bigSizes = sizes.map(x => Math.pow(bigScale, x))
+const bigLineHeight = sizes.map((_, i) => 1 + (bigScale / 12) * i)
 
 export type FontSize = number | 'small' | 'normal' | 'medium' | 'large'
 
@@ -128,13 +131,13 @@ export const getFontSize = (size: FontSize) => {
   }
   return css`
     font-size: ${smallSizes[mySize]}em;
-    line-height: ${smallScale};
+    line-height: ${smallLineHeight[mySize]};
     ${media.tablet`
         font-size: ${medSizes[mySize]}em;
-        line-height: ${medScale};
+        line-height: ${medLineHeight[mySize]};
       `} ${media.desktop`
         font-size: ${bigSizes[mySize]}em;
-        line-height: ${bigScale};
+        line-height: ${bigLineHeight[mySize]};
       `};
   `
 }
