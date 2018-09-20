@@ -2,6 +2,7 @@ import projects from './projects.json'
 
 export interface IProject {
   name: string
+  summary: string
   description: string[]
   date: string
   tags?: string[]

@@ -6,7 +6,6 @@ import styled from 'styled-components'
 import { Chip, Chips } from './chip'
 import { Icon } from './icon'
 import { Image } from './image'
-import { Tile } from './tile'
 import { H5, H6, Text } from './typography' 
 
 import {IProject} from '../models/project'
@@ -16,10 +15,26 @@ const Card = styled.div`
   padding: 2em;
   margin: 1em;
   box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.20);
-  border-color: ${vars.border()};
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid ${vars.border()};
   border-radius: ${vars.radius};
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  height: 100%;
+  position: relative;
+`
+
+const CardFooter = styled.div`
+  margin-top: auto;
+  margin-left: -2em;
+  margin-right: -2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  margin-bottom: -2em;
+  padding-bottom: 1em;
+  border-top: 1px solid ${vars.border()};
 `
 
 interface IProjectProps {
@@ -66,7 +81,19 @@ const ProjectChecks = styled.div`
 `
 
 const ProjectCheckHolder = styled.div`
-  margin-bottom: 4px;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-top: 1px solid ${vars.border()};
+  &:last-child {
+    border-bottom: 1px solid ${vars.border()};
+  }
+  &:hover {
+    background-color: ${vars["white-ter"]}
+  }
 `
 
 const ProjectCheck = styled.span`
@@ -76,25 +103,32 @@ const ProjectCheck = styled.span`
   top: 2px;
 `
 
+const ProjectCheckText = styled(Text)`
+  margin-bottom: 0;
+  line-height: 1.2;
+`
+
 export const Project = (props: IProjectProps) => (
-  <Tile size={4}>
+  <>
     <Card>
       <H5>{props.projectDetails.name}</H5>
       <H6>{props.projectDetails.date}</H6>
       <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={200} alt={`cover image for ${props.projectDetails.name}`} />
-      <Text dangerouslySetInnerHTML={{__html: props.projectDetails.description[0]}} />
+      <Text><em>{props.projectDetails.summary}</em></Text>
       <ProjectChecks>
         {props.projectDetails.tasks && props.projectDetails.tasks.map((val, i) => (
           <ProjectCheckHolder key={i}>
-            <ProjectCheck><Icon><FaAngleDoubleRight aria-hidden='true' /></Icon></ProjectCheck> {val}
+            <ProjectCheckText><ProjectCheck><Icon><FaAngleDoubleRight aria-hidden='true' /></Icon></ProjectCheck> {val}</ProjectCheckText>
           </ProjectCheckHolder>
         ))}
       </ProjectChecks>
-      <Chips>
-        {props.projectDetails.tags && props.projectDetails.tags.map((val, index) => (
-          <Chip key={index} color={getColorForTag(val)}>{val}</Chip>
-        ))}
-      </Chips>
+      <CardFooter>
+        <Chips>
+          {props.projectDetails.tags && props.projectDetails.tags.map((val, index) => (
+            <Chip key={index} color={getColorForTag(val)}>{val}</Chip>
+          ))}
+        </Chips>
+      </CardFooter>
     </Card>
-  </Tile>
+  </>
 )
