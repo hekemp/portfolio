@@ -223,7 +223,7 @@ class Nav extends React.Component<{}, INavState> {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://blog.alic-szecsei.com"
+                  href="http://blog.alic-szecsei.com"
                 >
                   Blog
                 </NavLink>
