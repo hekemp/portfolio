@@ -5,6 +5,7 @@ const columnGap = '0.75em'
 
 interface IColumnProps {
   size?: number | 'narrow' | 'full'
+  offsetSize?: number
 }
 
 export const Column = styled<IColumnProps, 'div'>('div')`
@@ -14,6 +15,9 @@ export const Column = styled<IColumnProps, 'div'>('div')`
   flex-shrink: 1;
   padding: ${columnGap};
   ${(props: IColumnProps) => media.tablet`
+    ${(props.offsetSize && css`
+      margin-left: ${(props.offsetSize / 12) * 100}%;
+    `)}
     ${
       props.size === 'narrow'
         ? css`
@@ -40,7 +44,7 @@ export const Column = styled<IColumnProps, 'div'>('div')`
 `
 
 interface IColumnsProps {
-  alignment?: 'left' | 'center' | 'right'
+  alignment?: 'left' | 'center'
   isGapless?: boolean
   isMultiline?: boolean
   isVcentered?: boolean
