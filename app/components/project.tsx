@@ -167,10 +167,10 @@ export class Projects extends React.Component<IProjectsProps, IProjectsState> {
     this.search.addIndex('name')
     this.search.addIndex('summary')
     this.search.addIndex('description')
+    this.search.addIndex('date')
     this.search.addIndex('tasks')
     this.search.addIndex('tags')
     this.search.addDocuments(this.props.projects.map((v, id) => ({...v, id})))
-    
   }
 
   public render() {

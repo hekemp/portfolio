@@ -15,9 +15,10 @@ export const Column = styled<IColumnProps, 'div'>('div')`
   flex-shrink: 1;
   padding: ${columnGap};
   ${(props: IColumnProps) => media.tablet`
-    ${(props.offsetSize && css`
-      margin-left: ${(props.offsetSize / 12) * 100}%;
-    `)}
+    ${props.offsetSize &&
+      css`
+        margin-left: ${(props.offsetSize / 12) * 100}%;
+      `}
     ${
       props.size === 'narrow'
         ? css`

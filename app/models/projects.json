@@ -11,9 +11,7 @@
       "date": "March 2018",
       "link": "https://joat.itch.io/odyssey-of-the-zephyr",
       "itch": "https://itch.io/embed/235921?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
-      "tags": [
-        "Blueprints", "Unreal Engine 4", "Train Jam"
-      ],
+      "tags": ["Blueprints", "Unreal Engine 4", "Train Jam"],
       "tasks": [
         "Created quest items to be completed",
         "Created custom triggers for NPC characters",
@@ -32,9 +30,7 @@
       "gif_path": "birb.gif",
       "date": "October 2017",
       "link": "tonybirb/",
-      "tags": [
-        "C#", "Unity", "EPX Jam"
-      ],
+      "tags": ["C#", "Unity", "EPX Jam"],
       "tasks": [
         "Created 3D model, textures, and animations",
         "Programmed particle effects to react to whether or not the player is on a twig"
@@ -52,9 +48,7 @@
       "date": "September 2017",
       "link": "https://devpost.com/software/internet-of-followers-iof",
       "github": "joshua-friede/Internet-of-Followers",
-      "tags": [
-        "C#", "Unity", "Data Visualization", "VR"
-      ],
+      "tags": ["C#", "Unity", "Data Visualization", "VR"],
       "tasks": [
         "Programmed 6DOF movement system",
         "Implemented spring-based 3D node placement algorithm"
@@ -73,9 +67,7 @@
       "date": "January 2017",
       "link": "beedodger/",
       "github": "aszecsei/game-jan17",
-      "tags": [
-        "JavaScript", "HTML5/Canvas"
-      ],
+      "tags": ["JavaScript", "HTML5/Canvas"],
       "tasks": [
         "Designed 2D game engine using HTML5/Canvas and pure JavaScript",
         "Implemented animation system, various enemies, and scoring mechanics",
@@ -94,9 +86,7 @@
       "itch": "https://itch.io/embed/122937?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
       "date": "March 2017",
       "link": "https://aszecsei.itch.io/neon-valhalla/",
-      "tags": [
-        "C#", "Unity", "Train Jam"
-      ],
+      "tags": ["C#", "Unity", "Train Jam"],
       "tasks": [
         "Created 3D models, music, and sound effects",
         "Programmed infinite road and terrain generation"
@@ -114,9 +104,7 @@
       "itch": "https://itch.io/embed/57569?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
       "date": "March 2016",
       "link": "https://aszecsei.itch.io/train-filler/",
-      "tags": [
-        "C#", "Unity", "Train Jam"
-      ],
+      "tags": ["C#", "Unity", "Train Jam"],
       "tasks": [
         "Programmed ragdoll physics for 2D stick figures and hose physics for player controllers",
         "Implemented twin-stick shooting character controller"
@@ -132,9 +120,7 @@
       "img_path": "gravity.png",
       "date": "February 2015",
       "link": "sector5/",
-      "tags": [
-        "JavaScript", "HTML5/Canvas"
-      ],
+      "tags": ["JavaScript", "HTML5/Canvas"],
       "tasks": [
         "Programmed game, menus, & level editor which serializes to JSON",
         "Designed 15 levels using level editor"
@@ -152,9 +138,7 @@
       "itch": "https://itch.io/embed/20009?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
       "date": "March 2015",
       "link": "https://aszecsei.itch.io/on-the-tracks",
-      "tags": [
-        "C#", "Unity", "Train Jam"
-      ],
+      "tags": ["C#", "Unity", "Train Jam"],
       "tasks": [
         "Programmed game and menus",
         "Implemented blood trail effect using particles"
@@ -170,9 +154,7 @@
       "img_path": "untitled.jpg",
       "date": "April 2015",
       "link": "https://gamejolt.com/games/untitled/62765/",
-      "tags": [
-        "C++", "Unreal Engine 4"
-      ],
+      "tags": ["C++", "Unreal Engine 4"],
       "tasks": [
         "Programmed game and triggers for narrative presentation",
         "Developed visual style using post-processing shaders"
@@ -189,9 +171,7 @@
       "img_path": "rover.jpg",
       "date": "December 2014",
       "link": "https://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=15297",
-      "tags": [
-        "C++", "Unreal Engine 4", "Ludum Dare"
-      ],
+      "tags": ["C++", "Unreal Engine 4", "Ludum Dare"],
       "tasks": [
         "Implemented visual effects using post-processing shaders",
         "Programmed UI for displaying distance to the closest pick-up"
@@ -209,9 +189,7 @@
       "itch": "https://itch.io/embed/20499?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
       "date": "March 2015",
       "link": "https://aszecsei.itch.io/chess-plus",
-      "tags": [
-        "C#", "Unity", "7DRL"
-      ],
+      "tags": ["C#", "Unity", "7DRL"],
       "tasks": [
         "Programmed chess movement, AI, and UI for displaying legal chess moves",
         "Developed algorithm to procedurally generate more difficult levels by using chess scoring rules"
@@ -230,9 +208,7 @@
       "itch": "https://itch.io/embed/14169?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
       "date": "November 2014",
       "link": "https://aszecsei.itch.io/confetti",
-      "tags": [
-        "JavaScript", "HTML5/Canvas", "Screensaver"
-      ],
+      "tags": ["JavaScript", "HTML5/Canvas", "Screensaver"],
       "tasks": [
         "Implemented particle system, including color, velocity, and size variation"
       ]
@@ -249,9 +225,7 @@
       "date": "December 2014",
       "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
       "youtube": "n2CMJaNdBaI",
-      "tags": [
-        "Python", "NAO Robots"
-      ],
+      "tags": ["Python", "NAO Robots"],
       "tasks": [
         "Developed and programmed a 5-minute dance routine for 4 Nao robots",
         "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
@@ -270,9 +244,7 @@
       "date": "October 2017",
       "link": "https://dexterity-io.herokuapp.com",
       "github": "aszecsei/dexterity.io",
-      "tags": [
-        "Ruby", "Web Dev", "Project Management"
-      ],
+      "tags": ["Ruby", "Web Dev", "Project Management"],
       "tasks": [
         "Led team of students using agile methodologies",
         "Developed issue activity log, burndown charts, and issue creation UI",
@@ -291,9 +263,7 @@
       "date": "November 2016",
       "link": "https://www.usatoday.com/story/tech/2015/02/16/app-lets-hospital-see-accident-scenes-better-prepare/23505279/",
       "youtube": "O1WCoJdTQ8I",
-      "tags": [
-        "Flutter", "Mobile Dev", "JavaScript", "Web Dev"
-      ],
+      "tags": ["Flutter", "Mobile Dev", "JavaScript", "Web Dev"],
       "tasks": [
         "Adapted existing iOS app to use Flutter, using Redux for state management",
         "Developed secured API and web front-end for hospitals to use when viewing crash reports"

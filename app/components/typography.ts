@@ -18,7 +18,8 @@ export const Text = styled<ITextProps, 'p'>('p')`
 
   font-family: ${vars['family-body']};
 
-  color: ${(props: ITextProps) => (props.color ? props.color : vars["grey-darker"])};
+  color: ${(props: ITextProps) =>
+    props.color ? props.color : vars['grey-darker']};
   text-align: ${(props: ITextProps) =>
     props.alignment ? props.alignment : 'left'};
 `

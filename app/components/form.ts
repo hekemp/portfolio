@@ -11,29 +11,29 @@ const controlPaddingVertical = `calc(0.375em - ${controlBorderWidth})`
 const controlPaddingHorizontal = `calc(0.625em - ${controlBorderWidth})`
 
 // INPUT VARS
-const inputColor = vars["grey-darker"]
+const inputColor = vars['grey-darker']
 const inputBackgroundColor = vars.white
-const inputBorderColor = vars["grey-lighter"]
+const inputBorderColor = vars['grey-lighter']
 const inputShadow = `inset 0 1px 2px ${rgba(vars.black, 0.1)}`
-const inputHoverColor = vars["grey-darker"]
-const inputHoverBorderColor = vars["grey-light"]
-const inputFocusColor = vars["grey-darker"]
+const inputHoverColor = vars['grey-darker']
+const inputHoverBorderColor = vars['grey-light']
+const inputFocusColor = vars['grey-darker']
 const inputFocusBorderColor = vars.purple
 const inputFocusBoxShadowSize = `0 0 0 0.125em`
 const inputFocusBoxShadowColor = rgba(vars.purple, 0.25)
-const inputDisabledColor = vars["text-light"]()
+const inputDisabledColor = vars['text-light']()
 const inputDisabledBackgroundColor = vars.background()
 const inputDisabledBorderColor = vars.background()
 
 const inputArrow = vars.purple
 
-const inputIconColor = vars["grey-lighter"]
+const inputIconColor = vars['grey-lighter']
 const inputIconActiveColor = vars.grey
 
 const inputRadius = vars.radius
 
-const labelColor = vars["grey-darker"]
-const labelWeight = vars["weight-bold"]
+const labelColor = vars['grey-darker']
+const labelWeight = vars['weight-bold']
 const helpSize = getFontSize('small')
 
 const control = css`
@@ -52,7 +52,8 @@ const control = css`
   padding-right: ${controlPaddingHorizontal};
   position: relative;
   vertical-align: top;
-  &:focus, &:active {
+  &:focus,
+  &:active {
     outline: none;
   }
   &[disabled] {
@@ -71,7 +72,8 @@ const input = css`
   &:hover {
     border-color: ${inputHoverBorderColor};
   }
-  &:focus, &:active {
+  &:focus,
+  &:active {
     border-color: ${inputFocusBorderColor};
     box-shadow: ${inputFocusBoxShadowSize} ${inputFocusBoxShadowColor};
   }
@@ -102,32 +104,43 @@ export const Input = styled<IInputProps, 'input'>('input')`
   &[readonly] {
     box-shadow: none;
   }
-  ${(props: IInputProps) => props.color && css`
-    border-color: ${props.color};
-    &:focus, &:active {
-      box-shadow: ${inputFocusBoxShadowSize} ${rgba(props.color, 0.25)};
-    }
-  `}
-  ${(props: IInputProps) => props.isFullwidth && css`
-    display: block;
-    width: 100%;
-  `}
-  ${(props: IInputProps) => props.isInline && css`
-    display: inline;
-    width: auto;
-  `}
-  ${(props: IInputProps) => props.isRounded && css`
-    border-radius: ${vars["radius-rounded"]};
-    padding-left: 1em;
-    padding-right: 1em;
-  `}
-  ${(props: IInputProps) => props.isStatic && css`
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow: none;
-    padding-left: 0;
-    padding-right: 0;
-  `}
+  ${(props: IInputProps) =>
+    props.color &&
+    css`
+      border-color: ${props.color};
+      &:focus,
+      &:active {
+        box-shadow: ${inputFocusBoxShadowSize} ${rgba(props.color, 0.25)};
+      }
+    `}
+  ${(props: IInputProps) =>
+    props.isFullwidth &&
+    css`
+      display: block;
+      width: 100%;
+    `}
+  ${(props: IInputProps) =>
+    props.isInline &&
+    css`
+      display: inline;
+      width: auto;
+    `}
+  ${(props: IInputProps) =>
+    props.isRounded &&
+    css`
+      border-radius: ${vars['radius-rounded']};
+      padding-left: 1em;
+      padding-right: 1em;
+    `}
+  ${(props: IInputProps) =>
+    props.isStatic &&
+    css`
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      padding-left: 0;
+      padding-right: 0;
+    `}
 `
 
 // TODO: Select
@@ -168,25 +181,26 @@ export const Control = styled<IControlProps, 'div'>('div')`
   ${getFontSize('normal')};
   position: relative;
   text-align: left;
-  ${(props: IControlProps) => props.hasIcon && css`
-    ${/* sc-selector */ Input} {
-      padding-left: 2.25em;
-      &:focus {
-        & ~ ${/* sc-selector */ Icon} {
-          color: ${inputIconActiveColor};
+  ${(props: IControlProps) =>
+    props.hasIcon &&
+    css`
+      ${/* sc-selector */ Input} {
+        padding-left: 2.25em;
+        &:focus {
+          & ~ ${/* sc-selector */ Icon} {
+            color: ${inputIconActiveColor};
+          }
         }
       }
-    }
-    ${/* sc-selector */ Icon} {
-      color: ${inputIconColor};
-      height: 2.25em;
-      pointer-events: none;
-      position: absolute;
-      top: 0;
-      width: 2.25em;
-      z-index: 4;
-      left: 0;
-    }
-  `}
+      ${/* sc-selector */ Icon} {
+        color: ${inputIconColor};
+        height: 2.25em;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 2.25em;
+        z-index: 4;
+        left: 0;
+      }
+    `};
 `
-
