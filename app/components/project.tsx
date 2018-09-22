@@ -1,7 +1,9 @@
+import * as JsSearch from 'js-search'
 import moment from 'moment'
 import * as React from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import LazyLoad from 'react-lazyload'
+import { stem } from 'stemr'
 import styled from 'styled-components'
 
 import { Chip, Chips } from './chip'
@@ -11,11 +13,11 @@ import { Image } from './image'
 import { H5, H6, Text } from './typography' 
 
 import {IProject} from '../models/project'
+import * as Form from './form'
 import { vars } from './style-variables';
 
 const Card = styled.div`
   padding: 2em;
-  margin: 1em;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.18);
   border: 1px solid ${vars.border()};
   border-radius: ${vars.radius};
@@ -149,16 +151,55 @@ function sortProjectsByDate(arr: IProject[]) {
   return arr.sort((a, b) => (moment(b.date, "MMMM YYYY").valueOf() - moment(a.date, "MMMM YYYY").valueOf()))
 }
 
-export const Projects = (props: IProjectsProps) => (
-  <>
-    {splitIntoChunks(sortProjectsByDate(props.projects), numProjectCols).map((value, index) => (
-      <Columns key={index}>
-        {value.map((project, index2) => (
-          <Column key={index2} size={12/numProjectCols}>
-            <Project key={index2} projectDetails={project} />
+interface IProjectsState {
+  filter: string
+}
+
+export class Projects extends React.Component<IProjectsProps, IProjectsState> {
+  private search: JsSearch.Search
+  constructor(props: IProjectsProps) {
+    super(props)
+    this.state = {
+      filter: ""
+    }
+    this.search = new JsSearch.Search('id')
+    this.search.tokenizer = new JsSearch.StemmingTokenizer(stem, new JsSearch.SimpleTokenizer())
+    this.search.addIndex('name')
+    this.search.addIndex('summary')
+    this.search.addIndex('description')
+    this.search.addIndex('tasks')
+    this.search.addIndex('tags')
+    this.search.addDocuments(this.props.projects.map((v, id) => ({...v, id})))
+    
+  }
+
+  public render() {
+    return (
+      <>
+        <Columns>
+          <Column size={4} offsetSize={8}>
+            <Form.Field>
+              <Form.Control>
+                <Form.Input placeholder='Search' type='text' onChange={this.updateFilter} />
+              </Form.Control>
+            </Form.Field>
           </Column>
+        </Columns>
+        {splitIntoChunks(this.state.filter !== '' ? this.search.search(this.state.filter) as IProject[] : sortProjectsByDate(this.props.projects), numProjectCols).map((value, index) => (
+          <Columns key={index}>
+            {value.map((project, index2) => (
+              <Column key={index2} size={12/numProjectCols}>
+                <Project key={index2} projectDetails={project} />
+              </Column>
+            ))}
+          </Columns>
         ))}
-      </Columns>
-    ))}
-  </>
-)
+      </>
+    )
+  }
+
+  private updateFilter = (e: React.FormEvent<HTMLInputElement>) => {
+    const input = e.target as HTMLInputElement
+    this.setState({filter: input.value})
+  }
+}
