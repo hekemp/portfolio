@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { scroller } from 'react-scroll'
+import { scroller, animateScroll } from 'react-scroll'
 import styled, { css } from 'styled-components';
 import { Container } from './container';
+import { vars } from './style-variables'
 import { BaseHeader, generateHeaderSize } from './typography';
-import { colors, media } from './utils';
+import { media } from './utils';
 
 const Navbar = styled.nav`
   text-transform: uppercase;
@@ -29,7 +30,7 @@ const Navbar = styled.nav`
 const NavbarBrand = styled.div`
   ${BaseHeader};
   ${generateHeaderSize(4)};
-  color: ${colors.white};
+  color: ${vars.white};
 
   align-items: center;
   display: flex;
@@ -87,7 +88,10 @@ const NavItem = styled.li`
 const NavLink = styled.a`
   ${BaseHeader};
   ${generateHeaderSize(5)};
-  color: ${colors.white};
+  ${/* sc-selector */ NavbarBrand} > & {
+    ${generateHeaderSize(4)};
+  }
+  color: ${vars.white};
   display: block;
   padding-left: 1em;
   outline: none;
@@ -95,7 +99,7 @@ const NavLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: ${colors.purple};
+    color: ${vars.primary()};
     cursor: pointer;
   }
 
@@ -200,7 +204,7 @@ class Nav extends React.Component<{}, INavState> {
       <Navbar>
         <NavbarContainer>
           <NavbarBrand>
-            Alic Szecsei
+            <NavLink href="/" onClick={this.scrollToTop}>Alic Szecsei</NavLink>
             <Hamburger dimensions={44} isActive={this.state.isActive} onClick={this.onClickHamburger} />
           </NavbarBrand>
         
@@ -242,7 +246,16 @@ class Nav extends React.Component<{}, INavState> {
     })
   };
 
-  private scrollToAbout = () => {
+  private scrollToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
+    animateScroll.scrollToTop({
+      smooth: true,
+    })
+    return false
+  }
+
+  private scrollToAbout = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
     scroller.scrollTo('about', {
       smooth: true,
       offset: -100,
@@ -250,7 +263,8 @@ class Nav extends React.Component<{}, INavState> {
     })
   }
 
-  private scrollToGames = () => {
+  private scrollToGames = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
     scroller.scrollTo('games', {
       smooth: true,
       offset: -100,
@@ -258,7 +272,8 @@ class Nav extends React.Component<{}, INavState> {
     })
   }
 
-  private scrollToProjects = () => {
+  private scrollToProjects = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
     scroller.scrollTo('projects', {
       smooth: true,
       offset: -100,
@@ -266,7 +281,8 @@ class Nav extends React.Component<{}, INavState> {
     })
   }
 
-  private scrollToSkills = () => {
+  private scrollToSkills = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
     scroller.scrollTo('skills', {
       smooth: true,
       offset: -100,
