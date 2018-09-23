@@ -26,8 +26,6 @@ interface IProjectsState {
   filter: string
 }
 
-const duration = 100
-
 export class Projects extends React.Component<IProjectsProps, IProjectsState> {
   private search: JsSearch.Search
   constructor(props: IProjectsProps) {
@@ -53,7 +51,7 @@ export class Projects extends React.Component<IProjectsProps, IProjectsState> {
           <Column size={4} offsetSize={8}>
             <Form.Field>
               <Form.Control>
-                <Form.Input placeholder='Search' type='text' onChange={this.updateFilter} />
+                <Form.Input placeholder='Search' type='text' onChange={this.updateFilter} aria-label='Search' />
               </Form.Control>
             </Form.Field>
           </Column>

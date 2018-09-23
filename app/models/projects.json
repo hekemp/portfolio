@@ -286,6 +286,22 @@
         "Adapted existing iOS app to use Flutter, using Redux for state management",
         "Developed secured API and web front-end for hospitals to use when viewing crash reports"
       ]
+    },
+    {
+      "name": "Electric IRC",
+      "summary": "a modern, user-friendly IRC client",
+      "description": [
+        "<em>Electric IRC</em> is an IRC client built using Electron and React."
+      ],
+      "thumbnail_img_path": "icon_electric.png",
+      "img_path": "electric.jpg",
+      "date": "January 2018",
+      "link": "https://github.com/aszecsei/electric-irc",
+      "tags": ["JavaScript", "Electron", "TypeScript", "React"],
+      "tasks": [
+        "Refactored application to use Redux data store, and led team research into Redux",
+        "Led development of IRC calls using redux-saga"
+      ]
     }
   ]
 }
