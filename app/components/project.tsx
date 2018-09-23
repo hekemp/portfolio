@@ -1,20 +1,17 @@
-import * as JsSearch from 'js-search'
-import moment from 'moment'
+import anime from 'animejs'
 import * as React from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import LazyLoad from 'react-lazyload'
-import { stem } from 'stemr'
 import styled from 'styled-components'
 
 import { Chip, Chips } from './chip'
-import { Column, Columns } from './column';
 import { Icon } from './icon'
 import { Image } from './image'
 import { H5, H6, Text } from './typography' 
 
 import {IProject} from '../models/project'
-import * as Form from './form'
 import { vars } from './style-variables';
+import { media } from './utils'
 
 const Card = styled.div`
   padding: 2em;
@@ -27,6 +24,13 @@ const Card = styled.div`
   flex-wrap: wrap;
   height: 100%;
   position: relative;
+  ${media.tablet`
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 7px 14px 0px rgba(0,0,0,0.18);
+      transition: all ${vars.speed} ease-in-out;
+    }
+  `}
 `
 
 const CardFooter = styled.div`
@@ -40,10 +44,6 @@ const CardFooter = styled.div`
   padding-bottom: 1em;
   border-top: 1px solid ${vars.border()};
 `
-
-interface IProjectProps {
-  projectDetails: IProject
-}
 
 const tagColorMap = {
   // ENGINES
@@ -112,13 +112,17 @@ const ProjectCheckText = styled(Text)`
   line-height: 1.2;
 `
 
+interface IProjectProps {
+  projectDetails: IProject
+}
+
 export const Project = (props: IProjectProps) => (
   <>
     <Card>
       <H5>{props.projectDetails.name}</H5>
       <H6>{props.projectDetails.date}</H6>
-      <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={200} alt={`cover image for ${props.projectDetails.name}`} />
-      <Text color={vars["grey-dark"]}><em>{props.projectDetails.summary}</em></Text>
+      <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={200} alt={`a preview image for ${props.projectDetails.name}`} />
+      <Text color={vars.grey}><em>{props.projectDetails.summary}</em></Text>
       <ProjectChecks>
         {props.projectDetails.tasks && props.projectDetails.tasks.map((val, i) => (
           <ProjectCheckHolder key={i}>
@@ -136,70 +140,3 @@ export const Project = (props: IProjectProps) => (
     </Card>
   </>
 )
-
-interface IProjectsProps {
-  projects: IProject[]
-}
-
-const numProjectCols = 3
-export function splitIntoChunks<T>(arr: T[], chunkSize: number) {
-  // return [...Array(chunkSize)].map((_0, i) => arr.filter((_1, i2) => i2 % chunkSize === i))
-  return arr.map((_, i) => i % chunkSize === 0 ? arr.slice(i, i+chunkSize) : null).filter((e) => e)
-}
-
-function sortProjectsByDate(arr: IProject[]) {
-  return arr.sort((a, b) => (moment(b.date, "MMMM YYYY").valueOf() - moment(a.date, "MMMM YYYY").valueOf()))
-}
-
-interface IProjectsState {
-  filter: string
-}
-
-export class Projects extends React.Component<IProjectsProps, IProjectsState> {
-  private search: JsSearch.Search
-  constructor(props: IProjectsProps) {
-    super(props)
-    this.state = {
-      filter: ""
-    }
-    this.search = new JsSearch.Search('id')
-    this.search.tokenizer = new JsSearch.StemmingTokenizer(stem, new JsSearch.SimpleTokenizer())
-    this.search.addIndex('name')
-    this.search.addIndex('summary')
-    this.search.addIndex('description')
-    this.search.addIndex('date')
-    this.search.addIndex('tasks')
-    this.search.addIndex('tags')
-    this.search.addDocuments(this.props.projects.map((v, id) => ({...v, id})))
-  }
-
-  public render() {
-    return (
-      <>
-        <Columns>
-          <Column size={4} offsetSize={8}>
-            <Form.Field>
-              <Form.Control>
-                <Form.Input placeholder='Search' type='text' onChange={this.updateFilter} />
-              </Form.Control>
-            </Form.Field>
-          </Column>
-        </Columns>
-        {splitIntoChunks(this.state.filter !== '' ? this.search.search(this.state.filter) as IProject[] : sortProjectsByDate(this.props.projects), numProjectCols).map((value, index) => (
-          <Columns key={index}>
-            {value.map((project, index2) => (
-              <Column key={index2} size={12/numProjectCols}>
-                <Project key={index2} projectDetails={project} />
-              </Column>
-            ))}
-          </Columns>
-        ))}
-      </>
-    )
-  }
-
-  private updateFilter = (e: React.FormEvent<HTMLInputElement>) => {
-    const input = e.target as HTMLInputElement
-    this.setState({filter: input.value})
-  }
-}

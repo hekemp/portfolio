@@ -6,7 +6,7 @@ import { Container } from '../components/container';
 import { HeroImage, HeroText } from '../components/hero';
 import { Icon } from '../components/icon';
 import Nav from '../components/navbar';
-import { Projects } from '../components/project'
+import { Projects } from '../components/projects'
 import { Section } from '../components/section';
 import { SkillIcon } from '../components/skill-icon'
 import { vars } from '../components/style-variables'

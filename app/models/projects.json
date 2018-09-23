@@ -19,6 +19,24 @@
       ]
     },
     {
+      "name": "BugHunters 2",
+      "summary": "a VR experience in which you pilot a spaceship",
+      "description": [
+        "<em>BugHunters 2</em> is the sequel to the wildly-popular (yet never-released) game <em>BugHunters</em>."
+      ],
+      "thumbnail_img_path": "icon_bughunters.png",
+      "img_path": "",
+      "date": "February 2018",
+      "link": "https://github.com/hekemp/BugHunters2",
+      "github": "hekemp/BugHunters2",
+      "tags": ["C#", "Unity", "VR"],
+      "tasks": [
+        "Implemented motion controls, movement system, and bullet pooling",
+        "Worked closely with 3D assets to implement realistic physics constraints",
+        "Extended several components in the SteamVR interaction system"
+      ]
+    },
+    {
       "name": "Tony Birb: Pro Sk8er 2003",
       "summary": "an infinite runner in which you're a birb who's shaped like a friend",
       "description": [

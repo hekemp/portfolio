@@ -220,7 +220,7 @@ class Nav extends React.Component<{}, INavState> {
               </NavItem>
               <NavItem>
                 <NavLink href="/static/Resume.pdf" target="_blank"
-                  rel="noopener noreferrer">Resume (PDF)</NavLink>
+                  rel="noopener noreferrer">Resume</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
@@ -246,6 +246,7 @@ class Nav extends React.Component<{}, INavState> {
     scroller.scrollTo('about', {
       smooth: true,
       offset: -100,
+      isDynamic: true,
     })
   }
 
@@ -253,6 +254,7 @@ class Nav extends React.Component<{}, INavState> {
     scroller.scrollTo('games', {
       smooth: true,
       offset: -100,
+      isDynamic: true,
     })
   }
 
@@ -260,6 +262,7 @@ class Nav extends React.Component<{}, INavState> {
     scroller.scrollTo('projects', {
       smooth: true,
       offset: -100,
+      isDynamic: true,
     })
   }
 
@@ -267,6 +270,7 @@ class Nav extends React.Component<{}, INavState> {
     scroller.scrollTo('skills', {
       smooth: true,
       offset: -100,
+      isDynamic: true,
     })
   }
 }
