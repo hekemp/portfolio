@@ -1,9 +1,10 @@
 import React from 'react';
-import { FaDesktop, FaGamepad, FaReact, FaRobot } from 'react-icons/fa'
+import { FaDesktop, FaEnvelope, FaGamepad, FaGithub, FaLinkedinIn, FaReact, FaRobot, FaTumblr, FaTwitter } from 'react-icons/fa'
 
 import { Column, Columns } from '../components/column';
 import { Container } from '../components/container';
-import { HeroImage, HeroText } from '../components/hero';
+import { Footer } from '../components/footer'
+import { HeroImage, HeroText, SocialButton, SocialButtonContainer } from '../components/hero';
 import { Icon } from '../components/icon';
 import Nav from '../components/navbar';
 import { Projects } from '../components/projects'
@@ -21,6 +22,13 @@ const IndexPage = () => (
         <H1 color={vars.white} alignment='center'>Alic Szecsei</H1>
         <H4 color={vars.white} alignment='center'>Game Developer & Software Engineer</H4>
       </HeroText>
+      <SocialButtonContainer>
+        <SocialButton href='mailto:aszecsei@gmail.com'><Icon><FaEnvelope aria-labelledby='Email' role='img' /></Icon></SocialButton>
+        <SocialButton href='https://twitter.com/aszecsei'><Icon><FaTwitter aria-labelledby='Twitter' role='img' /></Icon></SocialButton>
+        <SocialButton href='https://linkedin.com/in/alic-szecsei'><Icon><FaLinkedinIn aria-labelledby='LinkedIn' role='img' /></Icon></SocialButton>
+        <SocialButton href='https://github.com/aszecsei'><Icon><FaGithub aria-labelledby='GitHub' role='img' /></Icon></SocialButton>
+        <SocialButton href='http://blog.alic-szecsei.com'><Icon><FaTumblr aria-labelledby='Tumblr' role='img' /></Icon></SocialButton>
+      </SocialButtonContainer>
     </HeroImage>
     <Section id="about">
       <Container>
@@ -82,6 +90,17 @@ const IndexPage = () => (
         <Projects projects={otherProjects} />
       </Container>
     </Section>
+    <Section id="skills">
+      <Container>
+        <H2 alignment='center'>Skills</H2>
+      </Container>
+    </Section>
+    <Section id="contact">
+      <Container>
+        <H2 alignment='center'>Contact Me</H2>
+      </Container>
+    </Section>
+    <Footer />
   </div>
 );
 

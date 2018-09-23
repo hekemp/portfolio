@@ -114,13 +114,13 @@ export const getFontSize = (size: FontSize) => {
     mySize = size
   }
   return css`
-    font-size: ${smallSizes[mySize]}em;
+    font-size: ${smallSizes[mySize]}rem;
     line-height: ${smallLineHeight[mySize]};
     ${media.tablet`
-        font-size: ${medSizes[mySize]}em;
+        font-size: ${medSizes[mySize]}rem;
         line-height: ${medLineHeight[mySize]};
       `} ${media.desktop`
-        font-size: ${bigSizes[mySize]}em;
+        font-size: ${bigSizes[mySize]}rem;
         line-height: ${bigLineHeight[mySize]};
       `};
   `
