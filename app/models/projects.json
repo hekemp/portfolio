@@ -216,22 +216,6 @@
   ],
   "other": [
     {
-      "name": "Confetti",
-      "summary": "a browser-based screensaver with particles",
-      "description": [
-        "<em>Confetti</em> is a screensaver you can run in your browser - just pop it onto fullscreen and let it run! Made for <a href='https://itch.io/jam/flying-toast-with-jam' target='_blank' rel='noopener noreferrer'>Flying Toast With Jam</a>."
-      ],
-      "thumbnail_img_path": "icon_confetti.png",
-      "img_path": "confetti.png",
-      "itch": "https://itch.io/embed/14169?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
-      "date": "November 2014",
-      "link": "https://aszecsei.itch.io/confetti",
-      "tags": ["JavaScript", "HTML5/Canvas", "Screensaver"],
-      "tasks": [
-        "Implemented particle system, including color, velocity, and size variation"
-      ]
-    },
-    {
       "name": "Dancing Robots",
       "summary": "an interdisciplinary, project-based course",
       "description": [
