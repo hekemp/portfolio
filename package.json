@@ -17,6 +17,7 @@
   "dependencies": {
     "@zeit/next-typescript": "^1.1.0",
     "animejs": "^2.2.0",
+    "axios": "^0.18.0",
     "js-search": "^1.4.2",
     "moment": "^2.22.2",
     "next": "^7.0.0",
