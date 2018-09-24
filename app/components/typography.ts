@@ -22,6 +22,37 @@ export const Text = styled<ITextProps, 'p'>('p')`
     props.color ? props.color : vars['grey-dark']};
   text-align: ${(props: ITextProps) =>
     props.alignment ? props.alignment : 'left'};
+
+  & > a {
+    color: ${vars.blue};
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      display: block;
+      transition: all 0.1s ease-in-out;
+      transform: translateY(-5px) scaleX(0);
+      background-color: ${vars.blue};
+      opacity: 0;
+    }
+    &:hover {
+      color: ${vars.primary()};
+      cursor: pointer;
+      &:before {
+        transform: translateY(0) scaleX(1);
+        background-color: ${vars.primary()};
+        opacity: 1;
+      }
+    }
+  }
 `
 
 export const BaseHeader = css`

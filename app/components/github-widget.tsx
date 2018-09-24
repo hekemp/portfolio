@@ -2,7 +2,7 @@ import axios from 'axios'
 import * as React from 'react'
 import styled from 'styled-components'
 
-const FetchGithubRepo = repository =>
+const FetchGithubRepo = (repository: string) =>
   axios.get(`https://api.github.com/repos/${repository}`)
   .then((response) => {
     if (response.status !== 200) {
@@ -139,6 +139,7 @@ const Download = styled.div`
     padding: 10px;
     height: auto;
     min-height: 24px;
+    box-sizing: content-box;
     @media (max-width: 767px) {
       height: auto;
       min-height: 46px;
@@ -188,6 +189,9 @@ const DownloadButton = styled.a`
       border-bottom-color: #9fc7db;
       background: #f1f7fa;
       background: linear-gradient(#f1f7fa, #dbeaf1);
+    }
+    @media (max-width: 767px) {
+      top: 32px;
     }
   }
 `
