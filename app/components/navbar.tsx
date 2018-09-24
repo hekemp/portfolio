@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { scroller, animateScroll } from 'react-scroll'
+import { animateScroll, scroller } from 'react-scroll'
 import styled, { css } from 'styled-components';
 import { Container } from './container';
 import { vars } from './style-variables'
@@ -93,7 +93,7 @@ const NavLink = styled.a`
   }
   color: ${vars.white};
   display: block;
-  padding-left: 1em;
+  padding-left: 1.25rem;
   outline: none;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -217,10 +217,10 @@ class Nav extends React.Component<{}, INavState> {
                 <NavLink href="#games" onClick={this.scrollToGames}>Games</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#projects" onClick={this.scrollToProjects}>Projects</NavLink>
+                <NavLink href="#software" onClick={this.scrollToSoftware}>Software</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#skills" onClick={this.scrollToSkills}>Skills</NavLink>
+                <NavLink href="#contact" onClick={this.scrollToContact}>Contact</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/static/Resume.pdf" target="_blank"
@@ -272,18 +272,18 @@ class Nav extends React.Component<{}, INavState> {
     })
   }
 
-  private scrollToProjects = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  private scrollToSoftware = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault()
-    scroller.scrollTo('projects', {
+    scroller.scrollTo('software', {
       smooth: true,
       offset: -100,
       isDynamic: true,
     })
   }
 
-  private scrollToSkills = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  private scrollToContact = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault()
-    scroller.scrollTo('skills', {
+    scroller.scrollTo('contact', {
       smooth: true,
       offset: -100,
       isDynamic: true,

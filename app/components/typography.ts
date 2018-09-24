@@ -19,7 +19,7 @@ export const Text = styled<ITextProps, 'p'>('p')`
   font-family: ${vars['family-body']};
 
   color: ${(props: ITextProps) =>
-    props.color ? props.color : vars['grey-darker']};
+    props.color ? props.color : vars['grey-dark']};
   text-align: ${(props: ITextProps) =>
     props.alignment ? props.alignment : 'left'};
 `
@@ -35,7 +35,7 @@ const generateHeader = <K extends keyof JSX.IntrinsicElements>(
   component: K,
 ) => styled<ITextProps, K>(component)`
   ${BaseHeader};
-  color: ${(props: ITextProps) => (props.color ? props.color : vars.black)};
+  color: ${(props: ITextProps) => (props.color ? props.color : vars.dark())};
   text-align: ${(props: ITextProps) =>
     props.alignment ? props.alignment : 'left'};
 

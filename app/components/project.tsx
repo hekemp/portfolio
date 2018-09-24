@@ -1,4 +1,3 @@
-import anime from 'animejs'
 import * as React from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import LazyLoad from 'react-lazyload'
@@ -24,6 +23,7 @@ const Card = styled.div`
   flex-wrap: wrap;
   height: 100%;
   position: relative;
+  background-color: ${vars.white};
   ${media.tablet`
     &:hover {
       transform: translateY(-5px);
@@ -121,7 +121,7 @@ export const Project = (props: IProjectProps) => (
     <Card>
       <H5>{props.projectDetails.name}</H5>
       <H6>{props.projectDetails.date}</H6>
-      <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={200} alt={`a preview image for ${props.projectDetails.name}`} />
+      <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={274} alt={`a preview image for ${props.projectDetails.name}`} />
       <Text color={vars.grey}><em>{props.projectDetails.summary}</em></Text>
       <ProjectChecks>
         {props.projectDetails.tasks && props.projectDetails.tasks.map((val, i) => (

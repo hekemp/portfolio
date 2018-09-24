@@ -1,10 +1,10 @@
 import React from 'react';
-import { FaDesktop, FaEnvelope, FaGamepad, FaGithub, FaLinkedinIn, FaReact, FaRobot, FaTumblr, FaTwitter } from 'react-icons/fa'
+import { FaDesktop, FaGamepad, FaReact, FaRobot } from 'react-icons/fa'
 
 import { Column, Columns } from '../components/column';
 import { Container } from '../components/container';
 import { Footer } from '../components/footer'
-import { HeroImage, HeroText, SocialButton, SocialButtonContainer } from '../components/hero';
+import { HeroImage, HeroSocialButtonContainer, HeroText, SocialButtonContainer, SocialButtons } from '../components/hero';
 import { Icon } from '../components/icon';
 import Nav from '../components/navbar';
 import { Projects } from '../components/projects'
@@ -20,15 +20,11 @@ const IndexPage = () => (
     <HeroImage>
       <HeroText>
         <H1 color={vars.white} alignment='center'>Alic Szecsei</H1>
-        <H4 color={vars.white} alignment='center'>Game Developer & Software Engineer</H4>
+        <H4 color={vars.white} alignment='center'>Gameplay Programmer & Software Engineer</H4>
       </HeroText>
-      <SocialButtonContainer>
-        <SocialButton href='mailto:aszecsei@gmail.com'><Icon><FaEnvelope aria-labelledby='Email' role='img' /></Icon></SocialButton>
-        <SocialButton href='https://twitter.com/aszecsei'><Icon><FaTwitter aria-labelledby='Twitter' role='img' /></Icon></SocialButton>
-        <SocialButton href='https://linkedin.com/in/alic-szecsei'><Icon><FaLinkedinIn aria-labelledby='LinkedIn' role='img' /></Icon></SocialButton>
-        <SocialButton href='https://github.com/aszecsei'><Icon><FaGithub aria-labelledby='GitHub' role='img' /></Icon></SocialButton>
-        <SocialButton href='http://blog.alic-szecsei.com'><Icon><FaTumblr aria-labelledby='Tumblr' role='img' /></Icon></SocialButton>
-      </SocialButtonContainer>
+      <HeroSocialButtonContainer>
+        <SocialButtons />
+      </HeroSocialButtonContainer>
     </HeroImage>
     <Section id="about">
       <Container>
@@ -84,20 +80,23 @@ const IndexPage = () => (
         <Projects projects={games} />
       </Container>
     </Section>
-    <Section id="projects">
+    <Section id="software">
       <Container>
-        <H2 alignment='center'>Other Projects</H2>
+        <H2 alignment='center'>Software</H2>
         <Projects projects={otherProjects} />
       </Container>
     </Section>
-    <Section id="skills">
+    <Section id="contact" color={vars.dark()}>
       <Container>
-        <H2 alignment='center'>Skills</H2>
-      </Container>
-    </Section>
-    <Section id="contact">
-      <Container>
-        <H2 alignment='center'>Contact Me</H2>
+        <H2 alignment='center' color={vars.white}>Contact Me</H2>
+        <Columns alignment='center'>
+          <Column size={8}>
+            <Text alignment='center' color={vars.light()}>I'm always interested in collaborating on new projects! Feel free to reach out via one of the links below:</Text>
+            <SocialButtonContainer>
+              <SocialButtons />
+            </SocialButtonContainer>
+          </Column>
+        </Columns>
       </Container>
     </Section>
     <Footer />
