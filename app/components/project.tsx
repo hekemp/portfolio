@@ -75,7 +75,7 @@ interface IProjectImgProps {
 }
 
 const ProjectImg = (props: IProjectImgProps) => (
-  <LazyLoad once offset={100} height={props.height}>
+  <LazyLoad once offset={200} height={props.height}>
     <Image src={`/static/img/${props.isThumbnail ? 'thumbnails' : 'projects'}/${props.src}`} alt={props.alt} />
   </LazyLoad>
 )

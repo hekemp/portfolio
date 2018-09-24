@@ -4,6 +4,7 @@ import { vars } from './style-variables'
 
 interface IStyledImageProps {
   isRounded?: boolean
+  hasRoundedCorners?: boolean
 }
 
 const StyledImage = styled<IStyledImageProps, 'img'>('img')`
@@ -13,6 +14,9 @@ const StyledImage = styled<IStyledImageProps, 'img'>('img')`
   width: 100%;
   ${(props: IStyledImageProps) => props.isRounded && css`
     border-radius: ${vars["radius-rounded"]};
+  `}
+  ${(props: IStyledImageProps) => props.hasRoundedCorners && css`
+    border-radius: ${vars["radius-large"]};
   `}
   margin-top: 1em;
   margin-bottom: 1em;
