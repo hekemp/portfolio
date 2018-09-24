@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import * as React from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 import LazyLoad from 'react-lazyload'
@@ -112,6 +113,39 @@ const ProjectCheckText = styled(Text)`
   line-height: 1.2;
 `
 
+const ProjectLink = styled.a`
+  text-decoration: none;
+  font-variant: small-caps;
+  color: ${vars.blue};
+  transition: all 0.1s ease-in-out;
+  display: inline-block;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    display: block;
+    transition: all 0.1s ease-in-out;
+    transform: translateY(-5px) scaleX(0);
+    background-color: ${vars.blue};
+    opacity: 0;
+  }
+
+  &:hover {
+    color: ${vars.primary()};
+    cursor: pointer;
+    &:before {
+      transform: translateY(0) scaleX(1);
+      background-color: ${vars.primary()};
+      opacity: 1;
+    }
+  }
+`
+
 interface IProjectProps {
   projectDetails: IProject
 }
@@ -119,7 +153,7 @@ interface IProjectProps {
 export const Project = (props: IProjectProps) => (
   <>
     <Card>
-      <H5>{props.projectDetails.name}</H5>
+      <H5><Link href={'/' + props.projectDetails.url} passHref><ProjectLink>{props.projectDetails.name}</ProjectLink></Link></H5>
       <H6>{props.projectDetails.date}</H6>
       <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={274} alt={`a preview image for ${props.projectDetails.name}`} />
       <Text color={vars.grey}><em>{props.projectDetails.summary}</em></Text>

@@ -16,7 +16,7 @@ import { games, otherProjects } from '../models/project';
 
 const IndexPage = () => (
   <div>
-    <Nav />
+    <Nav shouldUseScroll />
     <HeroImage>
       <HeroText>
         <H1 color={vars.white} alignment='center'>Alic Szecsei</H1>

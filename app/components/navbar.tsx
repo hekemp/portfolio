@@ -187,12 +187,16 @@ const Hamburger = (props: IHamburgerProps) => (
   </HamburgerDiv>
 );
 
+interface INavProps {
+  shouldUseScroll?: boolean
+}
+
 interface INavState {
   isActive: boolean
 }
 
-class Nav extends React.Component<{}, INavState> {
-  constructor(props: {}) {
+class Nav extends React.Component<INavProps, INavState> {
+  constructor(props: INavProps) {
     super(props)
     this.state = {
       isActive: false
@@ -204,23 +208,23 @@ class Nav extends React.Component<{}, INavState> {
       <Navbar>
         <NavbarContainer>
           <NavbarBrand>
-            <NavLink href="/" onClick={this.scrollToTop}>Alic Szecsei</NavLink>
+            <NavLink href="/" onClick={this.props.shouldUseScroll && this.scrollToTop}>Alic Szecsei</NavLink>
             <Hamburger dimensions={44} isActive={this.state.isActive} onClick={this.onClickHamburger} />
           </NavbarBrand>
         
           <NavbarCollapse isActive={this.state.isActive}>
             <NavbarNav>
               <NavItem>
-                <NavLink href="#about" onClick={this.scrollToAbout}>About</NavLink>
+                <NavLink href="/#about" onClick={this.props.shouldUseScroll && this.scrollToAbout}>About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#games" onClick={this.scrollToGames}>Games</NavLink>
+                <NavLink href="/#games" onClick={this.props.shouldUseScroll && this.scrollToGames}>Games</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#software" onClick={this.scrollToSoftware}>Software</NavLink>
+                <NavLink href="/#software" onClick={this.props.shouldUseScroll && this.scrollToSoftware}>Software</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#contact" onClick={this.scrollToContact}>Contact</NavLink>
+                <NavLink href="/#contact" onClick={this.props.shouldUseScroll && this.scrollToContact}>Contact</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/static/Resume.pdf" target="_blank"
@@ -258,7 +262,6 @@ class Nav extends React.Component<{}, INavState> {
     event.preventDefault()
     scroller.scrollTo('about', {
       smooth: true,
-      offset: -100,
       isDynamic: true,
     })
   }
@@ -267,7 +270,6 @@ class Nav extends React.Component<{}, INavState> {
     event.preventDefault()
     scroller.scrollTo('games', {
       smooth: true,
-      offset: -100,
       isDynamic: true,
     })
   }
@@ -276,7 +278,6 @@ class Nav extends React.Component<{}, INavState> {
     event.preventDefault()
     scroller.scrollTo('software', {
       smooth: true,
-      offset: -100,
       isDynamic: true,
     })
   }
@@ -285,7 +286,6 @@ class Nav extends React.Component<{}, INavState> {
     event.preventDefault()
     scroller.scrollTo('contact', {
       smooth: true,
-      offset: -100,
       isDynamic: true,
     })
   }

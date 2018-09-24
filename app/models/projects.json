@@ -16,7 +16,8 @@
         "Created quest items to be completed",
         "Created custom triggers for NPC characters",
         "Implemented dynamically disappearing cut-outs of train cars"
-      ]
+      ],
+      "url": "zephyr"
     },
     {
       "name": "BugHunters 2",
@@ -34,7 +35,8 @@
         "Implemented motion controls, movement system, and bullet pooling",
         "Worked closely with 3D assets to implement realistic physics constraints",
         "Extended several components in the SteamVR interaction system"
-      ]
+      ],
+      "url": "bughunters2"
     },
     {
       "name": "Tony Birb: Pro Sk8er 2003",
@@ -52,7 +54,8 @@
       "tasks": [
         "Created 3D model, textures, and animations",
         "Programmed particle effects to react to whether or not the player is on a twig"
-      ]
+      ],
+      "url": "tonybirb"
     },
     {
       "name": "Internet of Followers",
@@ -70,7 +73,8 @@
       "tasks": [
         "Programmed 6DOF movement system",
         "Implemented spring-based 3D node placement algorithm"
-      ]
+      ],
+      "url": "internet-of-followers"
     },
     {
       "name": "Bee Dodger",
@@ -90,7 +94,8 @@
         "Designed 2D game engine using HTML5/Canvas and pure JavaScript",
         "Implemented animation system, various enemies, and scoring mechanics",
         "Created various menus, including a pause menu"
-      ]
+      ],
+      "url": "bee-dodger"
     },
     {
       "name": "Highway To A Neon Valhalla",
@@ -108,7 +113,8 @@
       "tasks": [
         "Created 3D models, music, and sound effects",
         "Programmed infinite road and terrain generation"
-      ]
+      ],
+      "url": "neon-valhalla"
     },
     {
       "name": "Train Filler",
@@ -126,7 +132,8 @@
       "tasks": [
         "Programmed ragdoll physics for 2D stick figures and hose physics for player controllers",
         "Implemented twin-stick shooting character controller"
-      ]
+      ],
+      "url": "train-filler"
     },
     {
       "name": "Gravity",
@@ -142,7 +149,8 @@
       "tasks": [
         "Programmed game, menus, & level editor which serializes to JSON",
         "Designed 15 levels using level editor"
-      ]
+      ],
+      "url": "gravity"
     },
     {
       "name": "On The Tracks",
@@ -160,7 +168,8 @@
       "tasks": [
         "Programmed game and menus",
         "Implemented blood trail effect using particles"
-      ]
+      ],
+      "url": "on-the-tracks"
     },
     {
       "name": "Untitled",
@@ -176,7 +185,8 @@
       "tasks": [
         "Programmed game and triggers for narrative presentation",
         "Developed visual style using post-processing shaders"
-      ]
+      ],
+      "url": "untitled"
     },
     {
       "name": "Rover",
@@ -193,7 +203,8 @@
       "tasks": [
         "Implemented visual effects using post-processing shaders",
         "Programmed UI for displaying distance to the closest pick-up"
-      ]
+      ],
+      "url": "rover"
     },
     {
       "name": "Chess Plus",
@@ -211,7 +222,8 @@
       "tasks": [
         "Programmed chess movement, AI, and UI for displaying legal chess moves",
         "Developed algorithm to procedurally generate more difficult levels by using chess scoring rules"
-      ]
+      ],
+      "url": "chess-plus"
     }
   ],
   "other": [
@@ -232,7 +244,8 @@
         "Developed and programmed a 5-minute dance routine for 4 Nao robots",
         "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
         "Assisted in the programming of other students' dance routines"
-      ]
+      ],
+      "url": "dancing-robots"
     },
     {
       "name": "dexterity.io",
@@ -251,7 +264,8 @@
         "Led team of students using agile methodologies",
         "Developed issue activity log, burndown charts, and issue creation UI",
         "Customized resort gem to work with Ruby 5"
-      ]
+      ],
+      "url": "dexterity-io"
     },
     {
       "name": "TraumaHawk",
@@ -269,7 +283,8 @@
       "tasks": [
         "Adapted existing iOS app to use Flutter, using Redux for state management",
         "Developed secured API and web front-end for hospitals to use when viewing crash reports"
-      ]
+      ],
+      "url": "traumahawk"
     },
     {
       "name": "Electric IRC",
@@ -285,7 +300,8 @@
       "tasks": [
         "Refactored application to use Redux data store, and led team research into Redux",
         "Led development of IRC calls using redux-saga"
-      ]
+      ],
+      "url": "electric-irc"
     }
   ]
 }

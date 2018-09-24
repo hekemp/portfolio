@@ -16,6 +16,8 @@ export interface IProject {
   github?: string
   itch?: string
   youtube?: string
+
+  url: string
 }
 
 export const games = projects.games as IProject[]
