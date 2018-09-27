@@ -205,7 +205,7 @@ export const Gravity: IProject = {
   "thumbnail_img_path": "icon_gravity.png",
   "img_path": "gravity.png",
   "date": "February 2015",
-  "link": "sector5/",
+  "link": "/games/sector5/",
   "tags": ["JavaScript", "HTML5/Canvas"],
   "tasks": [
     "Programmed game, menus, & level editor which serializes to JSON",
