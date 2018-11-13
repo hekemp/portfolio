@@ -80,9 +80,9 @@ const IndexPage = () => (
         <Projects projects={games} />
       </Container>
     </Section>
-    <Section id="software">
+    <Section id="projects">
       <Container>
-        <H2 alignment='center'>Software</H2>
+        <H2 alignment='center'>Projects</H2>
         <Projects projects={otherProjects} />
       </Container>
     </Section>

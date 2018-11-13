@@ -193,6 +193,11 @@ export const ProjectPage = (props: IProjectPageProps) => (
         </Columns>
       </Container>
     </Section>
+    <Section color={vars.dark()}>
+      <Container>
+      {props.project.returnLink ? <H5 alignment='center'><ProjectLink href={`/#` + props.project.returnLink}>Go back</ProjectLink></H5> : false}
+        </Container>
+    </Section>
     <Footer />
   </>
 )

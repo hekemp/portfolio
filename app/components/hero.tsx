@@ -1,6 +1,6 @@
 import { rgba } from 'polished'
 import * as React from 'react'
-import { FaEnvelope, FaGithub, FaLinkedinIn, FaMastodon, FaTumblr, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaLinkedinIn, FaTwitter, FaMedium, FaGamepad } from 'react-icons/fa'
 import styled from 'styled-components'
 
 import{ Icon } from './icon'
@@ -72,11 +72,11 @@ export const HeroSocialButtonContainer = styled(SocialButtonContainer)`
 
 export const SocialButtons = () => (
   <>
-    <SocialButton href='mailto:aszecsei@gmail.com'><Icon><FaEnvelope aria-labelledby='Email' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://twitter.com/aszecsei'><Icon><FaTwitter aria-labelledby='Twitter' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://mastodon.gamedev.place/@aszecsei'><Icon><FaMastodon aria-labelledby='Mastodon' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://linkedin.com/in/alic-szecsei'><Icon><FaLinkedinIn aria-labelledby='LinkedIn' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://github.com/aszecsei'><Icon><FaGithub aria-labelledby='GitHub' role='img' /></Icon></SocialButton>
-    <SocialButton href='http://blog.alic-szecsei.com'><Icon><FaTumblr aria-labelledby='Tumblr' role='img' /></Icon></SocialButton>
+    <SocialButton href='mailto:2heatherk@gmail.com'><Icon><FaEnvelope aria-labelledby='Email' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://twitter.com/IAmHeatherKemp'><Icon><FaTwitter aria-labelledby='Twitter' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://www.linkedin.com/in/hekemp/'><Icon><FaLinkedinIn aria-labelledby='LinkedIn' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://github.com/hekemp'><Icon><FaGithub aria-labelledby='GitHub' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://medium.com/@heatherkemp_89938'><Icon><FaMedium aria-labelledby='Medium' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://hekemp.itch.io'><Icon><FaGamepad aria-labelledby='Itch.io' role='img' /></Icon></SocialButton>
   </>
 )

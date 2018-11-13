@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "A personal portfolio",
   "main": "index.js",
-  "repository": "git@github.com:aszecsei/portfolio.git",
-  "author": "Alic Szecsei <aszecsei@gmail.com>",
+  "repository": "git@github.com:hekemp/portfolio.git",
+  "author": "Heather Kemp <heatherkemp7@yahoo.com>",
   "license": "MIT",
   "private": true,
   "scripts": {

@@ -208,7 +208,7 @@ class Nav extends React.Component<INavProps, INavState> {
       <Navbar>
         <NavbarContainer>
           <NavbarBrand>
-            <NavLink href="/" onClick={this.props.shouldUseScroll && this.scrollToTop}>Alic Szecsei</NavLink>
+            <NavLink href="/" onClick={this.props.shouldUseScroll && this.scrollToTop}>Heather Kemp</NavLink>
             <Hamburger dimensions={44} isActive={this.state.isActive} onClick={this.onClickHamburger} />
           </NavbarBrand>
         
@@ -221,7 +221,7 @@ class Nav extends React.Component<INavProps, INavState> {
                 <NavLink href="/#games" onClick={this.props.shouldUseScroll && this.scrollToGames}>Games</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#software" onClick={this.props.shouldUseScroll && this.scrollToSoftware}>Software</NavLink>
+                <NavLink href="/#projects" onClick={this.props.shouldUseScroll && this.scrollToProjects}>Projects</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/#contact" onClick={this.props.shouldUseScroll && this.scrollToContact}>Contact</NavLink>
@@ -232,7 +232,7 @@ class Nav extends React.Component<INavProps, INavState> {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="http://blog.alic-szecsei.com"
+                  href="https://medium.com/@heatherkemp_89938"
                 >
                   Blog
                 </NavLink>
@@ -274,9 +274,9 @@ class Nav extends React.Component<INavProps, INavState> {
     })
   }
 
-  private scrollToSoftware = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  private scrollToProjects = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault()
-    scroller.scrollTo('software', {
+    scroller.scrollTo('projects', {
       smooth: true,
       isDynamic: true,
     })
