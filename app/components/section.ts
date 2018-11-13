@@ -13,6 +13,7 @@ export const Section = styled<ISectionProps, 'section'>('section')`
   ${(props: ISectionProps) => props.color ? css`background-color: ${props.color};` : css`background-color: ${vars.background()};`}
   ${media.desktop`
     ${(props: ISectionProps) =>
+      props.size === 'small' ? css`padding: 50px 1.5em;` :
       props.size === 'medium'
         ? css`
             padding: calc(9em + 100px) 1.5em;

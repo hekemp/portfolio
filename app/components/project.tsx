@@ -155,7 +155,7 @@ export const Project = (props: IProjectProps) => (
     <Card>
       <H5><Link href={'/' + props.projectDetails.url} passHref><ProjectLink>{props.projectDetails.name}</ProjectLink></Link></H5>
       <H6>{props.projectDetails.date}</H6>
-      <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={274} alt={`a preview image for ${props.projectDetails.name}`} />
+      <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={274} alt={`A preview image for ${props.projectDetails.name}`} />
       <Text color={vars.grey}><em>{props.projectDetails.summary}</em></Text>
       <ProjectChecks>
         {props.projectDetails.tasks && props.projectDetails.tasks.map((val, i) => (
