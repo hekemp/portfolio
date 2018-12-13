@@ -21,6 +21,7 @@ const initialVars = {
   orange: hsl(14, 1, 0.53),
   yellow: hsl(48, 1, 0.67),
   green: hsl(141, 0.71, 0.48),
+  seafoam: hsl(177, .50, .46),
   turquoise: hsl(171, 1, 0.41),
   cyan: hsl(204, 0.86, 0.53),
   blue: hsl(217, 0.71, 0.53),
@@ -54,7 +55,7 @@ const initialVars = {
 }
 
 const derivedVars = {
-  primary: () => initialVars.purple,
+  primary: () => initialVars.seafoam,
   info: () => initialVars.cyan,
   success: () => initialVars.green,
   warning: () => initialVars.yellow,
@@ -86,7 +87,7 @@ export const getInverse = (color: string) => {
 
 // TYPOGRAPHY
 
-const bigScale = 1.414 // Augmented 4th
+const bigScale = 1.25 // Augmented 4th
 const medScale = 1.25 // Major 3rd
 const smallScale = 1.25 // Major 2nd
 

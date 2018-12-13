@@ -147,7 +147,8 @@ const ProjectLink = styled.a`
 `
 
 interface IProjectProps {
-  projectDetails: IProject
+  projectDetails: IProject,
+  onChipClicked?: (tag: string) => void,
 }
 
 export const Project = (props: IProjectProps) => (
@@ -167,7 +168,7 @@ export const Project = (props: IProjectProps) => (
       <CardFooter>
         <Chips>
           {props.projectDetails.tags && props.projectDetails.tags.map((val, index) => (
-            <Chip key={index} color={getColorForTag(val)}>{val}</Chip>
+            <Chip key={index} color={getColorForTag(val)} onClick={() => props.onChipClicked && props.onChipClicked(val)}>{val}</Chip>
           ))}
         </Chips>
       </CardFooter>

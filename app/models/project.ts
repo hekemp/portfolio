@@ -34,7 +34,7 @@ export const Zephyr: IProject = {
   "software": "Unreal Engine 4",
   "language": "Blueprints",
   "role": "Gameplay Programmer, Composer",
-  "thumbnail_img_path": "odyssey.gif",
+  "thumbnail_img_path": "odyssey.webp",
   "img_path": "odyssey.png",
   "date": "March 2018",
   "link": "https://joat.itch.io/odyssey-of-the-zephyr",
@@ -59,7 +59,7 @@ export const BugHunters: IProject = {
   "software": "Unity",
   "language": "C#",
   "role": "Gameplay Programmer",
-  "thumbnail_img_path": "icon_bughunters.png",
+  "thumbnail_img_path": "icon_bughunters.webp",
   "img_path": "",
   "date": "February 2018",
   "link": "https://github.com/hekemp/BugHunters2",
@@ -85,7 +85,7 @@ export const TonyBirb: IProject = {
   "software": "Unity",
   "language": "C#",
   "role": "Technical Artist, Character Artist",
-  "thumbnail_img_path": "icon_tonybirb.png",
+  "thumbnail_img_path": "icon_tonybirb.webp",
   "img_path": "tonybirb.jpg",
   "gif_path": "birb.gif",
   "date": "October 2017",
@@ -125,7 +125,7 @@ export const InternetOfFollowers: IProject = {
 }
 
 export const DancingRobots: IProject = {
-  "name": "Dancing Robots",
+  "name": "Robot Theater Stem Outreach",
   "summary": "an interdisciplinary, project-based course",
   "description": [
     "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
@@ -150,13 +150,366 @@ export const DancingRobots: IProject = {
   "returnLink": "projects"
 }
 
+export const RobotEyebrows: IProject = {
+  "name": "NAO Robot Eyebrows",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+export const SafeSwarm: IProject = {
+  "name": "SafeSwarm",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+export const Werewolf: IProject = {
+  "name": "Werewolf",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "games"
+}
+
+export const StatisticsAppSuite: IProject = {
+  "name": "Statistics App Suite",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+
+export const DataCleaner: IProject = {
+  "name": "Career Center Data Cleaner",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+export const SandwichDiscourse: IProject = {
+  "name": "Sandwich Discourse",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_sandwich.webp",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "games"
+}
+
+export const AttendEZ: IProject = {
+  "name": "AttendEZ",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+export const VRShowdown: IProject = {
+  "name": "Accessible VR Showdown Coach",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "games"
+}
+
+export const DeathParadox: IProject = {
+  "name": "Death Paradox",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "games"
+}
+
+export const HoloScribe: IProject = {
+  "name": "HoloScribe",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+export const MettaPR: IProject = {
+  "name": "Metta",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+export const OutlookAccessibility: IProject = {
+  "name": "Outlook Accessibility Checker",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+export const ConferenceOrganizer: IProject = {
+  "name": "Conference Organizer",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robots.jpg",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dancing-robots",
+  "returnLink": "projects"
+}
+
+
 export const games = [
-  Zephyr,
+  VRShowdown,
   BugHunters,
+  DeathParadox,
   TonyBirb,
-  InternetOfFollowers,
+  Werewolf,
+  Zephyr,
+  SandwichDiscourse,
 ]
 
 export const otherProjects = [
+  HoloScribe,
+  RobotEyebrows, 
+  InternetOfFollowers,
+  SafeSwarm, 
   DancingRobots,
+  StatisticsAppSuite,
+  DataCleaner,
+  AttendEZ,
+  MettaPR,
+  OutlookAccessibility,
+  ConferenceOrganizer,
 ]

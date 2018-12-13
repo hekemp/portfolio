@@ -230,13 +230,6 @@ class Nav extends React.Component<INavProps, INavState> {
                 <NavLink href="/static/Resume.pdf" target="_blank"
                   rel="noopener noreferrer">Resume</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://medium.com/@heatherkemp_89938"
-                >
-                  Blog
-                </NavLink>
-              </NavItem>
             </NavbarNav>
           </NavbarCollapse>
         </NavbarContainer>

@@ -23,7 +23,8 @@ function sortProjectsByDate(arr: IProject[]) {
 }
 
 interface IProjectsState {
-  filter: string
+  filter: string,
+  inputValue: string,
 }
 
 export class Projects extends React.Component<IProjectsProps, IProjectsState> {
@@ -31,7 +32,8 @@ export class Projects extends React.Component<IProjectsProps, IProjectsState> {
   constructor(props: IProjectsProps) {
     super(props)
     this.state = {
-      filter: ""
+      filter: "",
+      inputValue: ''
     }
     this.search = new JsSearch.Search('id')
     this.search.tokenizer = new JsSearch.StemmingTokenizer(stem, new JsSearch.SimpleTokenizer())
@@ -51,7 +53,7 @@ export class Projects extends React.Component<IProjectsProps, IProjectsState> {
           <Column size={4} offsetSize={8}>
             <Form.Field>
               <Form.Control>
-                <Form.Input placeholder='Search' type='text' onChange={this.updateFilter} aria-label='Search' />
+                <Form.Input placeholder='Search' type='text' onChange={this.updateFilter} aria-label='Search' value={this.state.inputValue}/>
               </Form.Control>
             </Form.Field>
           </Column>
@@ -60,7 +62,7 @@ export class Projects extends React.Component<IProjectsProps, IProjectsState> {
             <Columns key={index}>
               {value.map((project, index2) => (
                 <Column key={index2} size={12/numProjectCols}>
-                  <Project key={index2} projectDetails={project} />
+                  <Project key={index2} projectDetails={project} onChipClicked={this.updateChipClicked}/>
                 </Column>
               ))}
             </Columns>
@@ -69,8 +71,13 @@ export class Projects extends React.Component<IProjectsProps, IProjectsState> {
     )
   }
 
+  private updateChipClicked = (tag: string) => {
+    
+    this.setState({filter: tag, inputValue: tag});
+  }
+
   private updateFilter = (e: React.FormEvent<HTMLInputElement>) => {
     const input = e.target as HTMLInputElement
-    this.setState({filter: input.value})
+    this.setState({filter: input.value, inputValue: input.value})
   }
 }

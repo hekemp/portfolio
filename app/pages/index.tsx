@@ -19,7 +19,7 @@ const IndexPage = () => (
     <Nav shouldUseScroll />
     <HeroImage>
       <HeroText>
-        <H1 color={vars.white} alignment='center'>Alic Szecsei</H1>
+        <H1 color={vars.white} alignment='center'>Heather Kemp</H1>
         <H4 color={vars.white} alignment='center'>Gameplay Programmer & Software Engineer</H4>
       </HeroText>
       <HeroSocialButtonContainer>
@@ -82,7 +82,7 @@ const IndexPage = () => (
     </Section>
     <Section id="projects">
       <Container>
-        <H2 alignment='center'>Projects</H2>
+        <H2 alignment='center'>Other Projects</H2>
         <Projects projects={otherProjects} />
       </Container>
     </Section>

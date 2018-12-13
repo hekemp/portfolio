@@ -18,17 +18,17 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
-          <title>Alic Szecsei</title>
+          <title>Heather Kemp</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
           <meta name="robots" content="index, follow" />
-          <meta name="author" content="Alic Szecsei" />
+          <meta name="author" content="Heather Kemp" />
           <meta
             name="description"
             content="Game programming and software development
-          portfolio of Alic Szecsei."
+          portfolio of Heather Kemp."
           />
 
           {/* Facebook OpenGraph */}
@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="Alic Szecsei" />
           <meta
             property="og:description"
-            content="Game programming and software development portfolio of Alic Szecsei."
+            content="Game programming and software development portfolio of Heather Kemp."
           />
           <meta property="og:url" content="https://alic-szecsei.com" />
           <meta
