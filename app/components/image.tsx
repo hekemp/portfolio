@@ -30,8 +30,8 @@ interface IImageProps {
 export const Image = (props: IStyledImageProps & IImageProps) => (
   <picture>
     {/* Make the webp be the editted / substringed. Pass in the default (jpg/gif/png) */}
-    <source srcSet={props.src} type="image/webp" />
-    <source srcSet={props.src.substring(0,props.src.length - 4) + "png"} type="image/png" />
+    <source srcSet={props.src.substring(0, props.src.length - 3) + "webp"} type="image/webp" />
+    <source srcSet={props.src} />
     <StyledImage {...props} />
   </picture>
 )

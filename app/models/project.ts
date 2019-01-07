@@ -10,7 +10,7 @@ export interface IProject {
   img_path: string
   gif_path?: string
 
-  link: string
+  link?: string
   github?: string
   itch?: string
   youtube?: string
@@ -33,8 +33,8 @@ export const Zephyr: IProject = {
   "type": "Game Jam",
   "software": "Unreal Engine 4",
   "language": "Blueprints",
-  "role": "Gameplay Programmer, Composer",
-  "thumbnail_img_path": "odyssey.webp",
+  "role": "Gameplay Programmer",
+  "thumbnail_img_path": "icon_odyssey.png",
   "img_path": "odyssey.png",
   "date": "March 2018",
   "link": "https://joat.itch.io/odyssey-of-the-zephyr",
@@ -58,8 +58,8 @@ export const BugHunters: IProject = {
   "type": "University Project",
   "software": "Unity",
   "language": "C#",
-  "role": "Gameplay Programmer",
-  "thumbnail_img_path": "icon_bughunters.webp",
+  "role": "Gameplay Programmer, Producer",
+  "thumbnail_img_path": "icon_bughunters.png",
   "img_path": "",
   "date": "February 2018",
   "link": "https://github.com/hekemp/BugHunters2",
@@ -84,12 +84,13 @@ export const TonyBirb: IProject = {
   "type": "Game Jam",
   "software": "Unity",
   "language": "C#",
-  "role": "Technical Artist, Character Artist",
-  "thumbnail_img_path": "icon_tonybirb.webp",
+  "role": "Gameplay Programmer",
+  "thumbnail_img_path": "icon_tonybirb.png",
   "img_path": "tonybirb.jpg",
   "gif_path": "birb.gif",
   "date": "October 2017",
   "link": "tonybirb/",
+  "itch": "https://itch.io/embed/325452?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
   "tags": ["C#", "Unity", "EPX Jam"],
   "tasks": [
     "Created 3D model, textures, and animations",
@@ -109,7 +110,7 @@ export const InternetOfFollowers: IProject = {
   "type": "Hackathon",
   "software": "Unity",
   "language": "C#",
-  "role": "Gameplay Programmer",
+  "role": "Programmer, Producer, Scrum Master",
   "thumbnail_img_path": "icon_iof.jpg",
   "img_path": "iof.jpg",
   "date": "September 2017",
@@ -124,7 +125,7 @@ export const InternetOfFollowers: IProject = {
   "returnLink": "projects"
 }
 
-export const DancingRobots: IProject = {
+export const RobotOutreach: IProject = {
   "name": "Robot Theater Stem Outreach",
   "summary": "an interdisciplinary, project-based course",
   "description": [
@@ -134,19 +135,19 @@ export const DancingRobots: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Instructor, Animator, Choreographer, Programmer",
+  "thumbnail_img_path": "icon_robot_outreach.jpg",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
   "youtube": "n2CMJaNdBaI",
-  "tags": ["Python", "NAO Robots"],
+  "tags": ["Python", "NAO Robots", "Cozmo Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "robot-outreach",
   "returnLink": "projects"
 }
 
@@ -160,8 +161,8 @@ export const RobotEyebrows: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Programmer, Hardware Engineer, 3D Designer",
+  "thumbnail_img_path": "icon_nao_eyebrows.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -172,7 +173,7 @@ export const RobotEyebrows: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "robot-eyebrows",
   "returnLink": "projects"
 }
 
@@ -186,8 +187,8 @@ export const SafeSwarm: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Programmer, Project Manager",
+  "thumbnail_img_path": "icon_safeswarm.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -198,7 +199,7 @@ export const SafeSwarm: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "safeswarm",
   "returnLink": "projects"
 }
 
@@ -212,8 +213,8 @@ export const Werewolf: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Programmer, Producer, Graphic Designer",
+  "thumbnail_img_path": "icon_werewolf.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -224,7 +225,7 @@ export const Werewolf: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "werewolf",
   "returnLink": "games"
 }
 
@@ -238,19 +239,19 @@ export const StatisticsAppSuite: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Lead Programmer",
+  "thumbnail_img_path": "icon_statistics_suite.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "github": "hekemp/Statistics-App-Suite",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "statistics-app-suite",
   "returnLink": "projects"
 }
 
@@ -265,8 +266,8 @@ export const DataCleaner: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Lead Programmer, Graphic Designer",
+  "thumbnail_img_path": "icon_datacleaner.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -277,7 +278,7 @@ export const DataCleaner: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "data-cleaner",
   "returnLink": "projects"
 }
 
@@ -291,11 +292,12 @@ export const SandwichDiscourse: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_sandwich.webp",
+  "role": "Lead Programmer, Graphic Designer",
+  "thumbnail_img_path": "icon_sandwich.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "itch": "https://itch.io/embed/235915?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
   "youtube": "n2CMJaNdBaI",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
@@ -303,7 +305,7 @@ export const SandwichDiscourse: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "sandwich-discourse",
   "returnLink": "games"
 }
 
@@ -317,8 +319,8 @@ export const AttendEZ: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Lead Programmer, Graphic Designer, Project Manager",
+  "thumbnail_img_path": "icon_attendez.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -329,12 +331,12 @@ export const AttendEZ: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "attendez",
   "returnLink": "projects"
 }
 
 export const VRShowdown: IProject = {
-  "name": "Accessible VR Showdown Coach",
+  "name": "Accessible VR Showdown",
   "summary": "an interdisciplinary, project-based course",
   "description": [
     "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
@@ -343,8 +345,8 @@ export const VRShowdown: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Lead Programmer",
+  "thumbnail_img_path": "icon_vr_showdown.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -355,7 +357,7 @@ export const VRShowdown: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "vr-showdown",
   "returnLink": "games"
 }
 
@@ -369,8 +371,8 @@ export const DeathParadox: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Programmer, Producer",
+  "thumbnail_img_path": "icon_death_paradox.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -381,7 +383,7 @@ export const DeathParadox: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "death-paradox",
   "returnLink": "games"
 }
 
@@ -395,8 +397,8 @@ export const HoloScribe: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Programmer, Producer",
+  "thumbnail_img_path": "icon_holoscribe.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -407,22 +409,23 @@ export const HoloScribe: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "holoscribe",
   "returnLink": "projects"
 }
 
 export const MettaPR: IProject = {
   "name": "Metta",
-  "summary": "an interdisciplinary, project-based course",
+  "summary": "a crowdsourced application focused on sharing stories from different cultures",
   "description": [
+    "Project Metta was created for Microsoft One Week 2018.",
     "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
     "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
   ],
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Programmer, Graphic Designer",
+  "thumbnail_img_path": "icon_metta.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -433,7 +436,7 @@ export const MettaPR: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "metta",
   "returnLink": "projects"
 }
 
@@ -447,8 +450,8 @@ export const OutlookAccessibility: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Graphic Designer, Project Manager",
+  "thumbnail_img_path": "icon_outlook.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -459,7 +462,7 @@ export const OutlookAccessibility: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "outlook-accessibility",
   "returnLink": "projects"
 }
 
@@ -473,8 +476,8 @@ export const ConferenceOrganizer: IProject = {
   "type": "University Project",
   "software": "Choregraphe",
   "language": "Python",
-  "role": "Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robots.jpg",
+  "role": "Graphic Designer, Conference Organizer",
+  "thumbnail_img_path": "icon_conference.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
@@ -485,7 +488,7 @@ export const ConferenceOrganizer: IProject = {
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "dancing-robots",
+  "url": "conference-organizer",
   "returnLink": "projects"
 }
 
@@ -505,7 +508,7 @@ export const otherProjects = [
   RobotEyebrows, 
   InternetOfFollowers,
   SafeSwarm, 
-  DancingRobots,
+  RobotOutreach,
   StatisticsAppSuite,
   DataCleaner,
   AttendEZ,
