@@ -653,4 +653,5 @@ textarea,
        url('/static/fonts/open-sans-v15-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('/static/fonts/open-sans-v15-latin-italic.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
+
 `

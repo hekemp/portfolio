@@ -17,7 +17,7 @@ const Foot = styled.footer`
 export const Footer = () => (
   <Foot>
     <Container>
-    <Text alignment='center'>Copyright <Emoji symbol='©️'/> <a href="https://alic-szecsei.com/">Alic Szecsei</a> 2016–{moment().format('YYYY')}, modified by Heather Kemp with permission.</Text>
+    <Text alignment='center'>Copyright <Emoji symbol='©️'/> <a href="https://alic-szecsei.com/" rel="noopener noreferrer" target="_blank">Alic Szecsei</a> 2016–{moment().format('YYYY')}, modified by Heather Kemp with permission.</Text>
     <Text alignment='center'>Made with <Emoji label='love' symbol='❤️' /> using React, <Emoji symbol='💅' /> styled-components, and more.</Text>
     </Container>
     

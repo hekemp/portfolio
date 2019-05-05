@@ -14,6 +14,7 @@ export interface IProject {
   github?: string
   itch?: string
   youtube?: string
+  embedded?: string
 
   url: string
 
@@ -37,7 +38,6 @@ export const Zephyr: IProject = {
   "thumbnail_img_path": "icon_odyssey.png",
   "img_path": "odyssey.png",
   "date": "March 2018",
-  "link": "https://joat.itch.io/odyssey-of-the-zephyr",
   "itch": "https://itch.io/embed/235921?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
   "tags": ["Blueprints", "Unreal Engine 4", "Train Jam"],
   "tasks": [
@@ -62,7 +62,6 @@ export const BugHunters: IProject = {
   "thumbnail_img_path": "icon_bughunters.png",
   "img_path": "",
   "date": "February 2018",
-  "link": "https://github.com/hekemp/BugHunters2",
   "github": "hekemp/BugHunters2",
   "tags": ["C#", "Unity", "VR"],
   "tasks": [
@@ -89,8 +88,8 @@ export const TonyBirb: IProject = {
   "img_path": "tonybirb.jpg",
   "gif_path": "birb.gif",
   "date": "October 2017",
-  "link": "tonybirb/",
   "itch": "https://itch.io/embed/325452?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
+  "github": "hekemp/Tony-Birb",
   "tags": ["C#", "Unity", "EPX Jam"],
   "tasks": [
     "Created 3D model, textures, and animations",
@@ -113,6 +112,7 @@ export const InternetOfFollowers: IProject = {
   "role": "Programmer, Producer, Scrum Master",
   "thumbnail_img_path": "icon_iof.jpg",
   "img_path": "iof.jpg",
+  "gif_path": "birb.gif",
   "date": "September 2017",
   "link": "https://devpost.com/software/internet-of-followers-iof",
   "github": "joshua-friede/Internet-of-Followers",
@@ -139,8 +139,8 @@ export const RobotOutreach: IProject = {
   "thumbnail_img_path": "icon_robot_outreach.jpg",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "link": "https://outreach.uiowa.edu/program/robot-theater-summer-program",
+  "youtube": "KXH5jP2OFec",
   "tags": ["Python", "NAO Robots", "Cozmo Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -156,7 +156,9 @@ export const RobotEyebrows: IProject = {
   "summary": "an interdisciplinary, project-based course",
   "description": [
     "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education.",
+    "https://medium.com/@heatherkemp_89938/a-journey-with-nao-robots-and-arduinos-towards-eyebrows-b4d5fef6549f",
+    "https://medium.com/@heatherkemp_89938/interfacing-nao-robots-with-the-arduino-in-depth-tutorial-284ecba0b0aa"
   ],
   "type": "University Project",
   "software": "Choregraphe",
@@ -165,8 +167,8 @@ export const RobotEyebrows: IProject = {
   "thumbnail_img_path": "icon_nao_eyebrows.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "link": "/static/reports/NAO-Eyebrows-Report.pdf",
+  "youtube": "md460xqwSKA",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -191,8 +193,8 @@ export const SafeSwarm: IProject = {
   "thumbnail_img_path": "icon_safeswarm.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "link": "/static/reports/Safe_Swarm.pdf",
+  "youtube": "Pdbdpq5uljw",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -217,8 +219,8 @@ export const Werewolf: IProject = {
   "thumbnail_img_path": "icon_werewolf.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "youtube": "v9qpx77UJTc",
+  "github": "hekemp/Werewolf",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -243,7 +245,7 @@ export const StatisticsAppSuite: IProject = {
   "thumbnail_img_path": "icon_statistics_suite.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "link": "/static/reports/Statistics-App-Suite-Report.pdf", 
   "github": "hekemp/Statistics-App-Suite",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
@@ -270,8 +272,7 @@ export const DataCleaner: IProject = {
   "thumbnail_img_path": "icon_datacleaner.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "github": "hekemp/CareerCenterDataCleaner",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -296,9 +297,8 @@ export const SandwichDiscourse: IProject = {
   "thumbnail_img_path": "icon_sandwich.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
   "itch": "https://itch.io/embed/235915?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
-  "youtube": "n2CMJaNdBaI",
+  "github": "hekemp/Sandwich-Discourse",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -323,8 +323,7 @@ export const AttendEZ: IProject = {
   "thumbnail_img_path": "icon_attendez.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "github": "UIOWASELT2018/selt18project-g009",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -349,8 +348,6 @@ export const VRShowdown: IProject = {
   "thumbnail_img_path": "icon_vr_showdown.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -375,8 +372,6 @@ export const DeathParadox: IProject = {
   "thumbnail_img_path": "icon_death_paradox.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -401,8 +396,7 @@ export const HoloScribe: IProject = {
   "thumbnail_img_path": "icon_holoscribe.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "link": "https://hackuiowa.hackerearth.com/sprints/hackuiowa-1/dashboard/38fae46/submission/",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
@@ -428,8 +422,7 @@ export const MettaPR: IProject = {
   "thumbnail_img_path": "icon_metta.png",
   "img_path": "robots.jpg",
   "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
+  "youtube": "nKo9ukq-eSA",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",

@@ -179,20 +179,21 @@ export const ProjectPage = (props: IProjectPageProps) => (
             ))}
             {props.project.gif_path ? <Image src={`/static/img/projects/${props.project.gif_path}`} alt={`a gif of ${props.project.name}`} /> : false}
             {props.project.youtube ? <YoutubeWrapper><YoutubeWidget youtube={props.project.youtube} /></YoutubeWrapper> : false}
+            {props.project.embedded ? <iframe width="640" height="320" data-original={`${props.project.embedded}`} src={`${props.project.embedded}`} data-was-processed="true"></iframe> : false }
           </Column>
         </Columns>
       </Container>
     </Section>
-    <Section>
+    {props.project.link || props.project.github || props.project.itch ? <Section>
       <Container>
         <H2 alignment='center'>Links</H2>
-        {props.project.link ? <H5 alignment='center'><ProjectLink href={props.project.link}>{props.project.name}</ProjectLink></H5> : false}
+        {props.project.link ? <H5 alignment='center'><ProjectLink href={props.project.link} rel="noopener noreferrer" target="_blank">More About {props.project.name}</ProjectLink></H5> : false}
         <Columns alignment='center'>
           {props.project.github ? <Column size={6}><GitHub repository={props.project.github} /></Column> : false}
           {props.project.itch ? <Column size={6}><ItchWidget itch={props.project.itch} /></Column> : false}
         </Columns>
       </Container>
-    </Section>
+    </Section> : false }
     <Section color={vars.dark()} size={`small`}>
       <Container>
       {props.project.returnLink ? <H5 alignment='center'><ProjectLink href={`/#` + props.project.returnLink}>Go back</ProjectLink></H5> : false}

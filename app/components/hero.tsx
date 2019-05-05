@@ -73,10 +73,10 @@ export const HeroSocialButtonContainer = styled(SocialButtonContainer)`
 export const SocialButtons = () => (
   <>
     <SocialButton href='mailto:2heatherk@gmail.com'><Icon><FaEnvelope aria-labelledby='Email' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://twitter.com/IAmHeatherKemp'><Icon><FaTwitter aria-labelledby='Twitter' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://www.linkedin.com/in/hekemp/'><Icon><FaLinkedinIn aria-labelledby='LinkedIn' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://github.com/hekemp'><Icon><FaGithub aria-labelledby='GitHub' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://medium.com/@heatherkemp_89938'><Icon><FaMedium aria-labelledby='Medium' role='img' /></Icon></SocialButton>
-    <SocialButton href='https://hekemp.itch.io'><Icon><FaGamepad aria-labelledby='Itch.io' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://twitter.com/IAmHeatherKemp' rel="noopener noreferrer" target="_blank"><Icon><FaTwitter aria-labelledby='Twitter' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://www.linkedin.com/in/hekemp/' rel="noopener noreferrer" target="_blank"><Icon><FaLinkedinIn aria-labelledby='LinkedIn' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://github.com/hekemp' rel="noopener noreferrer" target="_blank"><Icon><FaGithub aria-labelledby='GitHub' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://medium.com/@heatherkemp_89938' rel="noopener noreferrer" target="_blank"><Icon><FaMedium aria-labelledby='Medium' role='img' /></Icon></SocialButton>
+    <SocialButton href='https://hekemp.itch.io' rel="noopener noreferrer" target="_blank"><Icon><FaGamepad aria-labelledby='Itch.io' role='img' /></Icon></SocialButton>
   </>
 )
