@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["f4ef"],{"i+Dx":function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/traumahawk",function(){var n=t("pTVS");return{page:n.default||n}}])},pTVS:function(n,e,t){"use strict";t.r(e);var a=t("mXGw"),u=t("AJ92"),o=t("TJ2u");e.default=function(){return a.createElement(u.a,{project:o.o})}}},[["i+Dx","5d41","9da1"]]]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["3117"],{"89IO":function(e,n,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/bee-dodger",function(){var e=o("eo+R");return{page:e.default||e}}])},"eo+R":function(e,n,o){"use strict";o.r(n);var t=o("mXGw"),u=o("AJ92"),a=o("TJ2u");n.default=function(){return t.createElement(u.a,{project:a.a})}}},[["89IO","5d41","9da1"]]]);

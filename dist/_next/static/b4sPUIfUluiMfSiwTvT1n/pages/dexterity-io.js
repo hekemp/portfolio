@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["b12b"],{B4tY:function(n,t,e){"use strict";e.r(t);var o=e("mXGw"),u=e("AJ92"),i=e("TJ2u");t.default=function(){return o.createElement(u.a,{project:i.e})}},m2oT:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dexterity-io",function(){var n=e("B4tY");return{page:n.default||n}}])}},[["m2oT","5d41","9da1"]]]);
