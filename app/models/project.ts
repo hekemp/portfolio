@@ -427,7 +427,7 @@ export const HoloScribe: IProject = {
   role: 'HoloLens Programer',
   thumbnail_img_path: 'icon_holoscribe.png',
   img_path: 'HoloScribe_Demo2.png',
-  github: 'aszecsei/HoloScribe',
+  github: 'aszecsei/HoloSwaggins',
   date: 'October 2018',
   link: 'https://github.com/aszecsei/HoloSwaggins',
   tags: ['JavaScript', 'Unity', 'HoloLens', 'C#', 'Google Cloud Platform'],
