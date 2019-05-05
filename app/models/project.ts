@@ -383,27 +383,27 @@ export const DeathParadox: IProject = {
 }
 
 export const HoloScribe: IProject = {
-  "name": "HoloScribe",
-  "summary": "an interdisciplinary, project-based course",
+  "name": 'HoloScribe',
+  "summary": 'a tool for real-time transcription and translation',
   "description": [
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+    '<em>HoloScribe</em> is an application developed for the HoloLens that enables users to transcribe and translate text they see. Supported language targets include English, French, Spanish, and German. Users can activate the transcription and translation through the use of voice commands.',
+    "This application was developed for the University of Iowa's HACKUIOWA event.",
   ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Programmer, Producer",
-  "thumbnail_img_path": "icon_holoscribe.png",
-  "img_path": "robots.jpg",
-  "date": "December 2014",
-  "link": "https://hackuiowa.hackerearth.com/sprints/hackuiowa-1/dashboard/38fae46/submission/",
-  "tags": ["Python", "NAO Robots"],
+  "type": 'Hackathon',
+  "software": 'Unity, NodeJS',
+  "language": 'C#, JavaScript',
+  "role": 'HoloLens Programer',
+  "thumbnail_img_path": 'icon_holoscribe.png',
+  "img_path": 'HoloScribe_Demo2.png',
+  "github": 'aszecsei/HoloScribe',
+  "date": 'October 2018',
+  "link": 'https://github.com/aszecsei/HoloSwaggins',
+  "tags": ['JavaScript', 'Unity', 'HoloLens', 'C#', 'Google Cloud Platform'],
   "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
+    'Led development of HoloLens application in parallel to web API development',
+    'Integrated voice recognition and camera code using HoloLens APIs',
   ],
-  "url": "holoscribe",
+  "url": 'holoscribe',
   "returnLink": "projects"
 }
 

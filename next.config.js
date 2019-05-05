@@ -1,12 +1,13 @@
-const withTypescript = require("@zeit/next-typescript");
+const withTypescript = require('@zeit/next-typescript')
+const optimizedImages = require('next-optimized-images')
 
-const withPlugins = require('next-compose-plugins');
-
+const withPlugins = require('next-compose-plugins')
 
 const myCustomization = {
-  distDir: '../.next'
+  distDir: '../.next',
 }
 
-module.exports = withPlugins([
-  [withTypescript]
-], myCustomization);
+module.exports = withPlugins(
+  [[withTypescript], [optimizedImages]],
+  myCustomization,
+)

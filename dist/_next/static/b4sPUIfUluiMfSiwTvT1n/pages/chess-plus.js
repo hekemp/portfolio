@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["27bd"],{EQJo:function(n,e,o){"use strict";o.r(e);var t=o("mXGw"),u=o("AJ92"),c=o("TJ2u");e.default=function(){return t.createElement(u.a,{project:c.c})}},VDRf:function(n,e,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/chess-plus",function(){var n=o("EQJo");return{page:n.default||n}}])}},[["VDRf","5d41","9da1"]]]);
