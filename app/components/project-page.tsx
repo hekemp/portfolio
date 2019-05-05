@@ -1,6 +1,7 @@
 import * as React from 'react'
 import LazyLoad from 'react-lazyload'
 import styled from 'styled-components'
+import NextHead from 'next/head'
 
 import { IProject } from '../models/project'
 
@@ -38,17 +39,17 @@ const ProjectSummaryHolder = styled.div`
   width: 100%;
   ${media.tablet`
     margin: 0;
-    width: ${100 * 1 / 2}%;
+    width: ${(100 * 1) / 2}%;
   `}
 `
 
 const ProjectSummaryText = styled.div`
-  width: ${100 * 1 / 2}%;
+  width: ${(100 * 1) / 2}%;
   padding: 0 2rem;
 `
 
 const ProjectSummaryLabel = styled(ProjectSummaryText)`
-  font-weight: ${vars["weight-bold"]};
+  font-weight: ${vars['weight-bold']};
   text-align: right;
 `
 
@@ -58,7 +59,7 @@ interface IItchWidgetProps {
 
 const ItchWidget = (props: IItchWidgetProps) => (
   <LazyLoad once offset={200} height={400}>
-    <iframe frameBorder='0' src={props.itch} width="100%" height="auto"></iframe>
+    <iframe frameBorder="0" src={props.itch} width="100%" height="auto" />
   </LazyLoad>
 )
 
@@ -83,7 +84,13 @@ interface IYoutubeWidgetProps {
 }
 
 const YoutubeWidget = (props: IYoutubeWidgetProps) => (
-  <YoutubeIframe width="560" height="315" src={`https://www.youtube.com/embed/${props.youtube}?rel=0&amp;showinfo=0`} frameBorder='0' allowFullScreen></YoutubeIframe>
+  <YoutubeIframe
+    width="560"
+    height="315"
+    src={`https://www.youtube.com/embed/${props.youtube}?rel=0&amp;showinfo=0`}
+    frameBorder="0"
+    allowFullScreen
+  />
 )
 
 const ProjectLink = styled.a`
@@ -96,7 +103,7 @@ const ProjectLink = styled.a`
   padding: 0.5rem 0;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 1px;
     left: 0;
@@ -110,7 +117,7 @@ const ProjectLink = styled.a`
   }
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 1px;
     left: 0;
@@ -141,55 +148,121 @@ const ProjectLink = styled.a`
 
 export const ProjectPage = (props: IProjectPageProps) => (
   <>
+    <NextHead>
+      <title>{props.project.name} | Alic Szecsei</title>
+    </NextHead>
     <Nav />
     <Section>
       <Container>
-        <H1 alignment='center'>{props.project.name}</H1>
-        <H5 alignment='center' color={vars.grey}>{props.project.date}</H5>
-        <Columns alignment='center'>
-          <Column size={8}><Image src={`/static/img/projects/${props.project.img_path}`} alt={`Image showing ${props.project.name}`} hasRoundedCorners /></Column>
+        <H1 alignment="center">{props.project.name}</H1>
+        <H5 alignment="center" color={vars.grey}>
+          {props.project.date}
+        </H5>
+        <Columns alignment="center">
+          <Column size={8}>
+            <Image
+              src={`/static/img/projects/${props.project.img_path}`}
+              alt={`Image showing ${props.project.name}`}
+              hasRoundedCorners
+            />
+          </Column>
         </Columns>
         <ProjectSummaries>
           <ProjectSummaryHolder>
-            <ProjectSummaryLabel><Text alignment='right'>Project Type</Text></ProjectSummaryLabel>
-            <ProjectSummaryText><Text>{props.project.type}</Text></ProjectSummaryText>
+            <ProjectSummaryLabel>
+              <Text alignment="right">Project Type</Text>
+            </ProjectSummaryLabel>
+            <ProjectSummaryText>
+              <Text>{props.project.type}</Text>
+            </ProjectSummaryText>
           </ProjectSummaryHolder>
           <ProjectSummaryHolder>
-            <ProjectSummaryLabel><Text alignment='right'>Software Used</Text></ProjectSummaryLabel>
-            <ProjectSummaryText><Text>{props.project.software}</Text></ProjectSummaryText>
+            <ProjectSummaryLabel>
+              <Text alignment="right">Software Used</Text>
+            </ProjectSummaryLabel>
+            <ProjectSummaryText>
+              <Text>{props.project.software}</Text>
+            </ProjectSummaryText>
           </ProjectSummaryHolder>
           <ProjectSummaryHolder>
-            <ProjectSummaryLabel><Text alignment='right'>Languages Used</Text></ProjectSummaryLabel>
-            <ProjectSummaryText><Text>{props.project.language}</Text></ProjectSummaryText>
+            <ProjectSummaryLabel>
+              <Text alignment="right">Languages Used</Text>
+            </ProjectSummaryLabel>
+            <ProjectSummaryText>
+              <Text>{props.project.language}</Text>
+            </ProjectSummaryText>
           </ProjectSummaryHolder>
           <ProjectSummaryHolder>
-            <ProjectSummaryLabel><Text alignment='right'>Primary Role(s)</Text></ProjectSummaryLabel>
-            <ProjectSummaryText><Text>{props.project.role}</Text></ProjectSummaryText>
+            <ProjectSummaryLabel>
+              <Text alignment="right">Primary Role(s)</Text>
+            </ProjectSummaryLabel>
+            <ProjectSummaryText>
+              <Text>{props.project.role}</Text>
+            </ProjectSummaryText>
           </ProjectSummaryHolder>
         </ProjectSummaries>
       </Container>
     </Section>
     <Section color={vars.dark()}>
       <Container>
-        <Columns alignment='center'>
+        <Columns alignment="center">
           <Column size={8}>
-            <H2 alignment='center' color={vars.light()}>Description</H2>
+            <H2 alignment="center" color={vars.light()}>
+              Description
+            </H2>
             {props.project.description.map((v, i) => (
-              <Text key={i} color={vars.light()} dangerouslySetInnerHTML={{__html: v}} />
+              <Text
+                key={i}
+                color={vars.light()}
+                dangerouslySetInnerHTML={{ __html: v }}
+              />
             ))}
-            {props.project.gif_path ? <Image src={`/static/img/projects/${props.project.gif_path}`} alt={`a gif of ${props.project.name}`} /> : false}
-            {props.project.youtube ? <YoutubeWrapper><YoutubeWidget youtube={props.project.youtube} /></YoutubeWrapper> : false}
+            {props.project.gif_path ? (
+              <Image
+                src={`/static/img/projects/${props.project.gif_path}`}
+                alt={`a gif of ${props.project.name}`}
+              />
+            ) : (
+              false
+            )}
+            {props.project.youtube ? (
+              <YoutubeWrapper>
+                <YoutubeWidget youtube={props.project.youtube} />
+              </YoutubeWrapper>
+            ) : (
+              false
+            )}
           </Column>
         </Columns>
       </Container>
     </Section>
     <Section>
       <Container>
-        <H2 alignment='center'>Links</H2>
-        {props.project.link ? <H5 alignment='center'><ProjectLink href={props.project.link}>{props.project.name}</ProjectLink></H5> : false}
-        <Columns alignment='center'>
-          {props.project.github ? <Column size={6}><GitHub repository={props.project.github} /></Column> : false}
-          {props.project.itch ? <Column size={6}><ItchWidget itch={props.project.itch} /></Column> : false}
+        <H2 alignment="center">Links</H2>
+        {props.project.link ? (
+          <H5 alignment="center">
+            <ProjectLink href={props.project.link}>
+              {props.project.name}
+            </ProjectLink>
+          </H5>
+        ) : (
+          false
+        )}
+        <Columns alignment="center">
+          {props.project.github ? (
+            <Column size={6}>
+              <GitHub repository={props.project.github} />
+            </Column>
+          ) : (
+            false
+          )}
+          {props.project.itch ? (
+            <Column size={6}>
+              <ItchWidget itch={props.project.itch} />
+            </Column>
+          ) : (
+            false
+          )}
         </Columns>
       </Container>
     </Section>

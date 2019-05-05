@@ -1,7 +1,7 @@
-import { injectGlobal } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 // tslint:disable-next-line:no-unused-expression
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
 /*! sanitize.css v7.0.3 | CC0 License | github.com/csstools/sanitize.css */
 
 /* Document

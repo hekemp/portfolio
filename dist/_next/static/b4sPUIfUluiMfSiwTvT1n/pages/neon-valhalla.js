@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["5e4e"],{krgJ:function(n,e,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/neon-valhalla",function(){var n=u("uOjd");return{page:n.default||n}}])},uOjd:function(n,e,u){"use strict";u.r(e);var a=u("mXGw"),t=u("AJ92"),o=u("TJ2u");e.default=function(){return a.createElement(t.a,{project:o.j})}}},[["krgJ","5d41","9da1"]]]);
