@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["b2a7"],{kJX8:function(n,t,e){"use strict";e.r(t);var o=e("mXGw"),a=e("AJ92"),u=e("TJ2u");t.default=function(){return o.createElement(a.a,{project:u.d})}},kYU3:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dancing-robots",function(){var n=e("kJX8");return{page:n.default||n}}])}},[["kYU3","5d41","9da1"]]]);

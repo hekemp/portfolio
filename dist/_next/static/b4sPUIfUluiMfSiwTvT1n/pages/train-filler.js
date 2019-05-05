@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["f41c"],{"Rz+B":function(n,e,t){"use strict";t.r(e);var r=t("mXGw"),u=t("AJ92"),a=t("TJ2u");e.default=function(){return r.createElement(u.a,{project:a.n})}},"dxk/":function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/train-filler",function(){var n=t("Rz+B");return{page:n.default||n}}])}},[["dxk/","5d41","9da1"]]]);

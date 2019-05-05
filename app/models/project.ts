@@ -38,7 +38,7 @@ export const Zephyr: IProject = {
   "thumbnail_img_path": "icon_odyssey.png",
   "img_path": "odyssey.png",
   "date": "March 2018",
-  "itch": "https://itch.io/embed/235921?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
+  "itch": "https://itch.io/embed/235921",
   "tags": ["Blueprints", "Unreal Engine 4", "Train Jam"],
   "tasks": [
     "Created quest items to be completed",
@@ -88,7 +88,7 @@ export const TonyBirb: IProject = {
   "img_path": "tonybirb.jpg",
   "gif_path": "birb.gif",
   "date": "October 2017",
-  "itch": "https://itch.io/embed/325452?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
+  "itch": "https://itch.io/embed/325452",
   "github": "hekemp/Tony-Birb",
   "tags": ["C#", "Unity", "EPX Jam"],
   "tasks": [
@@ -395,9 +395,9 @@ export const HoloScribe: IProject = {
   "role": 'HoloLens Programer',
   "thumbnail_img_path": 'icon_holoscribe.png',
   "img_path": 'HoloScribe_Demo2.png',
-  "github": 'aszecsei/HoloScribe',
+  "github": 'aszecsei/HoloSwaggins',
   "date": 'October 2018',
-  "link": 'https://github.com/aszecsei/HoloSwaggins',
+  "link": 'https://www.hackerearth.com/challenges/hackathon/hackuiowa-1/dashboard/38fae46/submission/',
   "tags": ['JavaScript', 'Unity', 'HoloLens', 'C#', 'Google Cloud Platform'],
   "tasks": [
     'Led development of HoloLens application in parallel to web API development',
@@ -445,7 +445,7 @@ export const OutlookAccessibility: IProject = {
   "language": "Python",
   "role": "Graphic Designer, Project Manager",
   "thumbnail_img_path": "icon_outlook.png",
-  "img_path": "robots.jpg",
+  "img_path": "outlook.png",
   "date": "December 2014",
   "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
   "youtube": "n2CMJaNdBaI",
@@ -485,15 +485,69 @@ export const ConferenceOrganizer: IProject = {
   "returnLink": "projects"
 }
 
+export const HumanNature: IProject = {
+  "name": "Human Nature",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Graphic Designer, Conference Organizer",
+  "thumbnail_img_path": "icon_conference.png",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "itch": "https://itch.io/embed/392945",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "human-nature",
+  "returnLink": "games"
+}
+
+export const DMTools: IProject = {
+  "name": "DMTools",
+  "summary": "an interdisciplinary, project-based course",
+  "description": [
+    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
+    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+  ],
+  "type": "University Project",
+  "software": "Choregraphe",
+  "language": "Python",
+  "role": "Graphic Designer, Conference Organizer",
+  "thumbnail_img_path": "icon_conference.png",
+  "img_path": "robots.jpg",
+  "date": "December 2014",
+  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
+  "youtube": "n2CMJaNdBaI",
+  "tags": ["Python", "NAO Robots"],
+  "tasks": [
+    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
+    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
+    "Assisted in the programming of other students' dance routines"
+  ],
+  "url": "dm-tools",
+  "returnLink": "projects"
+}
+
 
 export const games = [
   VRShowdown,
   BugHunters,
-  DeathParadox,
+  //DeathParadox,
   TonyBirb,
   Werewolf,
   Zephyr,
-  SandwichDiscourse,
+  HumanNature,
+  //SandwichDiscourse,
 ]
 
 export const otherProjects = [
@@ -501,11 +555,12 @@ export const otherProjects = [
   RobotEyebrows, 
   InternetOfFollowers,
   SafeSwarm, 
-  RobotOutreach,
-  StatisticsAppSuite,
-  DataCleaner,
-  AttendEZ,
-  MettaPR,
+  DMTools,
+  //RobotOutreach,
+  //StatisticsAppSuite,
+  //DataCleaner,
+  //AttendEZ,
+  //MettaPR,
   OutlookAccessibility,
-  ConferenceOrganizer,
+  //ConferenceOrganizer,
 ]
