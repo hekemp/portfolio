@@ -35,3 +35,10 @@ export const Image = (props: IStyledImageProps & IImageProps) => (
     <StyledImage {...props} />
   </picture>
 )
+
+export const ImageGif = (props: IStyledImageProps & IImageProps) => (
+  <picture>
+    <source srcSet={props.src} />
+    <StyledImage {...props} />
+  </picture>
+)

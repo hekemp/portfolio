@@ -9,7 +9,7 @@ import { Column, Columns } from './column'
 import { Container } from './container'
 import { Footer } from './footer'
 import GitHub from './github-widget'
-import { Image } from './image'
+import { Image, ImageGif } from './image'
 import Nav from './navbar'
 import { Section } from './section'
 import { vars } from './style-variables'
@@ -217,7 +217,7 @@ export const ProjectPage = (props: IProjectPageProps) => (
                 dangerouslySetInnerHTML={{ __html: v }}
               />
             ))}
-            {props.project.gif_path ? <Image src={`/static/img/projects/${props.project.gif_path}`} alt={`a gif of ${props.project.name}`} /> : false}
+            {props.project.gif_path ? <ImageGif src={`/static/img/projects/${props.project.gif_path}`} alt={`a gif of ${props.project.name}`} /> : false}
             {props.project.youtube ? <YoutubeWrapper><YoutubeWidget youtube={props.project.youtube} /></YoutubeWrapper> : false}
             {props.project.embedded ? <iframe width="640" height="320" data-original={`${props.project.embedded}`} src={`${props.project.embedded}`} data-was-processed="true"></iframe> : false }
           </Column>
