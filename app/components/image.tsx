@@ -27,6 +27,4 @@ interface IImageProps {
   src: string
 }
 
-export const Image = (props: IStyledImageProps & IImageProps) => (
-  <StyledImage {...props} />
-)
+export const Image = (props: IStyledImageProps & IImageProps) => (<StyledImage {...props} />)

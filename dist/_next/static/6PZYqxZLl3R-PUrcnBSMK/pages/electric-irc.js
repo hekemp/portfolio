@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["1e45"],{"+GPL":function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/electric-irc",function(){var n=t("o7Qk");return{page:n.default||n}}])},o7Qk:function(n,e,t){"use strict";t.r(e);var o=t("mXGw"),c=t("AJ92"),r=t("TJ2u");e.default=function(){return o.createElement(c.a,{project:r.f})}}},[["+GPL","5d41","9da1"]]]);

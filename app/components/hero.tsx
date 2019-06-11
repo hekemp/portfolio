@@ -1,9 +1,9 @@
 import { rgba } from 'polished'
 import * as React from 'react'
-import { FaEnvelope, FaGithub, FaLinkedinIn, FaMastodon, FaTumblr, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaLinkedinIn, FaMastodon, FaWordpressSimple, FaTwitter } from 'react-icons/fa'
 import styled from 'styled-components'
 
-import{ Icon } from './icon'
+import { Icon } from './icon'
 import { getFontSize, vars } from './style-variables'
 
 export const HeroImage = styled.div`
@@ -77,6 +77,6 @@ export const SocialButtons = () => (
     <SocialButton href='https://mastodon.gamedev.place/@aszecsei'><Icon><FaMastodon aria-labelledby='Mastodon' role='img' /></Icon></SocialButton>
     <SocialButton href='https://linkedin.com/in/alic-szecsei'><Icon><FaLinkedinIn aria-labelledby='LinkedIn' role='img' /></Icon></SocialButton>
     <SocialButton href='https://github.com/aszecsei'><Icon><FaGithub aria-labelledby='GitHub' role='img' /></Icon></SocialButton>
-    <SocialButton href='http://blog.alic-szecsei.com'><Icon><FaTumblr aria-labelledby='Tumblr' role='img' /></Icon></SocialButton>
+    <SocialButton href='http://blog.alic-szecsei.com'><Icon><FaWordpressSimple aria-labelledby='Wordpress' role='img' /></Icon></SocialButton>
   </>
 )

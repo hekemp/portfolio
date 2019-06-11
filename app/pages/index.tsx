@@ -30,8 +30,8 @@ const IndexPage = () => (
       <Container>
         <H2 alignment='center' >About Me</H2>
         <Text>
-          I'm Alic Szecsei, a software engineer and game developer. I'm currently a student at the
-          University of Iowa, getting my Master's degree in computer science. I've been programming since
+          I'm Alic Szecsei, a software engineer and game developer. I received my Master's degree in computer
+          science from the University of Iowa, and am currently working at Microsoft. I've been programming since
           I was 12, making simple rock-paper-scissors games in C, then writing equally-simple encryption
           algorithms on my TI-89 graphing calculator. I'm interested in game programming and graphics
           programming; merging art and computer science in bold ways, alongside interdisciplinary teams
@@ -48,7 +48,7 @@ const IndexPage = () => (
             </Text>
           </Column>
           <Column size={3}>
-          <H1 alignment='center'><SkillIcon><Icon><FaReact /></Icon></SkillIcon></H1>
+            <H1 alignment='center'><SkillIcon><Icon><FaReact /></Icon></SkillIcon></H1>
             <H4 alignment='center'>Web</H4>
             <Text>
               I've worked on projects using React and Redux, CoffeeScript, TypeScript, and more.
@@ -56,7 +56,7 @@ const IndexPage = () => (
             </Text>
           </Column>
           <Column size={3}>
-          <H1 alignment='center'><SkillIcon><Icon><FaRobot /></Icon></SkillIcon></H1>
+            <H1 alignment='center'><SkillIcon><Icon><FaRobot /></Icon></SkillIcon></H1>
             <H4 alignment='center'>Machine Learning</H4>
             <Text>
               I have experience with developing a custom machine learning solution using ELMs.
@@ -64,7 +64,7 @@ const IndexPage = () => (
             </Text>
           </Column>
           <Column size={3}>
-          <H1 alignment='center'><SkillIcon><Icon><FaDesktop /></Icon></SkillIcon></H1>
+            <H1 alignment='center'><SkillIcon><Icon><FaDesktop /></Icon></SkillIcon></H1>
             <H4 alignment='center'>Other Software</H4>
             <Text>
               I've worked with Docker and several continuous integration & deployment solutions.
