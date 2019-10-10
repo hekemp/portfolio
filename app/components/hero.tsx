@@ -3,7 +3,7 @@ import * as React from 'react'
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaTwitter, FaMedium, FaGamepad } from 'react-icons/fa'
 import styled from 'styled-components'
 
-import{ Icon } from './icon'
+import { Icon } from './icon'
 import { getFontSize, vars } from './style-variables'
 
 export const HeroImage = styled.div`

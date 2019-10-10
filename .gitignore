@@ -74,3 +74,6 @@ typings/
 
 # Visual Studio Code folder
 .vscode
+
+# Distribution Folder
+dist
