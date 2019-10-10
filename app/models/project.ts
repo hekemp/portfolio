@@ -195,6 +195,7 @@ export const SafeSwarm: IProject = {
   "date": "December 2014",
   "link": "/static/reports/Safe_Swarm.pdf",
   "youtube": "Pdbdpq5uljw",
+  "github": "ZeroCool2u/SafeSwarm",
   "tags": ["Python", "NAO Robots"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
