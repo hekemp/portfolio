@@ -11,7 +11,7 @@ interface ITextProps {
   alignment?: 'left' | 'center' | 'right' | 'justify'
 }
 
-export const Text = styled<ITextProps, 'p'>('p')`
+export const Text = styled.p<ITextProps>`
   ${TextBase};
   margin-top: 0em;
   margin-bottom: 1em;
@@ -31,7 +31,7 @@ export const Text = styled<ITextProps, 'p'>('p')`
     position: relative;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 1px;
       left: 0;
@@ -64,7 +64,7 @@ export const BaseHeader = css`
 const generateHeader = <K extends keyof JSX.IntrinsicElements>(
   size: number,
   component: K,
-) => styled<ITextProps, K>(component)`
+) => styled(component)<ITextProps>`
   ${BaseHeader};
   color: ${(props: ITextProps) => (props.color ? props.color : vars.dark())};
   text-align: ${(props: ITextProps) =>

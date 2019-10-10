@@ -9,7 +9,7 @@ interface IIconProps {
   size?: 'small' | 'normal' | 'medium' | 'large'
 }
 
-export const Icon = styled<IIconProps, 'span'>('span')`
+export const Icon = styled.span<IIconProps>`
   align-items: center;
   display: inline-flex;
   justify-content: center;

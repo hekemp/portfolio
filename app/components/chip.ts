@@ -14,7 +14,7 @@ interface IChipProps {
   color?: string
 }
 
-export const Chip = styled<IChipProps, 'span'>('span')`
+export const Chip = styled.span<IChipProps>`
   align-items: center;
   background-color: ${tagBackgroundColor};
   border-radius: ${tagRadius};
@@ -60,7 +60,7 @@ interface IChipsProps {
   alignment?: 'left' | 'center' | 'right'
 }
 
-export const Chips = styled<IChipsProps, 'div'>('div')`
+export const Chips = styled.div<IChipsProps>`
   align-items: center;
   display: flex;
   flex-wrap: wrap;

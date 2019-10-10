@@ -7,15 +7,15 @@ import styled from 'styled-components'
 import { Chip, Chips } from './chip'
 import { Icon } from './icon'
 import { Image } from './image'
-import { H5, H6, Text } from './typography' 
+import { H5, H6, Text } from './typography'
 
-import {IProject} from '../models/project'
-import { vars } from './style-variables';
+import { IProject } from '../models/project'
+import { vars } from './style-variables'
 import { media } from './utils'
 
 const Card = styled.div`
   padding: 2em;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.18);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.18);
   border: 1px solid ${vars.border()};
   border-radius: ${vars.radius};
   display: flex;
@@ -48,23 +48,27 @@ const CardFooter = styled.div`
 
 const tagColorMap = {
   // ENGINES
-  'Unity': vars.purple,
+  Unity: vars.purple,
   'Unreal Engine 4': vars.green,
 
   // LANGUAGES
-  'Blueprints': vars.turquoise,
+  Blueprints: vars.turquoise,
   'C++': vars.red,
   'C#': vars.orange,
-  'JavaScript': vars.lime,
-  'Ruby': vars.maroon,
-  'Flutter': vars.blue,
-  'Python': vars.yellow,
+  JavaScript: vars.lime,
+  Ruby: vars.maroon,
+  Flutter: vars.blue,
+  Python: vars.yellow,
 
   // OTHER
 }
 
 const getColorForTag = (tag: string): string => {
-  return tagColorMap[tag] ? tagColorMap[tag] : vars.background()
+  interface IData {
+    [key: string]: string
+  }
+  const colorMap: IData = tagColorMap
+  return colorMap[tag] ? colorMap[tag] : vars.background()
 }
 
 interface IProjectImgProps {
@@ -76,7 +80,12 @@ interface IProjectImgProps {
 
 const ProjectImg = (props: IProjectImgProps) => (
   <LazyLoad once offset={200} height={props.height}>
-    <Image src={`/static/img/${props.isThumbnail ? 'thumbnails' : 'projects'}/${props.src}`} alt={props.alt} />
+    <Image
+      src={`/static/img/${props.isThumbnail ? 'thumbnails' : 'projects'}/${
+        props.src
+      }`}
+      alt={props.alt}
+    />
   </LazyLoad>
 )
 
@@ -96,8 +105,9 @@ const ProjectCheckHolder = styled.div`
   &:last-child {
     border-bottom: 1px solid ${vars.border()};
   }
-  &:hover, &:active {
-    background-color: ${vars["blue-light"]};
+  &:hover,
+  &:active {
+    background-color: ${vars['blue-light']};
   }
 `
 
@@ -122,7 +132,7 @@ const ProjectLink = styled.a`
   position: relative;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 1px;
     left: 0;
@@ -153,22 +163,44 @@ interface IProjectProps {
 export const Project = (props: IProjectProps) => (
   <>
     <Card>
-      <H5><Link href={'/' + props.projectDetails.url} passHref><ProjectLink>{props.projectDetails.name}</ProjectLink></Link></H5>
+      <H5>
+        <Link href={'/' + props.projectDetails.url} passHref>
+          <ProjectLink>{props.projectDetails.name}</ProjectLink>
+        </Link>
+      </H5>
       <H6>{props.projectDetails.date}</H6>
-      <ProjectImg src={props.projectDetails.thumbnail_img_path} isThumbnail height={274} alt={`a preview image for ${props.projectDetails.name}`} />
-      <Text color={vars.grey}><em>{props.projectDetails.summary}</em></Text>
+      <ProjectImg
+        src={props.projectDetails.thumbnail_img_path}
+        isThumbnail
+        height={274}
+        alt={`a preview image for ${props.projectDetails.name}`}
+      />
+      <Text color={vars.grey}>
+        <em>{props.projectDetails.summary}</em>
+      </Text>
       <ProjectChecks>
-        {props.projectDetails.tasks && props.projectDetails.tasks.map((val, i) => (
-          <ProjectCheckHolder key={i}>
-            <ProjectCheckText><ProjectCheck><Icon><FaAngleDoubleRight aria-hidden='true' /></Icon></ProjectCheck> {val}</ProjectCheckText>
-          </ProjectCheckHolder>
-        ))}
+        {props.projectDetails.tasks &&
+          props.projectDetails.tasks.map((val, i) => (
+            <ProjectCheckHolder key={i}>
+              <ProjectCheckText>
+                <ProjectCheck>
+                  <Icon>
+                    <FaAngleDoubleRight aria-hidden="true" />
+                  </Icon>
+                </ProjectCheck>{' '}
+                {val}
+              </ProjectCheckText>
+            </ProjectCheckHolder>
+          ))}
       </ProjectChecks>
       <CardFooter>
         <Chips>
-          {props.projectDetails.tags && props.projectDetails.tags.map((val, index) => (
-            <Chip key={index} color={getColorForTag(val)}>{val}</Chip>
-          ))}
+          {props.projectDetails.tags &&
+            props.projectDetails.tags.map((val, index) => (
+              <Chip key={index} color={getColorForTag(val)}>
+                {val}
+              </Chip>
+            ))}
         </Chips>
       </CardFooter>
     </Card>

@@ -8,7 +8,7 @@ interface IColumnProps {
   offsetSize?: number
 }
 
-export const Column = styled<IColumnProps, 'div'>('div')`
+export const Column = styled.div<IColumnProps>`
   display: block;
   flex-basis: 0;
   flex-grow: 1;
@@ -20,26 +20,26 @@ export const Column = styled<IColumnProps, 'div'>('div')`
         margin-left: ${(props.offsetSize / 12) * 100}%;
       `}
     ${
-      props.size === 'narrow'
+      props.size === 'narrow' || props.size === undefined
         ? css`
             flex: none;
           `
         : props.size === 'full'
-          ? css`
-              flex: none;
-              width: 100%;
-            `
-          : props.size >= 1
-            ? css`
-                flex: none;
-                width: ${(props.size / 12) * 100}%;
-              `
-            : props.size < 1
-              ? css`
-                  flex: none;
-                  width: ${props.size}%;
-                `
-              : false
+        ? css`
+            flex: none;
+            width: 100%;
+          `
+        : props.size >= 1
+        ? css`
+            flex: none;
+            width: ${(props.size / 12) * 100}%;
+          `
+        : props.size < 1
+        ? css`
+            flex: none;
+            width: ${props.size}%;
+          `
+        : false
     }
   `};
 `
@@ -51,7 +51,7 @@ interface IColumnsProps {
   isVcentered?: boolean
 }
 
-export const Columns = styled<IColumnsProps, 'div'>('div')`
+export const Columns = styled.div<IColumnsProps>`
   margin-left: -${columnGap};
   margin-right: -${columnGap};
   margin-top: -${columnGap};
