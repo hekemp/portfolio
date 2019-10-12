@@ -20,7 +20,7 @@ const IndexPage = () => (
     <HeroImage>
       <HeroText>
         <H1 color={vars.white} alignment='center'>Heather Kemp</H1>
-        <H4 color={vars.white} alignment='center'>Gameplay Programmer & Software Engineer</H4>
+        <H4 color={vars.white} alignment='center'>Accessibility-Focused Gameplay Programmer & Software Engineer</H4>
       </HeroText>
       <HeroSocialButtonContainer>
         <SocialButtons />
