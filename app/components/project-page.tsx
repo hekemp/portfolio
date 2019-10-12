@@ -149,14 +149,14 @@ const ProjectLink = styled.a`
 export const ProjectPage = (props: IProjectPageProps) => (
   <>
     <NextHead>
-      <title>{props.project.name} | Alic Szecsei</title>
+      <title>{props.project.name} | Heather Kemp</title>
     </NextHead>
     <Nav />
     <Section>
       <Container>
         <H1 alignment="center">{props.project.name}</H1>
         <H5 alignment="center" color={vars.grey}>
-          {props.project.date}
+          {(props.project.startDate ? props.project.startDate + " - " : "") + props.project.date}
         </H5>
         <Columns alignment="center">
           <Column size={8}>

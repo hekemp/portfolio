@@ -39,7 +39,7 @@ export default class MyApp extends App {
           {/* Facebook OpenGraph */}
           <meta property="og:image:height" content="180" />
           <meta property="og:image:width" content="344" />
-          <meta property="og:title" content="Alic Szecsei" />
+          <meta property="og:title" content="Heather Kemp" />
           <meta
             property="og:description"
             content="Game programming and software development portfolio of Heather Kemp."
@@ -49,7 +49,7 @@ export default class MyApp extends App {
             property="og:image"
             content="https://alic-szecsei.com/static/img/og-image.jpg"
           />
-          <meta name="twitter:title" content="Alic Szecsei's Portfolio" />
+          <meta name="twitter:title" content="Heather Kemp's Portfolio" />
 
           <link
             rel="apple-touch-icon"
@@ -78,8 +78,8 @@ export default class MyApp extends App {
             rel="shortcut icon"
             href="/static/img/favicon.ico?v=alQgGE7PNp"
           />
-          <meta name="apple-mobile-web-app-title" content="Alic Szecsei" />
-          <meta name="application-name" content="Alic Szecsei" />
+          <meta name="apple-mobile-web-app-title" content="Heather Kemp" />
+          <meta name="application-name" content="Heather Kemp" />
           <meta name="msapplication-TileColor" content="#603cba" />
           <meta
             name="msapplication-config"

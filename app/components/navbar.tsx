@@ -228,7 +228,7 @@ class Nav extends React.Component<INavProps, INavState> {
               </NavItem>
               <NavItem>
                 <NavLink href="/static/Resume.pdf" target="_blank"
-                  rel="noopener noreferrer">Resume</NavLink>
+                  rel="noopener noreferrer">Résumé</NavLink>
               </NavItem>
             </NavbarNav>
           </NavbarCollapse>
