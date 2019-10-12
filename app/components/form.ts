@@ -96,7 +96,7 @@ interface IInputProps {
   isStatic?: boolean
 }
 
-export const Input = styled<IInputProps, 'input'>('input')`
+export const Input = styled.input<IInputProps>`
   ${input};
   box-shadow: ${inputShadow};
   max-width: 100%;
@@ -166,7 +166,7 @@ interface IFieldProps {
   hasAddons?: boolean
 }
 
-export const Field = styled<IFieldProps, 'div'>('div')`
+export const Field = styled.div<IFieldProps>`
   &:not(:last-child) {
     margin-bottom: 0.75rem;
   }
@@ -176,7 +176,7 @@ interface IControlProps {
   hasIcon?: boolean
 }
 
-export const Control = styled<IControlProps, 'div'>('div')`
+export const Control = styled.div<IControlProps>`
   clear: both;
   ${getFontSize('normal')};
   position: relative;

@@ -6,7 +6,7 @@ interface ITileProps {
   size?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 }
 
-export const Tile = styled<ITileProps, 'div'>('div')`
+export const Tile : any = styled.div<ITileProps>`
   align-items: stretch;
   display: block;
   flex-basis: 0;

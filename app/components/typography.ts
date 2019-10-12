@@ -11,7 +11,7 @@ interface ITextProps {
   alignment?: 'left' | 'center' | 'right' | 'justify'
 }
 
-export const Text = styled<ITextProps, 'p'>('p')`
+export const Text = styled.p<ITextProps>`
   ${TextBase};
   margin-top: 0em;
   margin-bottom: 1em;

@@ -45,7 +45,7 @@ interface INavbarCollapseProps {
   isActive?: boolean
 }
 
-const NavbarCollapse = styled<INavbarCollapseProps, 'div'>('div')`
+const NavbarCollapse = styled.div<INavbarCollapseProps>`
   display: flex;
   flex-basis: auto;
   flex-grow: 1;
@@ -122,7 +122,7 @@ interface IHamburgerDivProps {
   dimensions: number
 }
 
-const HamburgerDiv = styled<IHamburgerDivProps, 'div'>('div')`
+const HamburgerDiv = styled.div<IHamburgerDivProps>`
   margin-left: auto;
   cursor: pointer;
   color: white;
@@ -142,7 +142,7 @@ interface IHamburgerSpanProps {
   isActive?: boolean
 }
 
-const HamburgerSpan = styled<IHamburgerSpanProps, 'span'>('span')`
+const HamburgerSpan = styled.span<IHamburgerSpanProps>`
   background-color: currentColor;
   display: block;
   height: 1px;

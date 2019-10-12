@@ -8,7 +8,7 @@ interface IColumnProps {
   offsetSize?: number
 }
 
-export const Column = styled<IColumnProps, 'div'>('div')`
+export const Column = styled.div<IColumnProps>`
   display: block;
   flex-basis: 0;
   flex-grow: 1;
@@ -51,7 +51,7 @@ interface IColumnsProps {
   isVcentered?: boolean
 }
 
-export const Columns = styled<IColumnsProps, 'div'>('div')`
+export const Columns = styled.div<IColumnsProps>`
   margin-left: -${columnGap};
   margin-right: -${columnGap};
   margin-top: -${columnGap};

@@ -8,7 +8,7 @@ interface ISectionProps {
   color?: string
 }
 
-export const Section = styled<ISectionProps, 'section'>('section')`
+export const Section = styled.section<ISectionProps>`
   padding: calc(1rem + 100px) 1.5rem;
   ${(props: ISectionProps) => props.color ? css`background-color: ${props.color};` : css`background-color: ${vars.background()};`}
   ${media.desktop`

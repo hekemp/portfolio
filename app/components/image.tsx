@@ -7,7 +7,7 @@ interface IStyledImageProps {
   hasRoundedCorners?: boolean
 }
 
-const StyledImage = styled<IStyledImageProps, 'img'>('img')`
+const StyledImage = styled.img<IStyledImageProps>`
   display: block;
   position: relative;
   height: auto;

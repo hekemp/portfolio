@@ -490,7 +490,6 @@ export const ConferenceOrganizer: IProject = {
 export const games = [
   VRShowdown,
   BugHunters,
-  DeathParadox,
   TonyBirb,
   Werewolf,
   Zephyr,
@@ -506,7 +505,4 @@ export const otherProjects = [
   StatisticsAppSuite,
   DataCleaner,
   AttendEZ,
-  MettaPR,
-  OutlookAccessibility,
-  ConferenceOrganizer,
 ]

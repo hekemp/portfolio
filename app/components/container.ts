@@ -5,7 +5,7 @@ interface IContainerProps {
   isFluid?: boolean
 }
 
-export const Container = styled<IContainerProps, 'div'>('div')`
+export const Container = styled.div<IContainerProps>`
   margin: 0 auto;
   position: relative;
   display: flex;
