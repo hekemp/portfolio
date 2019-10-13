@@ -1,4 +1,4 @@
-import { getLuminance, hsl } from 'polished'
+import { getLuminance, hsl, rgb } from 'polished'
 import { css } from 'styled-components'
 import { media } from './utils'
 
@@ -31,6 +31,26 @@ const initialVars = {
   navy: '#001f3f',
   lime: '#01ff70',
   maroon: '#85144b',
+  
+  // 15-Color Palette for Color Blindness
+  // black definition above
+  // ** teal and neutral-blue are going to appear the same to people with tritanopia
+  // ** pink and dark-orange are going to appear the same to people with tritanopia
+
+  'dark-teal': rgb(0, 73, 73),
+  teal: rgb(0, 146, 146),
+  pink: rgb(255, 109, 182),
+  'light-pink': rgb(255, 181, 219),
+  'dark-purple': rgb(73, 0, 146),
+  'neutral-blue': rgb(0, 109, 219),
+  lilac: rgb(182, 109, 255),
+  'sky-blue': rgb(109, 182, 255),
+  'ice-blue': rgb(182, 219, 255),
+  'dark-red': rgb(146, 0, 0),
+  brown: rgb(146, 73, 0),
+  'dark-orange': rgb(219, 109, 0),
+  'bright-green': rgb(36, 255, 36),
+  'lemon': rgb(255, 255, 109),
 
   // TYPOGRAPHY
   'family-body':
@@ -87,7 +107,7 @@ export const getInverse = (color: string) => {
 
 // TYPOGRAPHY
 
-const bigScale = 1.25 // Augmented 4th
+const bigScale = 1.414 // Augmented 4th
 const medScale = 1.25 // Major 3rd
 const smallScale = 1.25 // Major 2nd
 

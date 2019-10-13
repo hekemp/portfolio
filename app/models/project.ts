@@ -134,7 +134,7 @@ export const RobotEyebrows: IProject = {
     "The project is documented <a href='https://medium.com/@heatherkemp_89938/a-journey-with-nao-robots-and-arduinos-towards-eyebrows-b4d5fef6549f' target='_blank' rel='noopener noreferrer'>here</a> while an in-depth tutorial at how to set up a similar experiment is seen <a href='https://medium.com/@heatherkemp_89938/interfacing-nao-robots-with-the-arduino-in-depth-tutorial-284ecba0b0aa' target='_blank' rel='noopener noreferrer'>here</a>."
   ],
   "type": "University Project",
-  "software": "Choregraphe, Arduino IDE, and Blender",
+  "software": "Choregraphe and Blender",
   "language": "C++ and Python",
   "role": "Lead Programmer, Hardware Engineer, 3D Designer",
   "thumbnail_img_path": "icon_nao_eyebrows.png",
@@ -144,7 +144,7 @@ export const RobotEyebrows: IProject = {
   "link": "/static/reports/NAO-Eyebrows-Report.pdf",
   "youtube": "md460xqwSKA",
   "tags": ["C++", "Python", "3D Printing", "Arduino", "NAO Robots"],
-  "tasks": [
+  "tasks": [ 
     "Redesigned and prototyped more robust variations of headsets for eyebrows",
     "Refactored undocumented codebase for controlling eyebrows with servos",
   ],
@@ -156,7 +156,7 @@ export const SafeSwarm: IProject = {
   "name": "SafeSwarm",
   "summary": "an Android app which deploys a drone to a user’s location and follows them until it’s dismissed to return to its base",
   "description": [
-    "<em>SafeSwarm</em> the app was created for the Android Mobile Development course at the University of Iowa in 2017 with the goal of learning how to automate drone behavior and interact with location based services while laying out the framework for a real life application. In it's current state, the Safe Swarm application controls one drone, which can be deployed to the mobile application user's location and follow them until it is dismissed or runs out of battery. The <em>Safe Swarm</em> drones would, at full production capability, be able to follow users, stream the video activity of what is happening, notify nearby friends of the situation, and keep the user in a well lit area with their flashlight.",
+    "<em>SafeSwarm</em> the app was created for the Android Mobile Development course at the University of Iowa in 2017 with the goal of learning how to automate drone behavior and interact with location based services while laying out the framework for a real life application. In its current state, the Safe Swarm application controls one drone, which can be deployed to the mobile application user's location and follow them until it is dismissed or runs out of battery. The <em>Safe Swarm</em> drones would, at full production capability, be able to follow users, stream the video activity of what is happening, notify nearby friends of the situation, and keep the user in a well lit area with their flashlight.",
   ],
   "type": "University Project",
   "software": "Android Studio",
@@ -222,9 +222,9 @@ export const VRShowdown: IProject = {
   "img_path": "vrshowdown.png",
   "github": 'hekemp/virtualshowdown',
   "itch": "https://itch.io/embed/419966",
-  "date": "May 2019",
+  "date": "Current",
   "startDate": "January 2019",
-  "tags": ["C#", "Unity", "Virtual Reality", "Kinect 2.0 SDK", "Nintendo Switch SDK", "Accessibility"],
+  "tags": ["C#", "Unity", "Virtual Reality", "Accessibility", "Kinect 2.0 SDK", "Nintendo Switch SDK"],
   "tasks": [
     "Refactored codebase and Kinect SDK to have atomic objects and use game state logic while fixing various bugs",
     "Improved performance of game and cut loading times in half",
@@ -250,35 +250,12 @@ export const HoloScribe: IProject = {
   "github": 'aszecsei/HoloSwaggins',
   "date": 'October 2018',
   "link": 'https://www.hackerearth.com/challenges/hackathon/hackuiowa-1/dashboard/38fae46/submission/',
-  "tags": ['JavaScript', 'Unity', 'HoloLens', 'C#', 'Google Cloud Platform', "Hackathon", "Mixed Reality", "Accessibility"],
+  "tags": ['JavaScript', 'Unity', 'Mixed Reality', 'Accessibility', 'C#', 'HoloLens', 'Google Cloud Platform', "Hackathon"],
   "tasks": [
     'Collaboratively developed API using Google Cloud Platform to transcribe images in the form of binary JSON data to text',
     'Set up HoloLens device for Unity deployment and established pipeline for team',
   ],
   "url": 'holoscribe',
-  "returnLink": "projects"
-}
-
-export const OutlookAccessibility: IProject = {
-  "name": "Outlook Accessibility Checker",
-  "summary": "an easy way to to host an inclusive meeting using Outlook",
-  "description": [
-    "Inspired by the experiences of many of our teammates, for One Week we wanted to create a feature for Outlook that would take away stress by eliminating the need for secondary emails to request formal accommodations. At the end of One Week, we had integrated into Outlook a feature to add on a quick optionally anonymous message to the meeting host asking for either a pre-determined accommodation or a custom accommodation specified by the user. In its completed state, this feature would also automatically fill out any additional forms, such as requests for ASL interpreters, at the time of accepting the meeting invite.",
-    "This feature has been taken into the backlog of the Outlook team at Microsoft and will be finished at their earliest convenience.",
-  ],
-  "type": "Hackathon",
-  "software": "Visual Studio",
-  "language": "C++",
-  "role": "Graphic Designer, Project Manager",
-  "thumbnail_img_path": "icon_outlook.png",
-  "img_path": "outlook.png",
-  "date": "July 2018",
-  "tags": ["C++", "Hackathon", "Accessibility"],
-  "tasks": [
-    "Lead team of 5 developers and 10 marketing stakeholders through daily Agile sprints",
-    "Collaboratively developed and debugged integration of our extension into the codebase",
-  ],
-  "url": "outlook-accessibility",
   "returnLink": "projects"
 }
 
@@ -327,7 +304,7 @@ export const DMTools: IProject = {
   "tags": ["JavaScript", "TypeScript", "Electron", "Docker", "Node JS", "React"],
   "tasks": [
     "Created dynamic and reusable React components used across the application",
-    "Perform all DevOps and Scrum Master related tasks for team of 5 developers",
+    "Perform all DevOps and Scrum Master related tasks for team of 5 developers, including biweekly releases",
     "Maintained application wide documentation for developers and end users",
   ],
   "url": "dm-tools",
@@ -338,31 +315,6 @@ export const DMTools: IProject = {
 ///     NO LONGER USED:     /// 
 ///////////////////////////////
 
-export const RobotOutreach: IProject = {
-  "name": "Robot Theater Stem Outreach",
-  "summary": "an interdisciplinary, project-based course",
-  "description": [
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
-  ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Instructor, Animator, Choreographer, Programmer",
-  "thumbnail_img_path": "icon_robot_outreach.jpg",
-  "img_path": "robots.jpg",
-  "date": "December 2014",
-  "link": "https://outreach.uiowa.edu/program/robot-theater-summer-program",
-  "youtube": "KXH5jP2OFec",
-  "tags": ["Python", "NAO Robots", "Cozmo Robots"],
-  "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
-  ],
-  "url": "robot-outreach",
-  "returnLink": "projects"
-}
 
 export const StatisticsAppSuite: IProject = {
   "name": "Statistics App Suite",
@@ -468,82 +420,6 @@ export const AttendEZ: IProject = {
   "returnLink": "projects"
 }
 
-export const DeathParadox: IProject = {
-  "name": "Death Paradox",
-  "summary": "an interdisciplinary, project-based course",
-  "description": [
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
-  ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Programmer, Producer",
-  "thumbnail_img_path": "icon_death_paradox.png",
-  "img_path": "robots.jpg",
-  "date": "December 2014",
-  "tags": ["Python", "NAO Robots"],
-  "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
-  ],
-  "url": "death-paradox",
-  "returnLink": "games"
-}
-
-export const MettaPR: IProject = {
-  "name": "Metta",
-  "summary": "a crowdsourced application focused on sharing stories from different cultures",
-  "description": [
-    "Project Metta was created for Microsoft One Week 2018.",
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
-  ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Programmer, Graphic Designer",
-  "thumbnail_img_path": "icon_metta.png",
-  "img_path": "robots.jpg",
-  "date": "December 2014",
-  "youtube": "nKo9ukq-eSA",
-  "tags": ["Python", "NAO Robots"],
-  "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
-  ],
-  "url": "metta",
-  "returnLink": "projects"
-}
-
-export const ConferenceOrganizer: IProject = {
-  "name": "Conference Organizer",
-  "summary": "an interdisciplinary, project-based course",
-  "description": [
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
-  ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Graphic Designer, Conference Organizer",
-  "thumbnail_img_path": "icon_conference.png",
-  "img_path": "robots.jpg",
-  "date": "December 2014",
-  "link": "https://cs.uiowa.edu/resources/ui-cs-performing-robots",
-  "youtube": "n2CMJaNdBaI",
-  "tags": ["Python", "NAO Robots"],
-  "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
-  ],
-  "url": "conference-organizer",
-  "returnLink": "projects"
-}
-
 export const games = [
   VRShowdown,
   BugHunters,
@@ -560,5 +436,4 @@ export const otherProjects = [
   InternetOfFollowers,
   SafeSwarm, 
   DMTools,
-  OutlookAccessibility,
 ]

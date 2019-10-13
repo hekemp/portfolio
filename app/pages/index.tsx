@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaDesktop, FaGamepad, FaReact, FaRobot } from 'react-icons/fa'
-
+import { FaUniversalAccess, FaGamepad, FaReact, FaChartArea } from 'react-icons/fa'
 import { Column, Columns } from '../components/column';
 import { Container } from '../components/container';
 import { Footer } from '../components/footer'
@@ -30,20 +29,21 @@ const IndexPage = () => (
       <Container>
         <H2 alignment='center' >About Me</H2>
         <Text>
-          I'm Alic Szecsei, a software engineer and game developer. I received my Master's degree in computer
-          science from the University of Iowa, and am currently working at Microsoft. I've been programming since
-          I was 12, making simple rock-paper-scissors games in C, then writing equally-simple encryption
-          algorithms on my TI-89 graphing calculator. I'm interested in game programming and graphics
-          programming; merging art and computer science in bold ways, alongside interdisciplinary teams
-          passionate about what they do. I'm thrilled by the opportunity to solve a problem and have a
-          working piece of software to show off at the end.
+          I'm Heather Kemp, a software engineer and game developer. I received my Master's degree in computer
+          science from the University of Iowa in 2019, and am currently working at Microsoft. My passion for programming started 
+          when I made a simple calculator in Java for some basic statistics in the Kingdom Hearts mobile game. It was such a simple
+          program, and yet it really helped to ease the burden of daily tasks in my guild. Throughout my career,
+          I've since learned that I could not only simplify work with technology, but also expand possibilities and empower others to do 
+          things they never could before. Ever since then, I've taken several courses in accessibility and worked on projects like a 
+          virtual reality game for people who are blind or with low vision and WCAG compliant reports and webpages for my university and workplace.
+          I'm thrilled to be working alongside my peers as we all work together to empower everyone and build a more inclusive tomorrow today.
         </Text>
         <Columns alignment='center'>
           <Column size={3}>
             <H1 alignment='center'><SkillIcon><Icon><FaGamepad /></Icon></SkillIcon></H1>
             <H4 alignment='center'>Games</H4>
             <Text>
-              I've made games in Unity, UE4 & XNA/MonoGame. I've participated in multiple
+              I've made games in Unity and UE4. I've participated in multiple
               game jams, and have experience building VR applications.
             </Text>
           </Column>
@@ -51,24 +51,24 @@ const IndexPage = () => (
             <H1 alignment='center'><SkillIcon><Icon><FaReact /></Icon></SkillIcon></H1>
             <H4 alignment='center'>Web</H4>
             <Text>
-              I've worked on projects using React and Redux, CoffeeScript, TypeScript, and more.
-              I'm also experienced in build tools like gulp, webpack, and Next.js.
+              I've worked on projects using React, TypeScript, Electron, and more.
+              I'm also experienced in tools like webpack, Enzyme, and Jest.
             </Text>
           </Column>
           <Column size={3}>
-            <H1 alignment='center'><SkillIcon><Icon><FaRobot /></Icon></SkillIcon></H1>
-            <H4 alignment='center'>Machine Learning</H4>
+            <H1 alignment='center'><SkillIcon><Icon><FaUniversalAccess /></Icon></SkillIcon></H1>
+            <H4 alignment='center'>Accessibility</H4>
             <Text>
-              I have experience with developing a custom machine learning solution using ELMs.
-              In addition, I have experience with TensorFlow and scikit-learn.
+              I have experience with developing a variety of accessible UX's, with a focus on
+              vision and mobility accessibility.
             </Text>
           </Column>
           <Column size={3}>
-            <H1 alignment='center'><SkillIcon><Icon><FaDesktop /></Icon></SkillIcon></H1>
-            <H4 alignment='center'>Other Software</H4>
+            <H1 alignment='center'><SkillIcon><Icon><FaChartArea /></Icon></SkillIcon></H1>
+            <H4 alignment='center'>Data Analytics</H4>
             <Text>
-              I've worked with Docker and several continuous integration & deployment solutions.
-              I also have experience with building native applications using Electron.
+              I've created impactful and efficient dashboards and reports for thousands of data points from databases
+              like Kusto, Cosmos, Mongo, SQL, and Postgres.
             </Text>
           </Column>
         </Columns>

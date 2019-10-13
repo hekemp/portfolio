@@ -20,26 +20,26 @@ export const Column = styled.div<IColumnProps>`
         margin-left: ${(props.offsetSize / 12) * 100}%;
       `}
     ${
-      props.size === 'narrow'
+      props.size === 'narrow' || props.size === undefined
         ? css`
             flex: none;
           `
         : props.size === 'full'
-          ? css`
-              flex: none;
-              width: 100%;
-            `
-          : props.size >= 1
-            ? css`
-                flex: none;
-                width: ${(props.size / 12) * 100}%;
-              `
-            : props.size < 1
-              ? css`
-                  flex: none;
-                  width: ${props.size}%;
-                `
-              : false
+        ? css`
+            flex: none;
+            width: 100%;
+          `
+        : props.size >= 1
+        ? css`
+            flex: none;
+            width: ${(props.size / 12) * 100}%;
+          `
+        : props.size < 1
+        ? css`
+            flex: none;
+            width: ${props.size}%;
+          `
+        : false
     }
   `};
 `

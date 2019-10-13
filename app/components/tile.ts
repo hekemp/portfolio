@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { StyledComponent } from 'styled-components'
 import { media } from './utils'
 
 interface ITileProps {
@@ -6,7 +6,7 @@ interface ITileProps {
   size?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 }
 
-export const Tile : any = styled.div<ITileProps>`
+export const Tile: StyledComponent<'div', any, ITileProps, never> = styled.div<ITileProps>`
   align-items: stretch;
   display: block;
   flex-basis: 0;

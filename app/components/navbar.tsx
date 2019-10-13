@@ -1,10 +1,10 @@
-import * as React from 'react';
+import * as React from 'react'
 import { animateScroll, scroller } from 'react-scroll'
-import styled, { css } from 'styled-components';
-import { Container } from './container';
+import styled, { css } from 'styled-components'
+import { Container } from './container'
 import { vars } from './style-variables'
-import { BaseHeader, generateHeaderSize } from './typography';
-import { media } from './utils';
+import { BaseHeader, generateHeaderSize } from './typography'
+import { media } from './utils'
 
 const Navbar = styled.nav`
   text-transform: uppercase;
@@ -25,7 +25,7 @@ const Navbar = styled.nav`
     transition: padding-top .3s, padding-bottom .3s;
     background: rgba(0, 0, 0, 0.7);
   `};
-`;
+`
 
 const NavbarBrand = styled.div`
   ${BaseHeader};
@@ -39,7 +39,7 @@ const NavbarBrand = styled.div`
   white-space: nowrap;
   outline: none;
   text-decoration: none;
-`;
+`
 
 interface INavbarCollapseProps {
   isActive?: boolean
@@ -53,17 +53,18 @@ const NavbarCollapse = styled.div<INavbarCollapseProps>`
 
   ${media.until('desktop')`
     display: block;
-    ${(props: INavbarCollapseProps) => props.isActive
-      ? css`
-        display: block;
-      `
-      : css`
-        display: none;
-      `};
+    ${(props: INavbarCollapseProps) =>
+      props.isActive
+        ? css`
+            display: block;
+          `
+        : css`
+            display: none;
+          `};
     clear: both;
     width: 100%;
   `}
-`;
+`
 
 const NavbarNav = styled.ul`
   letter-spacing: 1px;
@@ -78,12 +79,12 @@ const NavbarNav = styled.ul`
   ${media.until('desktop')`
     flex-direction: column;
   `}
-`;
+`
 
 const NavItem = styled.li`
   display: list-item;
   user-select: none;
-`;
+`
 
 const NavLink = styled.a`
   ${BaseHeader};
@@ -108,7 +109,7 @@ const NavLink = styled.a`
     padding-bottom: .5em;
     padding-left: 2em;
   `}
-`;
+`
 
 const NavbarContainer = styled(Container)`
   ${media.until('desktop')`
@@ -155,21 +156,30 @@ const HamburgerSpan = styled.span<IHamburgerSpanProps>`
   width: 16px;
   &:nth-child(1) {
     top: calc(50% - 6px);
-    ${(props: IHamburgerSpanProps) => props.isActive ? css`
-      transform: translateY(5px) rotate(45deg);
-    ` : false};
+    ${(props: IHamburgerSpanProps) =>
+      props.isActive
+        ? css`
+            transform: translateY(5px) rotate(45deg);
+          `
+        : false};
   }
   &:nth-child(2) {
     top: calc(50% - 1px);
-    ${(props: IHamburgerSpanProps) => props.isActive ? css`
-      opacity: 0;
-    ` : false};
+    ${(props: IHamburgerSpanProps) =>
+      props.isActive
+        ? css`
+            opacity: 0;
+          `
+        : false};
   }
   &:nth-child(3) {
     top: calc(50% + 4px);
-    ${(props: IHamburgerSpanProps) => props.isActive ? css`
-      transform: translateY(-5px) rotate(-45deg);
-    ` : false};
+    ${(props: IHamburgerSpanProps) =>
+      props.isActive
+        ? css`
+            transform: translateY(-5px) rotate(-45deg);
+          `
+        : false};
   }
 `
 
@@ -185,7 +195,7 @@ const Hamburger = (props: IHamburgerProps) => (
     <HamburgerSpan isActive={props.isActive} />
     <HamburgerSpan isActive={props.isActive} />
   </HamburgerDiv>
-);
+)
 
 interface INavProps {
   shouldUseScroll?: boolean
@@ -199,7 +209,7 @@ class Nav extends React.Component<INavProps, INavState> {
   constructor(props: INavProps) {
     super(props)
     this.state = {
-      isActive: false
+      isActive: false,
     }
   }
 
@@ -208,27 +218,73 @@ class Nav extends React.Component<INavProps, INavState> {
       <Navbar>
         <NavbarContainer>
           <NavbarBrand>
-            <NavLink href="/" onClick={this.props.shouldUseScroll && this.scrollToTop}>Heather Kemp</NavLink>
-            <Hamburger dimensions={44} isActive={this.state.isActive} onClick={this.onClickHamburger} />
+            <NavLink
+              href="/"
+              onClick={
+                this.props.shouldUseScroll ? this.scrollToTop : undefined
+              }
+            >
+              Heather Kemp
+            </NavLink>
+            <Hamburger
+              dimensions={44}
+              isActive={this.state.isActive}
+              onClick={this.onClickHamburger}
+            />
           </NavbarBrand>
-        
+
           <NavbarCollapse isActive={this.state.isActive}>
             <NavbarNav>
               <NavItem>
-                <NavLink href="/#about" onClick={this.props.shouldUseScroll && this.scrollToAbout}>About</NavLink>
+                <NavLink
+                  href="/#about"
+                  onClick={
+                    this.props.shouldUseScroll ? this.scrollToAbout : undefined
+                  }
+                >
+                  About
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#games" onClick={this.props.shouldUseScroll && this.scrollToGames}>Games</NavLink>
+                <NavLink
+                  href="/#games"
+                  onClick={
+                    this.props.shouldUseScroll ? this.scrollToGames : undefined
+                  }
+                >
+                  Games
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#projects" onClick={this.props.shouldUseScroll && this.scrollToProjects}>Projects</NavLink>
+                <NavLink 
+                  href="/#projects" 
+                  onClick={
+                    this.props.shouldUseScroll ? this.scrollToProjects : undefined
+                  }
+                  >
+                    Projects
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#contact" onClick={this.props.shouldUseScroll && this.scrollToContact}>Contact</NavLink>
+                <NavLink
+                  href="/#contact"
+                  onClick={
+                    this.props.shouldUseScroll
+                      ? this.scrollToContact
+                      : undefined
+                  }
+                >
+                  Contact
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/static/Resume.pdf" target="_blank"
-                  rel="noopener noreferrer">Résumé</NavLink>
+                <NavLink
+                  href="/static/Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Résumé
+                </NavLink>
               </NavItem>
             </NavbarNav>
           </NavbarCollapse>
@@ -239,9 +295,9 @@ class Nav extends React.Component<INavProps, INavState> {
 
   private onClickHamburger = () => {
     this.setState({
-      isActive: !this.state.isActive
+      isActive: !this.state.isActive,
     })
-  };
+  }
 
   private scrollToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault()
@@ -285,7 +341,7 @@ class Nav extends React.Component<INavProps, INavState> {
 }
 
 // const Nav = () => (
-//   
+//
 // );
 
-export default Nav;
+export default Nav
