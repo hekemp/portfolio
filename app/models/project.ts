@@ -79,7 +79,8 @@ export const TonyBirb: IProject = {
   "summary": "an infinite runner in which you're a birb who's shaped like a friend",
   "description": [
     "<em>Tony Birb Pro Sk8er 2003</em> is an infinite runner in which you play as the legendary Tony Birb, sliding down twigs.",
-    "Inspired by a GIF of a bird sliding down a rail, this game was created with <a href='https://alic-szecsei.com/' target='_blank' rel='noopener noreferrer'>Alic Szecsei</a> for the Fall EPX Jam at the University of Iowa."
+    "Inspired by a GIF of a bird sliding down a rail, this game was created with <a href='https://alic-szecsei.com/' target='_blank' rel='noopener noreferrer'>Alic Szecsei</a> for the Fall EPX Jam at the University of Iowa.",
+    "You can play the game <a href='https://hekemp.github.io/TonyBirbGame' target='_blank' rel='noopener noreferrer'>here</a>."
   ],
   "type": "Game Jam",
   "software": "Unity",

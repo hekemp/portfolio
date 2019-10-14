@@ -44,10 +44,10 @@ export default class MyApp extends App {
             property="og:description"
             content="Game programming and software development portfolio of Heather Kemp."
           />
-          <meta property="og:url" content="https://alic-szecsei.com" />
+          <meta property="og:url" content="https://hekemp.github.io" />
           <meta
             property="og:image"
-            content="https://alic-szecsei.com/static/img/og-image.jpg"
+            content="https://hekemp.github.io/static/img/og-image.png"
           />
           <meta name="twitter:title" content="Heather Kemp's Portfolio" />
 
@@ -88,25 +88,25 @@ export default class MyApp extends App {
           <meta name="theme-color" content="#ffffff" />
 
           <link
-            rel="preload"
+            rel="prefetch"
             href="/static/fonts/open-sans-v15-latin-italic.woff2"
             as="font"
             type="font/woff2"
           />
           <link
-            rel="preload"
+            rel="prefetch"
             href="/static/fonts/open-sans-v15-latin-regular.woff2"
             as="font"
             type="font/woff2"
           />
           <link
-            rel="preload"
+            rel="prefetch"
             href="/static/fonts/raleway-v12-latin-800.woff2"
             as="font"
             type="font/woff2"
           />
           <link
-            rel="preload"
+            rel="prefetch"
             href="/static/fonts/raleway-v12-latin-regular.woff2"
             as="font"
             type="font/woff2"
