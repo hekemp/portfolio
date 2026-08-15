@@ -15,6 +15,8 @@ import { Section } from './section'
 import { vars } from './style-variables'
 import { H1, H2, H5, Text } from './typography'
 import { media } from './utils'
+import MicrosoftStoreWidget from './microsoft-store-widget'
+
 interface IProjectPageProps {
   project: IProject
 }
@@ -224,13 +226,14 @@ export const ProjectPage = (props: IProjectPageProps) => (
         </Columns>
       </Container>
     </Section>
-    {props.project.link || props.project.github || props.project.itch ? <Section>
+    {props.project.link || props.project.github || props.project.itch || props.project.microsoftProductId ? <Section>
       <Container>
         <H2 alignment='center'>Links</H2>
         {props.project.link ? <H5 alignment='center'><ProjectLink href={props.project.link} rel="noopener noreferrer" target="_blank">More About {props.project.name}</ProjectLink></H5> : false}
         <Columns alignment='center'>
           {props.project.github ? <Column size={6}><GitHub repository={props.project.github} /></Column> : false}
           {props.project.itch ? <Column size={6}><ItchWidget itch={props.project.itch} /></Column> : false}
+          {props.project.microsoftProductId ? <Column size={6}><MicrosoftStoreWidget productId={props.project.microsoftProductId} /></Column> : false}
         </Columns>
       </Container>
     </Section> : false }

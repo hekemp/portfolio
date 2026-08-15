@@ -16,6 +16,7 @@ export interface IProject {
   itch?: string
   youtube?: string
   embedded?: string
+  microsoftProductId?: string
 
   url: string
 
@@ -312,64 +313,7 @@ export const DMTools: IProject = {
   "returnLink": "projects"
 }
 
-///////////////////////////////
-///     NO LONGER USED:     /// 
-///////////////////////////////
-
-
-export const StatisticsAppSuite: IProject = {
-  "name": "Statistics App Suite",
-  "summary": "an interdisciplinary, project-based course",
-  "description": [
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
-  ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Lead Programmer",
-  "thumbnail_img_path": "icon_statistics_suite.png",
-  "img_path": "robots.jpg",
-  "date": "December 2017",
-  "startDate": "November 2015",
-  "link": "/static/reports/Statistics-App-Suite-Report.pdf", 
-  "github": "hekemp/Statistics-App-Suite",
-  "tags": ["Python", "NAO Robots"],
-  "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
-  ],
-  "url": "statistics-app-suite",
-  "returnLink": "projects"
-}
-
-
-export const DataCleaner: IProject = {
-  "name": "Career Center Data Cleaner",
-  "summary": "an interdisciplinary, project-based course",
-  "description": [
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
-  ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Lead Programmer, Graphic Designer",
-  "thumbnail_img_path": "icon_datacleaner.png",
-  "img_path": "robots.jpg",
-  "date": "December 2014",
-  "github": "hekemp/CareerCenterDataCleaner",
-  "tags": ["Python", "NAO Robots"],
-  "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
-  ],
-  "url": "data-cleaner",
-  "returnLink": "projects"
-}
-
+// TODO: finish
 export const SandwichDiscourse: IProject = {
   "name": "Sandwich Discourse",
   "summary": "an interdisciplinary, project-based course",
@@ -396,30 +340,40 @@ export const SandwichDiscourse: IProject = {
   "returnLink": "games"
 }
 
-export const AttendEZ: IProject = {
-  "name": "AttendEZ",
-  "summary": "an interdisciplinary, project-based course",
+export const Campfire: IProject = {
+  "name": "Campfire",
+  "summary": "providing on-console support for gamers and game developers in mental crisis",
   "description": [
     "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
     "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
   ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Lead Programmer, Graphic Designer, Project Manager",
-  "thumbnail_img_path": "icon_attendez.png",
+  "type": "Hackathon",
+  "software": "UWP",
+  "language": "C#",
+  "role":"Team Lead, Lead Programmer, Graphic Designer",
+  "thumbnail_img_path": "icon_sandwich.png",
   "img_path": "robots.jpg",
-  "date": "December 2014",
-  "github": "UIOWASELT2018/selt18project-g009",
-  "tags": ["Python", "NAO Robots"],
+  "date": "October 2021",
+  "startDate": "August 2021",
+  "microsoftProductId": "9N22T15N40DD",
+  "tags": ["C#", "UWP"],
   "tasks": [
     "Developed and programmed a 5-minute dance routine for 4 Nao robots",
     "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
     "Assisted in the programming of other students' dance routines"
   ],
-  "url": "attendez",
+  "url": "campfire",
   "returnLink": "projects"
 }
+
+// TODO: Game with your Brain
+
+// TODO: OpenXR contributions
+
+// TODO: Minecraft Education Godot games
+
+// TODO: remaining audit
+
 
 export const games = [
   VRShowdown,
@@ -432,6 +386,7 @@ export const games = [
 ]
 
 export const otherProjects = [
+  Campfire,
   HoloScribe,
   RobotEyebrows, 
   InternetOfFollowers,
