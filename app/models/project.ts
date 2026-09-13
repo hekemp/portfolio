@@ -173,7 +173,7 @@ export const SafeSwarm: IProject = {
   "github": "ZeroCool2u/SafeSwarm",
   "tags": ["Java", "Android", "DJI Drone SDK"],
   "tasks": [
-    "Developed frontend of Android application allowing for seperate user views of drone",
+    "Developed frontend of Android application allowing for separate user views of drone",
     "Collaboratively developed and debugged code for autonomous drone take off and landing"
   ],
   "url": "safeswarm",
@@ -182,10 +182,10 @@ export const SafeSwarm: IProject = {
 
 export const Werewolf: IProject = {
   "name": "Werewolf",
-  "summary": "an iOS version of the popular game Werewolf utalizing multipeer connectivity",
+  "summary": "an iOS version of the popular game Werewolf utilizing multipeer connectivity",
   "description": [
     "A peer-to-peer Werewolf game for iOS, written with Multipeer Connectivity in Swift 4.0 for Xcode 9. It was created by three college students for an iOS Development class in Fall 2017, and then expanded further into a project during our free time.",
-    "We've shared our findings on setting up a Multipeer Connectivity application in <a href='https://github.com/hekemp/Multipeer-Connectivity-Basic-Demo' target='_blank' rel='noopener noreferrer'>a seperate demo repo</a>."
+    "We've shared our findings on setting up a Multipeer Connectivity application in <a href='https://github.com/hekemp/Multipeer-Connectivity-Basic-Demo' target='_blank' rel='noopener noreferrer'>a separate demo repo</a>."
   ],
   "type": "University Project",
   "software": "Xcode",
@@ -214,7 +214,7 @@ export const VRShowdown: IProject = {
     "Virtual Reality (VR) is a growing source of entertainment, but people who are visually impaired have not been effectively included. Audio cues are motivated as a complement to visuals, making experiences more immersive, but are not a primary cue.",
     "To address this, we implemented a VR game called <em>Virtual Showdown</em>. We based <em>Virtual Showdown</em> on an accessible real-world game called Showdown, where people use their hearing to locate and hit a ball against an opponent. Further, we developed Verbal and Verbal/Vibration Scaffolds to teach people how to play <em>Virtual Showdown</em>.",
     "We assessed the acceptability of <em>Virtual Showdown</em> and compared our scaffolds in <a href='https://dl.acm.org/citation.cfm?id=3300371' target='_blank' rel='noopener noreferrer'>an empirical study</a> with 34 youth who are visually impaired. Thirty-three participants wanted to play <em>Virtual Showdown</em> again, and we learned that participants scored higher with the Verbal Scaffold or if they had prior Showdown experience.",
-    "This is a standalone version of the game used in this study. It now utilizes a mix of voice commands, keyboard interactions, and Switch Joy-Con button pressed to allow players to play the game without researcher support.",
+    "This is a standalone version of the game used in this study. It now utilizes a mix of voice commands, keyboard interactions, and Switch Joy-Con button pressed to allow players to play the game without researcher support.",
    ],
   "type": "University Project",
   "software": "Unity",
@@ -224,8 +224,8 @@ export const VRShowdown: IProject = {
   "img_path": "vrshowdown.png",
   "github": 'hekemp/virtualshowdown',
   "itch": "https://itch.io/embed/419966",
-  "date": "Current",
-  "startDate": "January 2019",
+  "date": "July 2019",
+  "startDate": "December 2018",
   "tags": ["C#", "Unity", "Virtual Reality", "Accessibility", "Kinect 2.0 SDK", "Nintendo Switch SDK"],
   "tasks": [
     "Refactored codebase and Kinect SDK to have atomic objects and use game state logic while fixing various bugs",
@@ -244,7 +244,7 @@ export const HoloScribe: IProject = {
     "This application was developed for the University of Iowa's HACKUIOWA event.",
   ],
   "type": 'Hackathon',
-  "software": 'Unity, Visual Studio',
+  "software": 'Unity',
   "language": 'C#, JavaScript, Node JS',
   "role": 'Programer, Producer',
   "thumbnail_img_path": 'icon_holoscribe.png',
@@ -265,7 +265,7 @@ export const HumanNature: IProject = {
   "name": "Human Nature",
   "summary": "a Mother Nature God-like Simulation game",
   "description": [
-    "Welcome to <em>Human Nature</em>, a game made for Train Jam 2019! You play the role of Mother Nature. As the world around you develops, your task is to ensure the survival of all species (Humans, Plants, Herbivores, and Carnivores). If any species becomes extinct, you lose!",
+    "Welcome to <em>Human Nature</em>, a game made for Train Jam 2019! You play the role of Mother Nature. As the world around you develops, your task is to ensure the survival of all species (Humans, Plants, Herbivores, and Carnivores). If any species becomes extinct, you lose!",
     "This game was inspired by the many civilization building games which focus on destroying nature in favor of urban development. Fitting into the Train Jam theme of “Circuitous”, we wanted to create a game that focused on the opposite, tasking players to work as Mother nature to curb humans from destroying all of nature while still allowing all species to thrive.",
   ],
   "type": "Game Jam",
@@ -313,28 +313,26 @@ export const DMTools: IProject = {
   "returnLink": "projects"
 }
 
-// TODO: finish
 export const SandwichDiscourse: IProject = {
   "name": "Sandwich Discourse",
-  "summary": "an interdisciplinary, project-based course",
+  "summary": "an innovative approach to the sandwich discourse using data from Train Jam 2018 participants",
   "description": [
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+    "\"Welcome to the world of sandwich discourse! As an sandwich purist you are looking to consume sandwiches on your quest. Aim for traveling the furthest with the most smugness to go down in the sandwich gourmets' history books!\".",
+    "This game was inspired by the famous sandwich discourse of \"Is a hot dog a sandwich?\". At the start of Train Jam, we randomly generated lists of ingredients to make 'sandwiches' based on attendees' suggestions. After our lists were set, my partner gathered the sandwich classification data, while I developed this game to display the results."
   ],
-  "type": "University Project",
-  "software": "Choregraphe",
-  "language": "Python",
-  "role": "Lead Programmer, Graphic Designer",
+  "type": "Game Jam",
+  "software": "Unity",
+  "language": "C#",
+  "role": "Gameplay Programmer",
   "thumbnail_img_path": "icon_sandwich.png",
-  "img_path": "robots.jpg",
-  "date": "December 2014",
+  "img_path": "sandwichdiscourse.png",
+  "date": "March 2018",
   "itch": "https://itch.io/embed/235915?bg_color=ffffff&amp;fg_color=222222&amp;border_color=bebebe",
   "github": "hekemp/Sandwich-Discourse",
-  "tags": ["Python", "NAO Robots"],
+  "tags": ["C#", "Unity", "Train Jam"],
   "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
+    "Programmed core gameplay loop with loading menus and scaffolding",
+    "Implemented system for surveying and exporting results for use in game"
   ],
   "url": "sandwich-discourse",
   "returnLink": "games"
@@ -344,49 +342,118 @@ export const Campfire: IProject = {
   "name": "Campfire",
   "summary": "providing on-console support for gamers and game developers in mental crisis",
   "description": [
-    "The Department of Computer Science at the University of Iowa designed a new interdisciplinary, project-based course in collaboration with the Department of Dance in which students designed and implemented a 45-minute dance recital performed by autonomous humanoid robots.",
-    "I created <a href='https://www.youtube.com/watch?v=rTpt6K-Lmf4' target='_blank' rel='noopener noreferrer'>a dance routine</a> for this performance, and continued to work with the robots through the University to create several theatrical skits, as well as to do outreach to encourage children to continue STEM education."
+    "The Games and Online Harassment Hotline is a free, confidential text-message based hotline that provides emotional support for anyone who makes or plays games. In partnership with some folks from the non-profit, I lead a team to create an application that gathered mental health resources and guided users through various exercises for their wellbeing.",
+    "Our main goal during the project was to remove blockers for the non-profit to establish a presence on the console - both from a coding perspective and a Partner Center navigation perspective. We developed a proof of concept application with examples of all of the various resources and activities that the non-profit needed and successfully flighted the application to the Microsoft Store.",
+    "This project won 1st place in the Mental Health Hackathon category."
   ],
   "type": "Hackathon",
   "software": "UWP",
   "language": "C#",
   "role":"Team Lead, Lead Programmer, Graphic Designer",
-  "thumbnail_img_path": "icon_sandwich.png",
-  "img_path": "robots.jpg",
-  "date": "October 2021",
+  "thumbnail_img_path": "icon_campfire.png",
+  "img_path": "Campfire.png",
+  "date": "October 2022",
   "startDate": "August 2021",
   "microsoftProductId": "9N22T15N40DD",
   "tags": ["C#", "UWP"],
   "tasks": [
-    "Developed and programmed a 5-minute dance routine for 4 Nao robots",
-    "Created a Python script that was used by other students to have robots sync up by sending messages over a local network",
-    "Assisted in the programming of other students' dance routines"
+    "Collaborated directly with Feminist Frequency to design application and exercises like the emotion check-in flow",
+    "Ensured smooth application interaction across varied inputs, like mouse and keyboard versus controller",
   ],
   "url": "campfire",
   "returnLink": "projects"
 }
 
-// TODO: Game with your Brain
+export const GameWithYourBrain: IProject = {
+  "name": "Game with Your Brain",
+  "summary": "enabling controller input using myelectric and brainwave inputs",
+  "description": [
+    "Warfighter Engaged is an all volunteer effort adapting game controllers, recreational, and independence items for severely injured and disabled veterans. They came to us looking for assistance prototyping various technologies as inputs to the Xbox Adaptive Controller. During the hackathon, I was the developer team lead, responsible for gathering and parsing the sensor data, as well as emitting it for the adaptive controller, In our initial prototype, we used several Arduinos, a deconstructed Star Wars Force Trainer EMG headset, and two EEG sensors to emit both analog and digital signals to the adaptive controller. Our project took home 2nd Place in the Gaming for Everyone category at that hackathon.",
+    "After the hackathon, I joined as a co-project lead, and over the course of the next few years, we continued to iterate on the project. We started by getting more advanced hardware like new EMG sensors and the Emotiv EEG headset, which included gyrometer data. I lead the analysis of the gyrometer data and how to use it as another potential signal to inputs.",
+    "Our final stages of the project were a total re-write using Rust, allowing us to simplify the hardware footprint significantly from multiple Arduinos to a single Raspberry Pi."
+  ],
+  "type": "Hackathon",
+  "software": "UWP",
+  "language": "C#",
+  "role":"Team Lead, Lead Programmer, Data Analyst",
+  "thumbnail_img_path": "icon_gamewithyourbrain.png",
+  "img_path": "gamewithyourbrain.png",
+  "date": "October 2021",
+  "startDate": "June 2019",
+  "github": "warfighter-engaged/game-with-your-brain",
+  "tags": ["Python", "Rust", "Arduino", "Raspberry Pi"],
+  "tasks": [
+    "Lead team in prototyping EMG and EEG signal conversion to Xbox Adaptive Controller input",
+    "Analyzed gyrometer data from Emotiv EMG headset, developing algorithm to convert head rotation to controller analog input",
+  ],
+  "url": "gamewithyourbrain",
+  "returnLink": "projects"
+}
 
-// TODO: OpenXR contributions
+export const OpenXR: IProject = {
+  "name": "Enabling Xbox Adaptive Controller Input for the Meta Quest",
+  "summary": "bringing accessibility to virtual reality",
+  "description": [
+    "Traditionally, VR systems rely heavily on handheld motion controllers, which can be exclusionary for people with limited mobility or strength. The goal for our project was to bridge the gap between adaptive hardware and consumer VR headsets, creating a more inclusive space where everyone can participate in play, creativity, and connection.",
+    "At the core of this was VDXR (VirtualDesktop-OpenXR), an open-source framework that allows controller inputs to be simulated directly into the OpenXR standard. Instead of modifying the Meta Quest itself — a closed system — we use a PC-based approach to intercept and replace inputs at the software layer. This makes it possible to remap adaptive hardware like joysticks, switches, and pre-recorded motion playback into the VR input stack, unlocking capabilities such as head-gaze targeting, joystick-based locomotion, or replaying gestures for games like Beat Saber and Pistol Whip.",
+    "This project won the Inclusive Innovation Award at the Microsoft 2025 Hackathon."
+  ],
+  "type": "Hackathon",
+  "software": "Meta Quest",
+  "language": "C++",
+  "role":"Programmer",
+  "thumbnail_img_path": "icon_openxr.png",
+  "img_path": "OpenXr.png",
+  "gif_path": "OpenXr.gif",
+  "date": "September 2025",
+  "startDate": "July 2025",
+  "github": "mbucchia/VirtualDesktop-OpenXR",
+  "tags": ["C++", "Virtual Reality"],
+  "tasks": [
+    "Developed C++ middleware to record, configure, and playback animations for virtual emulated controllers",
+  ],
+  "url": "openxr",
+  "returnLink": "projects"
+}
 
-// TODO: Minecraft Education Godot games
-
-// TODO: remaining audit
+export const MinecraftEducationMiniGames: IProject = {
+  "name": "Minecraft Education Mini-Games",
+  "summary": "reducing the time-to-play for Minecraft Education gamers",
+  "description": [
+    "During this hackathon, we experimented with removing friction for engaging with Minecraft Education Edition. A frequent complaint was that Minecraft Education Edition has a signicant up-front setup time for users, not to mention non-trivial system requirements. For this project, we aimed to circumvent the app, instead relying on performant in-browser web games to teach specific skills while setup is occuring."
+  ],
+  "type": "Hackathon",
+  "software": "Godot",
+  "language": "GDScript",
+  "role": "Programmer",
+  "thumbnail_img_path": "icon_minecrafteducationminigames.png",
+  "img_path": "MinecraftEducationMinigames.png",
+  "date": "September 2024",
+  "startDate": "July 2024",
+  "tags": ["GDScript", "Godot"],
+  "tasks": [
+    "Developed various Minecraft themed minigames for prototyping",
+  ],
+  "url": "minecraft-education-minigames",
+  "returnLink": "games"
+}
 
 
 export const games = [
+  MinecraftEducationMiniGames,
   VRShowdown,
   BugHunters,
   TonyBirb,
   Werewolf,
   Zephyr,
   HumanNature,
-  //SandwichDiscourse,
+  SandwichDiscourse,
 ]
 
 export const otherProjects = [
+  OpenXR,
   Campfire,
+  GameWithYourBrain,
   HoloScribe,
   RobotEyebrows, 
   InternetOfFollowers,
